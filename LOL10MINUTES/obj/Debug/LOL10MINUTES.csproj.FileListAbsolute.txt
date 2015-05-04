@@ -1,0 +1,78 @@
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\bin\Debug\LOL10MINUTES.exe.config
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\bin\Debug\LOL10MINUTES.exe
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\bin\Debug\LOL10MINUTES.pdb
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\LOL10MINUTES.csprojResolveAssemblyReference.cache
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\MainWindow.g.cs
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\App.g.cs
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\LOL10MINUTES_MarkupCompile.cache
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\LOL10MINUTES_MarkupCompile.lref
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\MainWindow.baml
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\LOL10MINUTES.g.resources
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\LOL10MINUTES.Properties.Resources.resources
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\LOL10MINUTES.csproj.GenerateResource.Cache
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\LOL10MINUTES.exe
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\LOL10MINUTES.pdb
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\bin\Debug\MahApps.Metro.dll
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\bin\Debug\System.Windows.Interactivity.dll
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\bin\Debug\MahApps.Metro.xml
+c:\users\francisco\documents\visual studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\App.baml
+C:\Users\Francisco\Documents\Visual Studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\preview.g.cs
+C:\Users\Francisco\Documents\Visual Studio 2015\Projects\LOL10MINUTES\LOL10MINUTES\obj\Debug\preview.baml
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\LOL10MINUTES.exe.config
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\LOL10MINUTES.exe
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\LOL10MINUTES.pdb
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\LOL10MINUTES.exe
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\LOL10MINUTES.pdb
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\MahApps.Metro.dll
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\MahApps.Metro.xml
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\LOL10MINUTES.csprojResolveAssemblyReference.cache
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\MainWindow.g.cs
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\preview.g.cs
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\App.g.cs
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\LOL10MINUTES_MarkupCompile.cache
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\LOL10MINUTES_MarkupCompile.lref
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\App.baml
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\MainWindow.baml
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\preview.baml
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\LOL10MINUTES.g.resources
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\LOL10MINUTES.Properties.Resources.resources
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\LOL10MINUTES.csproj.GenerateResource.Cache
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\AddHudWindow.baml
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\AddHudWindow.g.cs
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\LolNexus.baml
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\LolNexus.g.cs
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\System.Json.dll
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\System.Json.xml
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\Yunan.WPF.ImageAnim.dll
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\bin\Debug\LOL10MINUTES.exe.config
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LOL10MINUTES.exe
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LOL10MINUTES.pdb
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LOL10MINUTES.csprojResolveAssemblyReference.cache
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\AddHudWindow.baml
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LolNexus.baml
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\AddHudWindow.g.cs
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LolNexus.g.cs
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\MainWindow.g.cs
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\preview.g.cs
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\App.g.cs
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LOL10MINUTES_MarkupCompile.cache
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LOL10MINUTES_MarkupCompile.lref
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\bin\Debug\LOL10MINUTES.exe
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\bin\Debug\LOL10MINUTES.pdb
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\bin\Debug\MahApps.Metro.dll
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\bin\Debug\System.Json.dll
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\bin\Debug\Yunan.WPF.ImageAnim.dll
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\bin\Debug\MahApps.Metro.xml
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\bin\Debug\System.Json.xml
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\App.baml
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\MainWindow.baml
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\preview.baml
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LOL10MINUTES.g.resources
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LOL10MINUTES.Properties.Resources.resources
+C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LOL10MINUTES.csproj.GenerateResource.Cache

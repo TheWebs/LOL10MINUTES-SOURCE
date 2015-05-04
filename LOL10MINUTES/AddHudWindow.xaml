@@ -1,0 +1,18 @@
+﻿<Controls:MetroWindow x:Class="LOL10MINUTES.AddHudWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      Title="Add new HUD"
+                      Height="219"
+                      Width="573" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,2,0" Height="187" VerticalAlignment="Top">
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="9" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="376"/>
+        <Button x:Name="button" Content="Browse" HorizontalAlignment="Left" Height="26" Margin="397,10,0,0" VerticalAlignment="Top" Width="156" Cursor="Hand" Click="button_Click"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="4" Margin="122,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="431"/>
+        <Label x:Name="label" Content="Preview URL :" HorizontalAlignment="Left" Height="26" Margin="10,61,0,0" VerticalAlignment="Top" Width="107"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="13" Margin="122,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="431"/>
+        <Label x:Name="label_Copy" Content="Name :" HorizontalAlignment="Left" Height="26" Margin="10,109,0,0" VerticalAlignment="Top" Width="107"/>
+        <Button x:Name="button1" Content="Add" HorizontalAlignment="Left" Height="37" Margin="208,141,0,0" VerticalAlignment="Top" Width="147" Click="button1_Click" Cursor="Hand"/>
+
+    </Grid>
+</Controls:MetroWindow>
