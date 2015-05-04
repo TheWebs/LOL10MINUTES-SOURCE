@@ -128,9 +128,9 @@ namespace LOL10MINUTES
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            //LolNexus GameScout = new LolNexus();
+            //LolNexus GameScout = new LolNexus();    {League Game Stats}
             //GameScout.Show();
-			MessageBox.Show("Available on ext update ^^", "LOL10MINUTES - LoL Scout");
+            MessageBox.Show("Available on ext update ^^", "LOL10MINUTES - LoL Scout");
         }
 
         public string GetTempPath()
