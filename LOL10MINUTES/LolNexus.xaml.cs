@@ -151,9 +151,9 @@ namespace LOL10MINUTES
             Summoner1Sp2.Source = new BitmapImage(new Uri(Directory.GetCurrentDirectory() + "\\Spells\\" + Summoner1.ToArray()[2].ToString() + ".png"));
             GetIcon(Int32.Parse(Summoner1.ToArray()[4].ToString()));
             Summoner1Icon.Source = new BitmapImage(new Uri(Directory.GetCurrentDirectory() + "\\Icons\\" + Summoner1.ToArray()[4].ToString() + ".png"));
-            //ObterInformacao(label.Content.ToString());
-            //ObterLiga(info.ToArray()[0].ToString());// ---------------------------------------ERRO---------------------------//
-            //Summoner1Rank.Content = Liga;
+            ObterInformacao(label.Content.ToString());
+            ObterLiga(info.ToArray()[0].ToString());// ---------------------------------------ERRO---------------------------//
+            Summoner1Rank.Content = Liga;
 
             //--------------------------------------------
             JsonValue S2 = JsonValue.Parse(File.ReadAllText(Directory.GetCurrentDirectory() + "\\1summoner.txt"));
@@ -291,7 +291,7 @@ namespace LOL10MINUTES
             }
         }
 
-       /* public void ObterLiga(string id) // UGLY HACK AHEAD!!!
+       public void ObterLiga(string id) // UGLY HACK AHEAD!!!
         {
             MessageBox.Show(id);
             WebClient web = new WebClient();
@@ -333,7 +333,7 @@ namespace LOL10MINUTES
             {
                 if (ex.Status == WebExceptionStatus.ProtocolError)
                 {
-                    MessageBox.Show("O jogador e unranked");//UNRANKED!
+                    MessageBox.Show("Unranked");//UNRANKED!
                 }
             }
             JsonValue data = JsonValue.Parse(textotodo);
@@ -350,7 +350,7 @@ namespace LOL10MINUTES
             }
            //[0]- id [1]- name
         }
-        */
+        
 
     }
 }

@@ -76,3 +76,6 @@ C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\pre
 C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LOL10MINUTES.g.resources
 C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LOL10MINUTES.Properties.Resources.resources
 C:\Users\Francisco\Desktop\LOL10MINUTES-SOURCE-master\LOL10MINUTES\obj\Debug\LOL10MINUTES.csproj.GenerateResource.Cache
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\Gat.Controls.OpenDialog.dll
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\Ookii.Dialogs.Wpf.dll
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\Ookii.Dialogs.Wpf.xml

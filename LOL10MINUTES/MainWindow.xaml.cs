@@ -16,6 +16,8 @@ using MahApps.Metro;
 using MahApps.Metro.Controls;
 using System.IO;
 using System.Net;
+using Microsoft.Win32;
+using Ookii.Dialogs;
 
 namespace LOL10MINUTES
 {
@@ -27,13 +29,27 @@ namespace LOL10MINUTES
         public MainWindow()
         {
             InitializeComponent();
-            string caminho = Directory.GetCurrentDirectory() + "\\HUDS";
-            foreach(string dir in Directory.GetDirectories(caminho))
+            if (File.Exists(Directory.GetCurrentDirectory() + "\\Path.txt"))
             {
-               DirectoryInfo dirinf = new DirectoryInfo(dir);
-                listBox.Items.Add(dirinf.Name);
+                string caminho = Directory.GetCurrentDirectory() + "\\HUDS";
+                foreach (string dir in Directory.GetDirectories(caminho))
+                {
+                    DirectoryInfo dirinf = new DirectoryInfo(dir);
+                    listBox.Items.Add(dirinf.Name);
+                }
+                listBox.SelectedIndex = 0;
             }
-            listBox.SelectedIndex = 0;
+            else
+            {
+                EscolhePasta();
+                string caminho = Directory.GetCurrentDirectory() + "\\HUDS";
+                foreach (string dir in Directory.GetDirectories(caminho))
+                {
+                    DirectoryInfo dirinf = new DirectoryInfo(dir);
+                    listBox.Items.Add(dirinf.Name);
+                }
+                listBox.SelectedIndex = 0;
+            }
 
         }
 
@@ -73,9 +89,9 @@ namespace LOL10MINUTES
         private void button_Click(object sender, RoutedEventArgs e)
         {
             try {
-                DirectoryInfo joao = new DirectoryInfo(Directory.GetDirectories(System.IO.Path.GetPathRoot(Environment.SystemDirectory) + "Riot Games\\League of Legends\\RADS\\solutions\\lol_game_client_sln\\releases\\")[0]);
+                DirectoryInfo joao = new DirectoryInfo(Directory.GetDirectories(File.ReadAllText(Directory.GetCurrentDirectory() + "\\Path.txt") + "\\RADS\\solutions\\lol_game_client_sln\\releases\\")[0]);
                 //C:\Riot Games\League of Legends\RADS\solutions\lol_game_client_sln\releases\0.0.1.78\deploy\DATA\menu\hud
-                File.Copy(Directory.GetCurrentDirectory() + "\\HUDS\\" + listBox.SelectedItem.ToString() + "\\hudatlas.dds", System.IO.Path.GetPathRoot(Environment.SystemDirectory) + "Riot Games\\League of Legends\\RADS\\solutions\\lol_game_client_sln\\releases\\" + joao.Name + "\\deploy\\DATA\\menu\\hud\\hudatlas.dds", true);
+                File.Copy(Directory.GetCurrentDirectory() + "\\HUDS\\" + listBox.SelectedItem.ToString() + "\\hudatlas.dds", File.ReadAllText(Directory.GetCurrentDirectory() + "\\Path.txt") + "\\RADS\\solutions\\lol_game_client_sln\\releases\\" + joao.Name + "\\deploy\\DATA\\menu\\hud\\hudatlas.dds", true);
                 label.Content = "Done!";
             }
             catch(Exception ex)
@@ -88,8 +104,8 @@ namespace LOL10MINUTES
         private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
             try {
-                DirectoryInfo joao = new DirectoryInfo(Directory.GetDirectories(System.IO.Path.GetPathRoot(Environment.SystemDirectory) + "Riot Games\\League of Legends\\RADS\\solutions\\lol_game_client_sln\\releases\\")[0]);
-                File.Delete(System.IO.Path.GetPathRoot(Environment.SystemDirectory) + "Riot Games\\League of Legends\\RADS\\solutions\\lol_game_client_sln\\releases\\" + joao.Name + "\\deploy\\DATA\\menu\\hud\\hudatlas.dds");
+                DirectoryInfo joao = new DirectoryInfo(Directory.GetDirectories(File.ReadAllText(Directory.GetCurrentDirectory() + "\\Path.txt") + "\\RADS\\solutions\\lol_game_client_sln\\releases\\")[0]);
+                File.Delete(File.ReadAllText(Directory.GetCurrentDirectory() + "\\Path.txt") + "\\RADS\\solutions\\lol_game_client_sln\\releases\\" + joao.Name + "\\deploy\\DATA\\menu\\hud\\hudatlas.dds");
                 label.Content = "Done!";
             } catch(IOException ex)
             {
@@ -153,6 +169,20 @@ namespace LOL10MINUTES
             {
                 sw.Close();
             }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            EscolhePasta();
+        }
+
+        private void EscolhePasta()
+        {
+            Ookii.Dialogs.Wpf.VistaFolderBrowserDialog pasta = new Ookii.Dialogs.Wpf.VistaFolderBrowserDialog();
+            pasta.Description = "Please select your League of Legends folder";
+            pasta.RootFolder = Environment.SpecialFolder.MyComputer;
+            pasta.ShowDialog();
+            File.WriteAllText(Directory.GetCurrentDirectory() + "\\path.txt", pasta.SelectedPath.ToString());
         }
     }
 }

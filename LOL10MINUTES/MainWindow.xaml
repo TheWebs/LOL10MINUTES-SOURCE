@@ -12,6 +12,7 @@
             <Button Content="Add HUD" Click="AddHud_Click" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
             <Button Content="Refresh" Click="Button_Click_1" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
             <Button Content="Game Stats (BETA)" Click="Button_Click_2"  MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
+            <Button Content="LoL Path" Click="Button_Click_3"  MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
         </Controls:WindowCommands>
 </Controls:MetroWindow.RightWindowCommands>
     <Grid Height="452" VerticalAlignment="Top" Background="#FF0C0C0C">
