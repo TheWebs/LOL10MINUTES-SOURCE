@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace LOL10MINUTES
 {
@@ -19,10 +20,25 @@ namespace LOL10MINUTES
     /// </summary>
     public partial class Splash : Window
     {
+        public static void DoEvents()
+        {
+            Application.Current.Dispatcher.Invoke(DispatcherPriority.Background, new Action(delegate { }));
+        }
         public Splash()
         {
             InitializeComponent();
-            
+            progressbar.Maximum = 30000;
+            progressbar.Minimum = 0;
+            this.Topmost = true;
+            this.Show();
+            int i = 0;
+            while(i < 30000)
+            {
+                progressbar.Value = i;
+                i++;
+                DoEvents();
+            }
+            System.Threading.Thread.Sleep(1000);
             MainWindow window = new MainWindow();
             window.Show();
             this.Close();

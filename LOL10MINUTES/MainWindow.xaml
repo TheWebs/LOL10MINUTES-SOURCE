@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:LOL10MINUTES"
         mc:Ignorable="d"
-        Title="LOL10MINUTES" Height="483" Width="948" ResizeMode="CanMinimize">
+        Title="LOL10MINUTES" Height="483" Width="948" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Controls:MetroWindow.RightWindowCommands>
   <Controls:WindowCommands>
             <Button Content="Add HUD" Click="AddHud_Click" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave"/>
