@@ -1,0 +1,11 @@
+﻿<Window x:Class="LOL10MINUTES.Splash"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Splash" Height="300" Width="577" WindowStyle="None" WindowStartupLocation="CenterScreen" Visibility="Visible">
+    <Grid Background="#FF6C6C6C">
+        <Label Content="LoL Hud Changer" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="87" Width="569" Foreground="#FF55C8FD" FontFamily="Monospac821 BT" FontSize="60" HorizontalContentAlignment="Center"/>
+        <Label Content="Version [1.4]" HorizontalAlignment="Left" Margin="0,102,0,0" VerticalAlignment="Top" Height="87" Width="569" Foreground="#FF55C8FD" FontFamily="Monospac821 BT" FontSize="60" HorizontalContentAlignment="Center"/>
+        <Label Content="Coded by kiko298" HorizontalAlignment="Left" Margin="0,194,0,0" VerticalAlignment="Top" Height="87" Width="569" Foreground="#FF55C8FD" FontFamily="Monospac821 BT" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+    </Grid>
+</Window>

@@ -64,24 +64,57 @@ namespace LOL10MINUTES
                 preview = textBox1.Text;
                 try
                 {
-                    Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\HUDS\\" + nome);
-                    File.WriteAllText(Directory.GetCurrentDirectory() + "\\HUDS\\" + nome + "\\preview.txt", preview);
-                    File.Move(caminho, Directory.GetCurrentDirectory() + "\\HUDS\\" + nome + "\\hudatlas.dds");
-                    MessageBox.Show("Added " + nome + " sucefully!");
-                    this.Close();
+                    if (!Directory.Exists(Directory.GetCurrentDirectory() + "\\HUDS\\" + nome))
+                    {
+                        Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\HUDS\\" + nome);
+                        File.WriteAllText(Directory.GetCurrentDirectory() + "\\HUDS\\" + nome + "\\preview.txt", preview);
+                        File.Move(caminho, Directory.GetCurrentDirectory() + "\\HUDS\\" + nome + "\\hudatlas.dds");
+                        MessageBox.Show("Added " + nome + " sucefully!");
+                        this.Close();
+                    }
+                    else
+                    {
+                        string message = "There is already a Hud named " + nome;
+                        MessageBox.Show(message, "LoL10Minutes - Add Hud : Error!");
+                    }
                 }
                 catch (IOException ex)
                 {
                     textBox.Text = "Erro!";
                     textBox1.Text = "Erro!";
                     textBox2.Text = "Erro!";
+                    LogMessageToFile(ex.Message);
                 }
             }
             else
             {
                 MessageBox.Show("Erro!", "LOL10MINUTES : Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                LogMessageToFile("The file selected no longer exists at the specified path or is unacessable");
             }
+
+
             }
+        public string GetTempPath()
+        {
+            string path = Directory.GetCurrentDirectory() + "\\log.txt";
+            return path;
+        }
+
+        public void LogMessageToFile(string msg)
+        {
+            System.IO.StreamWriter sw = System.IO.File.AppendText(
+                GetTempPath());
+            try
+            {
+                string logLine = System.String.Format(
+                    "{0:G} : {1}.", System.DateTime.Now, msg);
+                sw.WriteLine(logLine);
+            }
+            finally
+            {
+                sw.Close();
+            }
+        }
         }
     }
 
