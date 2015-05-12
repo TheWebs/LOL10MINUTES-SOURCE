@@ -81,5 +81,6 @@ C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\O
 C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\Ookii.Dialogs.Wpf.xml
 C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\Resources\Icons.baml
 C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\Splash.baml
-C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\Resources\Icons.g.cs
 C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\Splash.g.cs
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\Change cursor.baml
+C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\obj\Debug\Change cursor.g.cs

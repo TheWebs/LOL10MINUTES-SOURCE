@@ -1,0 +1,5 @@
+ImageComponents.WPF.Imaging.ImgScan, ImageComponents.WPF.ImgScan, Culture=neutral, PublicKeyToken=8fca378f16b19c30
+ImageComponents.WPF.Imaging.ImgBarDecoder, ImageComponents.WPF.ImgBarDecoder, Culture=neutral, PublicKeyToken=8fca378f16b19c30
+ImageComponents.WPF.Imaging.ImgEdit, ImageComponents.WPF.ImgEdit, Culture=neutral, PublicKeyToken=8fca378f16b19c30
+ImageComponents.WPF.Imaging.ImgBarCoder, ImageComponents.WPF.ImgBarCoder, Culture=neutral, PublicKeyToken=8fca378f16b19c30
+ImageComponents.WPF.Imaging.ImgThumbnails, ImageComponents.WPF.ImgThumbnails, Culture=neutral, PublicKeyToken=8fca378f16b19c30

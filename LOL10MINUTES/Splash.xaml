@@ -1,12 +1,14 @@
 ﻿<Window x:Class="LOL10MINUTES.Splash"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Splash" Height="300" Width="577" WindowStyle="None" WindowStartupLocation="CenterScreen" Visibility="Visible" ResizeMode="NoResize">
-    <Grid Background="#FF6C6C6C">
-        <Label Content="LoL Hud Changer" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="87" Width="569" Foreground="#FF55C8FD" FontFamily="Monospac821 BT" FontSize="60" HorizontalContentAlignment="Center"/>
-        <Label Content="Version [1.4]" HorizontalAlignment="Left" Margin="0,102,0,0" VerticalAlignment="Top" Height="87" Width="569" Foreground="#FF55C8FD" FontFamily="Monospac821 BT" FontSize="60" HorizontalContentAlignment="Center"/>
-        <Label Content="Coded by kiko298" HorizontalAlignment="Left" Margin="0,249,0,0" VerticalAlignment="Top" Height="41" Width="569" Foreground="#FF55C8FD" FontFamily="Monospac821 BT" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <ProgressBar  x:Name="progressbar" HorizontalAlignment="Left" Height="60" Margin="0,189,0,0" VerticalAlignment="Top" Width="577" Background="#FF6C6C6C" Foreground="#FF55C8FD" BorderBrush="{x:Null}"/>
+        Title="Splash" Height="929" Width="1120" WindowStartupLocation="CenterScreen" Visibility="Visible" ResizeMode="NoResize" Background="Transparent" Foreground="Transparent" AllowsTransparency="True" WindowStyle="None">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/Melhor.png" Stretch="Uniform"/>
+        </Grid.Background>
+        <Label Content="Version [2.0]" HorizontalAlignment="Left" Margin="305,0,0,0" VerticalAlignment="Top" Height="87" Width="569" Foreground="#FF55C8FD" FontFamily="Monospac821 BT" FontSize="60" HorizontalContentAlignment="Center"/>
+        <ProgressBar  x:Name="progressbar" HorizontalAlignment="Left" Height="60" Margin="271,857,0,0" VerticalAlignment="Top" Width="577" Background="#FF6C6C6C" Foreground="#FF55C8FD" BorderBrush="{x:Null}"/>
+        <Label Content="Coded by kiko298" HorizontalAlignment="Left" Margin="271,857,0,0" VerticalAlignment="Top" Height="60" Width="577" Foreground="Black" FontFamily="Monospac821 BT" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
     </Grid>
 </Window>

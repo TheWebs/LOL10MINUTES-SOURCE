@@ -1,0 +1,2490 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>ImageComponents.WPF.ImgAnnotations</name>
+  </assembly>
+  <members>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject">
+      <summary>
+            Image Components Annotation Object class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.#ctor(System.Windows.Point)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position point.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">X position.</param>
+      <param name="posY">Y position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.#ctor(System.Windows.Point,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.#ctor(System.Int32,System.Int32,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">X position.</param>
+      <param name="posY">Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">X position.</param>
+      <param name="posY">Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.#ctor(System.Windows.Point,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.#ctor(System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">X position.</param>
+      <param name="posY">Y position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.#ctor(System.Windows.Point,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.#ctor(System.Int32,System.Int32,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">X position.</param>
+      <param name="posY">Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">X position.</param>
+      <param name="posY">Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.SetAnnotationSelection(System.Boolean)">
+      <summary>
+            Sets the selection of the annotation object.
+            </summary>
+      <param name="IsSelected">Is annotation object selected.</param>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.PageIndex">
+      <summary>
+            Gets the annotations objects collection page index.
+            </summary>
+      <returns>Gets the annotations objects collection page index.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.AnnotationObjectType">
+      <summary>
+            Gets the annotation object type.
+            </summary>
+      <returns>Gets the annotation object type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.X">
+      <summary>
+            Gets or sets the annotation X position.
+            </summary>
+      <value>Sets the annotation X position.</value>
+      <returns>Gets the annotation X position.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.Y">
+      <summary>
+            Gets or sets the annotation Y position.
+            </summary>
+      <value>Sets the annotation Y position.</value>
+      <returns>Gets the annotation Y position.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.Height">
+      <summary>
+            Gets or sets the annotation height size.
+            </summary>
+      <value>Sets the annotation height size.</value>
+      <returns>Gets the annotation height size.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.Width">
+      <summary>
+            Gets or sets the annotation width size.
+            </summary>
+      <value>Sets the annotation width size.</value>
+      <returns>Gets the annotation width size.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.ID">
+      <summary>
+            Gets or sets the annotation identification.
+            </summary>
+      <value>Sets the annotation identification.</value>
+      <returns>Gets the annotation identification.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.UID">
+      <summary>
+            Gets the annotation unique identifier.
+            </summary>
+      <returns>Gets the annotation unique identifier.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.IsVisible">
+      <summary>
+            Get or sets the annotation visibility.
+            </summary>
+      <value>Sets the annotation visibility.</value>
+      <returns>Gets the annotation visibility.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.IsProtected">
+      <summary>
+            Get or sets the annotation protection.
+            </summary>
+      <value>Sets the annotation protection.</value>
+      <returns>Gets the annotation protection.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.IsSelected">
+      <summary>
+            Get or sets the annotation selection.
+            </summary>
+      <value>Sets the annotation selection.</value>
+      <returns>Gets the annotation selection.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.ToolTip">
+      <summary>
+            Get or sets the annotation tooltip.
+            </summary>
+      <value>Sets the annotation tooltip.</value>
+      <returns>Gets the annotation tooltip.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject.Tag">
+      <summary>
+            Get or sets the annotation tag.
+            </summary>
+      <value>Sets the annotation tag.</value>
+      <returns>Gets the annotation tag.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects">
+      <summary>
+            Image Components Annotation Objects class.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects.HorizontalResolution">
+      <summary>
+            Get or sets the draw horizontal resolution.
+            </summary>
+      <value>Sets the draw horizontal resolution.</value>
+      <returns>Gets the draw horizontal resolution.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects.VerticalResolution">
+      <summary>
+            Get or sets the draw vertical resolution.
+            </summary>
+      <value>Sets the draw vertical resolution.</value>
+      <returns>Gets the draw vertical resolution.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects.PageIndex">
+      <summary>
+            Gets the annotations objects collection page index.
+            </summary>
+      <returns>Gets the annotations objects collection page index.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects.Item(System.Int32)">
+      <summary>
+            Gets or set the annotation object item by index position.
+            </summary>
+      <param name="index">Index annotation object position.</param>
+      <value>Sets the annotation object item by index position.</value>
+      <returns>Gets the annotation object item by index position.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects.Items">
+      <summary>
+            Gets or sets the annotation objects collection list.
+            </summary>
+      <value>Sets the annotation objects collection list.</value>
+      <returns>Gets the annotation objects collection list.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects.IsDirty">
+      <summary>
+            Gets or sets the annotations objects changed flag.
+            </summary>
+      <value>Sets the annotations objects changed flag.</value>
+      <returns>Gets the annotations objects changed flag.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.ICFont">
+      <summary>
+            Image Components Font class.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICFont.FontFamily">
+      <summary>
+            Get or sets the font family name.
+            </summary>
+      <value>Sets the font family name.</value>
+      <returns>Gets the font family name.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICFont.IsBold">
+      <summary>
+            Get or sets the font is bold.
+            </summary>
+      <value>Sets the font is bold.</value>
+      <returns>Gets the font is bold.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICFont.IsItalic">
+      <summary>
+            Get or sets the font is italic.
+            </summary>
+      <value>Sets the font is italic.</value>
+      <returns>Gets the font is italic.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICFont.IsStrikeout">
+      <summary>
+            Get or sets the font is strikeout.
+            </summary>
+      <value>Sets the font is strikeout.</value>
+      <returns>Gets the font is strikeout.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICFont.IsUnderline">
+      <summary>
+            Get or sets the font is underline.
+            </summary>
+      <value>Sets the font is underline.</value>
+      <returns>Gets the font is underline.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICFont.FontSize">
+      <summary>
+            Get or sets the font size.
+            </summary>
+      <value>Sets the font size.</value>
+      <returns>Gets the font size.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICImageAnnotation">
+      <summary>
+            Image Components Image Annotation class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICImageAnnotation.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation">
+      <summary>
+            Image Components Embedded Image Annotation class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.#ctor(System.Windows.Point,System.Byte[])">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="graphicPosition">Annotation position.</param>
+      <param name="embeddedImage">Embedded image object.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.#ctor(System.Int32,System.Int32,System.Byte[])">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="embeddedImage">Embedded image object.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.#ctor(System.Windows.Point,System.Windows.Size,System.Byte[])">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="embeddedImage">Embedded image object.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size,System.Byte[])">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="embeddedImage">Embedded image object.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Byte[])">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+      <param name="embeddedImage">Embedded image object.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.#ctor(System.Windows.Point,System.Single,System.Byte[])">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+      <param name="embeddedImage">Embedded image object.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.#ctor(System.Int32,System.Int32,System.Single,System.Byte[])">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+      <param name="embeddedImage">Embedded image object.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.#ctor(System.Windows.Point,System.Windows.Size,System.Single,System.Byte[])">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+      <param name="embeddedImage">Embedded image object.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size,System.Single,System.Byte[])">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+      <param name="embeddedImage">Embedded image object.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Byte[])">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+      <param name="Rotation">Annotation rotation.</param>
+      <param name="embeddedImage">Embedded image object.</param>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.EmbeddedImage">
+      <summary>
+            Gets or sets the annotation embedded image object.
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation.IsTransparent">
+      <summary>
+            Get or sets the image annotation is transparent.
+            </summary>
+      <value>Sets the image annotation is transparent.</value>
+      <returns>Gets the image annotation is transparent.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.ICRectangle">
+      <summary>
+            Image Components Rectangle class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICRectangle.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.ICRectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="x">X position.</param>
+      <param name="y">Y position.</param>
+      <param name="width">Width value.</param>
+      <param name="height">Height value.</param>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICRectangle.X">
+      <summary>
+            Get/Set X position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICRectangle.Y">
+      <summary>
+            Get/Set Y position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICRectangle.Width">
+      <summary>
+            Get/Set width size.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.ICRectangle.Height">
+      <summary>
+            Get/Set Height size.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICShapeAnnotation">
+      <summary>
+            Image Components Shape Annotation class.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICShapeAnnotation.LineWidth">
+      <summary>
+            Get or sets the annotation border line width.
+            </summary>
+      <value>Sets the annotation border line width.</value>
+      <returns>Gets the annotation border line width.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICShapeAnnotation.LineColor">
+      <summary>
+            Get or sets the annotation border line color.
+            </summary>
+      <value>Sets the annotation border line color.</value>
+      <returns>Gets the annotation border line color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICShapeAnnotation.Fill">
+      <summary>
+            Get or sets the annotation has back color.
+            </summary>
+      <value>Sets the annotation has back color.</value>
+      <returns>Gets the annotation has back color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICShapeAnnotation.FillColor">
+      <summary>
+            Get or sets the annotation fill color.
+            </summary>
+      <value>Sets the annotation fill color.</value>
+      <returns>Gets the annotation fill color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICShapeAnnotation.FillTransparency">
+      <summary>
+            Get or sets the annotation fill transparency.
+            </summary>
+      <value>Sets the annotation fill transparency.</value>
+      <returns>Gets the annotation fill transparency.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICLineAnnotation">
+      <summary>
+            Image Components Line Annotation class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICLineAnnotation.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICLineAnnotation.#ctor(System.Windows.Point)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICLineAnnotation.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICLineAnnotation.#ctor(System.Windows.Point,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICLineAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICLineAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICLineAnnotation.#ctor(System.Windows.Point,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICLineAnnotation.#ctor(System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICLineAnnotation.#ctor(System.Windows.Point,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICLineAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICLineAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICArrowAnnotation">
+      <summary>
+            Image Components Arrow Annotation class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICArrowAnnotation.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICArrowAnnotation.#ctor(System.Windows.Point)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICArrowAnnotation.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICArrowAnnotation.#ctor(System.Windows.Point,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICArrowAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICArrowAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICArrowAnnotation.#ctor(System.Windows.Point,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICArrowAnnotation.#ctor(System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICArrowAnnotation.#ctor(System.Windows.Point,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICArrowAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICArrowAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation">
+      <summary>
+            Image Components Highlight Annotation class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation.#ctor(System.Windows.Point)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation.#ctor(System.Windows.Point,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size)">
+      <summary>
+      </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation.#ctor(System.Windows.Point,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation.#ctor(System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation.#ctor(System.Windows.Point,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation">
+      <summary>
+            Image Components Hide Annotation class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation.#ctor(System.Windows.Point)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation.#ctor(System.Windows.Point,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size)">
+      <summary>
+      </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation.#ctor(System.Windows.Point,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation.#ctor(System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation.#ctor(System.Windows.Point,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation">
+      <summary>
+            Image Components Elipse Annotation class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation.#ctor(System.Windows.Point)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation.#ctor(System.Windows.Point,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation.#ctor(System.Windows.Point,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation.#ctor(System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation.#ctor(System.Windows.Point,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation">
+      <summary>
+            Image Components Stamp Annotation class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation.#ctor(System.Windows.Point,System.String,ImageComponents.WPF.Imaging.Annotations.ICFont,System.Windows.Media.Color)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="text">Annotation text.</param>
+      <param name="textFont">Annotation font.</param>
+      <param name="textColor">Annotation color.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation.#ctor(System.Int32,System.Int32,System.String,ImageComponents.WPF.Imaging.Annotations.ICFont,System.Windows.Media.Color)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="text">Annotation text.</param>
+      <param name="textFont">Annotation font.</param>
+      <param name="textColor">Annotation color.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation.#ctor(System.Windows.Point,System.String,ImageComponents.WPF.Imaging.Annotations.ICFont,System.Windows.Media.Color,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="text">Annotation text.</param>
+      <param name="textFont">Annotation font.</param>
+      <param name="textColor">Annotation color.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation.#ctor(System.Int32,System.Int32,System.String,ImageComponents.WPF.Imaging.Annotations.ICFont,System.Windows.Media.Color,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="text">Annotation text.</param>
+      <param name="textFont">Annotation font.</param>
+      <param name="textColor">Annotation color.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation.TextFont">
+      <summary>
+            Get or sets the annotation text font.
+            </summary>
+      <value>Sets the annotation text font.</value>
+      <returns>Gets the annotation text font.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation.Text">
+      <summary>
+            Get or sets the annotation text.
+            </summary>
+      <value>Sets the annotation text.</value>
+      <returns>Gets the annotation text.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation.TextAngle">
+      <summary>
+            Get or sets the annotation text angle.
+            </summary>
+      <value>Sets the annotation text angle.</value>
+      <returns>Gets the annotation text angle.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation.TextColor">
+      <summary>
+            Get or sets the annotation text color.
+            </summary>
+      <value>Sets the annotation text color.</value>
+      <returns>Gets the annotation text color.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation">
+      <summary>
+            Image Components Text Annotation class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.#ctor(System.Windows.Point,System.String,ImageComponents.WPF.Imaging.Annotations.ICFont,System.Windows.Media.Color)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="text">Annotation text.</param>
+      <param name="textFont">Annotation font.</param>
+      <param name="textColor">Annotation color.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.#ctor(System.Int32,System.Int32,System.String,ImageComponents.WPF.Imaging.Annotations.ICFont,System.Windows.Media.Color)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="text">Annotation text.</param>
+      <param name="textFont">Annotation font.</param>
+      <param name="textColor">Annotation color.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.#ctor(System.Windows.Point,System.String,ImageComponents.WPF.Imaging.Annotations.ICFont,System.Windows.Media.Color,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="text">Annotation text.</param>
+      <param name="textFont">Annotation font.</param>
+      <param name="textColor">Annotation color.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.#ctor(System.Int32,System.Int32,System.String,ImageComponents.WPF.Imaging.Annotations.ICFont,System.Windows.Media.Color,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="text">Annotation text.</param>
+      <param name="textFont">Annotation font.</param>
+      <param name="textColor">Annotation color.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.EnableTextEdit">
+      <summary>
+            Edit text annotation enabling text introduction.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.DisableTextEdit">
+      <summary>
+            Disable the edit text annotation.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.LineWidth">
+      <summary>
+            Get or sets the annotation border line width.
+            </summary>
+      <value>Sets the annotation border line width.</value>
+      <returns>Gets the annotation border line width.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.LineColor">
+      <summary>
+            Get or sets the annotation border line color.
+            </summary>
+      <value>Sets the annotation border line color.</value>
+      <returns>Gets the annotation border line color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.Fill">
+      <summary>
+            Get or sets the annotation has back color.
+            </summary>
+      <value>Sets the annotation has back color.</value>
+      <returns>Gets the annotation has back color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.FillColor">
+      <summary>
+            Get or sets the annotation fill color.
+            </summary>
+      <value>Sets the annotation fill color.</value>
+      <returns>Gets the annotation fill color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.FillTransparency">
+      <summary>
+            Get or sets the annotation fill transparency.
+            </summary>
+      <value>Sets the annotation fill transparency.</value>
+      <returns>Gets the annotation fill transparency.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.TextFont">
+      <summary>
+            Get or sets the annotation text font.
+            </summary>
+      <value>Sets the annotation text font.</value>
+      <returns>Gets the annotation text font.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.Text">
+      <summary>
+            Get or sets the annotation text.
+            </summary>
+      <value>Sets the annotation text.</value>
+      <returns>Gets the annotation text.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.IsEditTextEnabled">
+      <summary>
+            Gets the annotation text edit is enabled.
+            </summary>
+      <returns>Gets the annotation text edit is enabled.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation.TextColor">
+      <summary>
+            Get or sets the annotation text color.
+            </summary>
+      <value>Sets the annotation text color.</value>
+      <returns>Gets the annotation text color.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoneAnnotation">
+      <summary>
+            Image Components Zone Annotation class.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoneAnnotation.ZoneID">
+      <summary>
+            Get or sets the annotation zone ID.
+            </summary>
+      <value>Sets the annotation zone ID.</value>
+      <returns>Gets the annotation zone ID.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoneAnnotation.LineWidth">
+      <summary>
+            Get or sets the annotation border line width.
+            </summary>
+      <value>Sets the annotation border line width.</value>
+      <returns>Gets the annotation border line width.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoneAnnotation.LineColor">
+      <summary>
+            Get or sets the annotation border line color.
+            </summary>
+      <value>Sets the annotation border line color.</value>
+      <returns>Gets the annotation border line color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoneAnnotation.Fill">
+      <summary>
+            Get or sets the annotation has back color.
+            </summary>
+      <value>Sets the annotation has back color.</value>
+      <returns>Gets the annotation has back color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoneAnnotation.FillColor">
+      <summary>
+            Get or sets the annotation fill color.
+            </summary>
+      <value>Sets the annotation fill color.</value>
+      <returns>Gets the annotation fill color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoneAnnotation.FillTransparency">
+      <summary>
+            Get or sets the annotation fill transparency.
+            </summary>
+      <value>Sets the annotation fill transparency.</value>
+      <returns>Gets the annotation fill transparency.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation">
+      <summary>
+            Image Components OCR Zone Annotation class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.#ctor(System.Windows.Point)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.#ctor(System.Windows.Point,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size)">
+      <summary>
+      </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.#ctor(System.Windows.Point,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.#ctor(System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.#ctor(System.Windows.Point,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.OCRResult">
+      <summary>
+            Get or sets the annotation OCR result.
+            </summary>
+      <value>Sets the annotation OCR result.</value>
+      <returns>Get the annotation OCR result.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.ApplyAnnotationOCRSettings">
+      <summary>
+            Get or sets the application of the configured annotation OCR settings.
+            </summary>
+      <value>Sets the application of the configured annotation OCR settings.</value>
+      <returns>Get the application of the configured annotation OCR settings.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.AppendData">
+      <summary>
+            Get or sets the append annotation OCR result.
+            </summary>
+      <value>Sets the append annotation OCR result.</value>
+      <returns>Get the append annotation OCR result.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.OCRLanguage">
+      <summary>
+            Get or sets the annotation OCR language.
+            </summary>
+      <value>Sets the annotation OCR language.</value>
+      <returns>Get the annotation OCR language.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation.OCRType">
+      <summary>
+            Get or sets the annotation OCR type.
+            </summary>
+      <value>Sets the annotation OCR type.</value>
+      <returns>Get the annotation OCR type.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation">
+      <summary>
+            Image Components Barcode Zone Annotation class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.#ctor(System.Windows.Point)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.#ctor(System.Windows.Point,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size)">
+      <summary>
+      </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.#ctor(System.Windows.Point,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.#ctor(System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.#ctor(System.Windows.Point,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.BarcodeResult">
+      <summary>
+            Get or sets the annotation Barcode result.
+            </summary>
+      <value>Sets the annotation Barcode result.</value>
+      <returns>Get the annotation Barcode result.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.ApplyAnnotationBarcodeSettings">
+      <summary>
+            Get or sets the application of the configured annotation Barcode settings.
+            </summary>
+      <value>Sets the application of the configured annotation Barcode settings.</value>
+      <returns>Get the application of the configured annotation Barcode settings.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.BarcodeType">
+      <summary>
+            Get or sets the annotation Barcode type.
+            </summary>
+      <value>Sets the annotation Barcode type.</value>
+      <returns>Get the annotation Barcode type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.BarcodeOrientation">
+      <summary>
+            Get or sets the annotation Barcode orientation.
+            </summary>
+      <value>Sets the annotation Barcode orientation.</value>
+      <returns>Get the annotation Barcode orientation.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.StopOnFirstResult">
+      <summary>
+            Get or sets the stop on first result.
+            </summary>
+      <value>Sets the stop on first result.</value>
+      <returns>Get the stop on first result.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation.AppendData">
+      <summary>
+            Get or sets the append annotation Barcode result.
+            </summary>
+      <value>Sets the append annotation Barcode result.</value>
+      <returns>Get the append annotation Barcode result.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation">
+      <summary>
+            Image Components Zoom To Zone Annotation class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation.#ctor(System.Windows.Point)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation.#ctor(System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation.#ctor(System.Windows.Point,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size)">
+      <summary>
+      </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation.#ctor(System.Windows.Point,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation.#ctor(System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation.#ctor(System.Windows.Point,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="AnnotationPosition">Annotation position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation.#ctor(System.Int32,System.Int32,System.Windows.Size,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="AnnotationSize">Annotation size.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Single)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="posX">Annotation X position.</param>
+      <param name="posY">Annotation Y position.</param>
+      <param name="width">Annotation width.</param>
+      <param name="height">Annotation height.</param>
+      <param name="Rotation">Annotation rotation.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.AnnotationType">
+      <summary>
+            Annotation type enumeration.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.AnnotationType.None">
+      <summary>
+            None Annotation type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.AnnotationType.ArrowAnnotation">
+      <summary>
+            Arrow Annotation type [NOT IMPLEMENTED].
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.AnnotationType.BarcodeZoneAnnotation">
+      <summary>
+            Barcode Zone Annotation type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.AnnotationType.EllipseAnnotation">
+      <summary>
+            Elipse Annotation type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.AnnotationType.EmbeddedImageAnnotation">
+      <summary>
+            Embedded Image Annotation type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.AnnotationType.HideAnnotation">
+      <summary>
+            Hide Annotation type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.AnnotationType.HighlightAnnotation">
+      <summary>
+            Highlight Annotation type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.AnnotationType.LineAnnotation">
+      <summary>
+            Line Annotation type [NOT IMPLEMENTED].
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.AnnotationType.OCRZoneAnnotation">
+      <summary>
+            OCR Zone Annotation type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.AnnotationType.StampAnnotation">
+      <summary>
+            Stamp Annotation type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.AnnotationType.TextAnnotation">
+      <summary>
+            Text Annotation type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.AnnotationType.ZoomToZoneAnnotation">
+      <summary>
+            Zoom To Zone Annotation type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.ICImageOCRType">
+      <summary>
+            Image OCR type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageOCRType.Alfanumeric">
+      <summary>
+            Alfa numeric OCR type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageOCRType.Numeric">
+      <summary>
+            Numeric OCR type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.ICImageOCRLanguages">
+      <summary>
+            Image OCR languages.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageOCRLanguages.English">
+      <summary>
+            English OCR Language.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageOCRLanguages.French">
+      <summary>
+            French OCR Language.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageOCRLanguages.Italian">
+      <summary>
+            Italian OCR Language.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageOCRLanguages.German">
+      <summary>
+            German OCR Language.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageOCRLanguages.Spanish">
+      <summary>
+            Spanish OCR Language.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageOCRLanguages.Dutch">
+      <summary>
+            Dutch OCR Language.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageOCRLanguages.Portuguese">
+      <summary>
+            Portuguese OCR Language
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeType">
+      <summary>
+            Image Barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeType.Auto">
+      <summary>
+            Auto barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeType.Code11">
+      <summary>
+            Code11 barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeType.Code39">
+      <summary>
+            Code39 barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeType.Code93">
+      <summary>
+            Code93 barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeType.Interleaved2of5">
+      <summary>
+            Interleaved 2 of 5 barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeType.Codabar">
+      <summary>
+            Codabar barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeType.UPCA">
+      <summary>
+            UPCA barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeType.EAN8">
+      <summary>
+            EAN8 barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeType.EAN13">
+      <summary>
+            EAN13 barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeType.Code128">
+      <summary>
+            Code128 barcode type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeOrientation">
+      <summary>
+            Image Barcode orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeOrientation.Auto">
+      <summary>
+            Auto barcode orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeOrientation.LeftToRight">
+      <summary>
+            Left to right barcode orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeOrientation.TopToBottom">
+      <summary>
+            Top to bottom barcode orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeOrientation.RightToLeft">
+      <summary>
+            Right to left barcode orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.Annotations.ICImageBarcodeOrientation.BottomToTop">
+      <summary>
+            Bottom to top barcode orientation.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgAnnotations">
+      <summary>
+            Image Components ImgAnnotations control.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.Dispose">
+      <summary>
+            Dispose ImgAnnotation object.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.Dispose(System.Boolean)">
+      <summary>
+            Dispose Image Components Image Annotations Object
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.ImgAnnotations_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+      <summary>
+            ImgAnnotations loaded event.
+            </summary>
+      <param name="sender">Sender object.</param>
+      <param name="e">Event args.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.OnApplyTemplate">
+      <summary>
+            On apply template event.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.AddNote(ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation)">
+      <summary>
+            Adds a text annotation to the selected page.
+            </summary>
+      <param name="textAnnotation">The text annotation object containing the configured values.</param>
+      <example> This sample shows how to add a note to the selected image page.
+            <code lang="vbnet">
+              Dim m_TextAnnotation As ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation = New ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation()
+              m_TextAnnotation.Width = 150
+              m_TextAnnotation.Height = 100
+              m_TextAnnotation.Text = "Hello annotations world!!!"
+              m_TextAnnotation.X = 50
+              m_TextAnnotation.Y = 50
+              m_TextAnnotation.TextFont.FontSize = 18
+              m_TextAnnotation.TextFont.IsBold = True
+              m_TextAnnotation.LineColor = Colors.Blue
+              m_TextAnnotation.FillColor = Colors.Blue
+              m_TextAnnotation.FillTransparency = 72
+              ImgAnnotations1.AddNote(m_TextAnnotation)
+              m_TextAnnotation.EnableTextEdit()
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation m_TextAnnotation = new ImageComponents.WPF.Imaging.Annotations.Objects.ICTextAnnotation();
+              m_TextAnnotation.Width = 150;
+              m_TextAnnotation.Height = 100;
+              m_TextAnnotation.Text = "Hello annotations world!!!";
+              m_TextAnnotation.X = 50;
+              m_TextAnnotation.Y = 50;
+              m_TextAnnotation.TextFont.FontSize = 18;
+              m_TextAnnotation.TextFont.IsBold = true;
+              m_TextAnnotation.LineColor = Colors.Blue;
+              m_TextAnnotation.FillColor = Colors.Blue;
+              m_TextAnnotation.FillTransparency = 72;
+              ImgAnnotations1.AddNote(m_TextAnnotation);
+              m_TextAnnotation.EnableTextEdit();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.AddStamp(ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation)">
+      <summary>
+            Adds a stamp annotation to the selected page.
+            </summary>
+      <param name="stampAnnotation">The stamp annotation object containing the configured values.</param>
+      <example> This sample shows how to add a stamp to the selected image page.
+            <code lang="vbnet">
+              Dim m_StampAnnotation As ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation = New ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation()
+              m_StampAnnotation.Width = 150
+              m_StampAnnotation.Height = 100
+              m_StampAnnotation.Text = "Hello annotations world!!!"
+              m_StampAnnotation.TextAngle = 310
+              m_StampAnnotation.X = 50
+              m_StampAnnotation.Y = 50
+              m_StampAnnotation.TextFont.FontSize = 18
+              m_StampAnnotation.TextFont.IsBold = True
+              ImgAnnotations1.AddStamp(m_StampAnnotation)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation m_StampAnnotation = new ImageComponents.WPF.Imaging.Annotations.Objects.ICStampAnnotation();
+              m_StampAnnotation.Width = 150;
+              m_StampAnnotation.Height = 100;
+              m_StampAnnotation.Text = "Hello annotations world!!!";
+              m_StampAnnotation.TextAngle = 310;
+              m_StampAnnotation.X = 50;
+              m_StampAnnotation.Y = 50;
+              m_StampAnnotation.TextFont.FontSize = 18;
+              m_StampAnnotation.TextFont.IsBold = true;
+              ImgAnnotations1.AddStamp(m_StampAnnotation);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.AddOCRZone(ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation)">
+      <summary>
+            Adds an OCR zone annotation to the selected page.
+            </summary>
+      <param name="ocrZoneAnnotation">The OCR zone annotation object containing the configured values.</param>
+      <example> This sample shows how to add an OCR zone to the selected image page.
+            <code lang="vbnet">
+              Dim m_OCRZoneAnnotation As ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation = New ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation()
+              m_OCRZoneAnnotation.Width = 150
+              m_OCRZoneAnnotation.Height = 100
+              m_OCRZoneAnnotation.X = 50
+              m_OCRZoneAnnotation.Y = 50
+              m_OCRZoneAnnotation.LineColor = Colors.Blue
+              m_OCRZoneAnnotation.FillColor = Colors.Blue
+              m_OCRZoneAnnotation.FillTransparency = 72
+              ImgAnnotations1.AddOCRZone(m_OCRZoneAnnotation)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation m_OCRZoneAnnotation = new ImageComponents.WPF.Imaging.Annotations.Objects.ICOCRZoneAnnotation();
+              m_OCRZoneAnnotation.Width = 150;
+              m_OCRZoneAnnotation.Height = 100;
+              m_OCRZoneAnnotation.X = 50;
+              m_OCRZoneAnnotation.Y = 50;
+              m_OCRZoneAnnotation.LineColor = Colors.Blue;
+              m_OCRZoneAnnotation.FillColor = Colors.Blue;
+              m_OCRZoneAnnotation.FillTransparency = 72;
+              ImgAnnotations1.AddOCRZone(m_OCRZoneAnnotation);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.AddBarcodeZone(ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation)">
+      <summary>
+            Adds a Barcode zone annotation to the selected page.
+            </summary>
+      <param name="barcodeZoneAnnotation">The Barcode zone annotation object containing the configured values.</param>
+      <example> This sample shows how to add a Barcode zone to the selected image page.
+            <code lang="vbnet">
+              Dim m_BarcodeZoneAnnotation As ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation = New ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation()
+              m_BarcodeZoneAnnotation.Width = 150
+              m_BarcodeZoneAnnotation.Height = 100
+              m_BarcodeZoneAnnotation.X = 50
+              m_BarcodeZoneAnnotation.Y = 50
+              m_BarcodeZoneAnnotation.LineColor = Colors.Blue
+              m_BarcodeZoneAnnotation.FillColor = Colors.Blue
+              m_BarcodeZoneAnnotation.FillTransparency = 72
+              ImgAnnotations1.AddBarcodeZone(m_BarcodeZoneAnnotation)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation m_BarcodeZoneAnnotation = new ImageComponents.WPF.Imaging.Annotations.Objects.ICBarcodeZoneAnnotation();
+              m_BarcodeZoneAnnotation.Width = 150;
+              m_BarcodeZoneAnnotation.Height = 100;
+              m_BarcodeZoneAnnotation.X = 50;
+              m_BarcodeZoneAnnotation.Y = 50;
+              m_BarcodeZoneAnnotation.LineColor = Colors.Blue;
+              m_BarcodeZoneAnnotation.FillColor = Colors.Blue;
+              m_BarcodeZoneAnnotation.FillTransparency = 72;
+              ImgAnnotations1.AddBarcodeZone(m_BarcodeZoneAnnotation);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.AddZoomToZone(ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation)">
+      <summary>
+            Adds a Zoom to zone annotation to the selected page.
+            </summary>
+      <param name="zoomToZoneAnnotation">The Zoom to zone annotation object containing the configured values.</param>
+      <example> This sample shows how to add a Zoom to zone to the selected image page.
+            <code lang="vbnet">
+              Dim m_ZoomToZoneAnnotation As ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation = New ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation()
+              m_ZoomToZoneAnnotation.Width = 150
+              m_ZoomToZoneAnnotation.Height = 100
+              m_ZoomToZoneAnnotation.X = 50
+              m_ZoomToZoneAnnotation.Y = 50
+              m_ZoomToZoneAnnotation.LineColor = Colors.Blue
+              m_ZoomToZoneAnnotation.FillColor = Colors.Blue
+              m_ZoomToZoneAnnotation.FillTransparency = 72
+              ImgAnnotations1.AddZoomToZone(m_ZoomToZoneAnnotation)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation m_ZoomToZoneAnnotation = new ImageComponents.WPF.Imaging.Annotations.Objects.ICZoomToZoneAnnotation();
+              m_ZoomToZoneAnnotation.Width = 150;
+              m_ZoomToZoneAnnotation.Height = 100;
+              m_ZoomToZoneAnnotation.X = 50;
+              m_ZoomToZoneAnnotation.Y = 50;
+              m_ZoomToZoneAnnotation.LineColor = Colors.Blue;
+              m_ZoomToZoneAnnotation.FillColor = Colors.Blue;
+              m_ZoomToZoneAnnotation.FillTransparency = 72;
+              ImgAnnotations1.AddZoomToZone(m_ZoomToZoneAnnotation);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.AddHighlight(ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation)">
+      <summary>
+            Adds a Highlight annotation to the selected page.
+            </summary>
+      <param name="highlightAnnotation">The Highlight annotation object containing the configured values.</param>
+      <example> This sample shows how to add a Highlight to the selected image page.
+            <code lang="vbnet">
+              Dim m_HighlightAnnotation As ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation = New ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation()
+              m_HighlightAnnotation.Width = 150
+              m_HighlightAnnotation.Height = 100
+              m_HighlightAnnotation.X = 50
+              m_HighlightAnnotation.Y = 50
+              m_HighlightAnnotation.LineColor = Colors.Blue
+              m_HighlightAnnotation.FillColor = Colors.Blue
+              m_HighlightAnnotation.FillTransparency = 72
+              ImgAnnotations1.AddHighlight(m_HighlightAnnotation)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation m_HighlightAnnotation = new ImageComponents.WPF.Imaging.Annotations.Objects.ICHighlightAnnotation();
+              m_HighlightAnnotation.Width = 150;
+              m_HighlightAnnotation.Height = 100;
+              m_HighlightAnnotation.X = 50;
+              m_HighlightAnnotation.Y = 50;
+              m_HighlightAnnotation.LineColor = Colors.Blue;
+              m_HighlightAnnotation.FillColor = Colors.Blue;
+              m_HighlightAnnotation.FillTransparency = 72;
+              ImgAnnotations1.AddHighlight(m_HighlightAnnotation);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.AddHide(ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation)">
+      <summary>
+            Adds a Hide annotation to the selected page.
+            </summary>
+      <param name="hideAnnotation">The Hide annotation object containing the configured values.</param>
+      <example> This sample shows how to add a Hide to the selected image page.
+            <code lang="vbnet">
+              Dim m_HideAnnotation As ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation = New ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation()
+              m_HideAnnotation.Width = 150
+              m_HideAnnotation.Height = 100
+              m_HideAnnotation.X = 50
+              m_HideAnnotation.Y = 50
+              m_HideAnnotation.LineColor = Colors.Blue
+              m_HideAnnotation.FillColor = Colors.Blue
+              ImgAnnotations1.AddHide(m_HideAnnotation)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation m_HideAnnotation = new ImageComponents.WPF.Imaging.Annotations.Objects.ICHideAnnotation();
+              m_HideAnnotation.Width = 150;
+              m_HideAnnotation.Height = 100;
+              m_HideAnnotation.X = 50;
+              m_HideAnnotation.Y = 50;
+              m_HideAnnotation.LineColor = Colors.Blue;
+              m_HideAnnotation.FillColor = Colors.Blue;
+              ImgAnnotations1.AddHide(m_HideAnnotation);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.AddEllipse(ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation)">
+      <summary>
+            Adds an Ellipse annotation to the selected page.
+            </summary>
+      <param name="ellipseAnnotation">The Highlight annotation object containing the configured values.</param>
+      <example> This sample shows how to add a Highlight to the selected image page.
+            <code lang="vbnet">
+              Dim m_EllipseAnnotation As ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation = New ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation()
+              m_EllipseAnnotation.Width = 150
+              m_EllipseAnnotation.Height = 100
+              m_EllipseAnnotation.X = 50
+              m_EllipseAnnotation.Y = 50
+              m_EllipseAnnotation.LineColor = Colors.Blue
+              m_EllipseAnnotation.FillColor = Colors.Blue
+              m_EllipseAnnotation.FillTransparency = 72
+              ImgAnnotations1.AddEllipse(m_EllipseAnnotation)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation m_EllipseAnnotation = new ImageComponents.WPF.Imaging.Annotations.Objects.ICEllipseAnnotation();
+              m_EllipseAnnotation.Width = 150;
+              m_EllipseAnnotation.Height = 100;
+              m_EllipseAnnotation.X = 50;
+              m_EllipseAnnotation.Y = 50;
+              m_EllipseAnnotation.LineColor = Colors.Blue;
+              m_EllipseAnnotation.FillColor = Colors.Blue;
+              m_EllipseAnnotation.FillTransparency = 72;
+              ImgAnnotations1.AddEllipse(m_EllipseAnnotation);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.AddEmbeddedImage(ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation)">
+      <summary>
+            Adds a embedded image annotation to the selected page.
+            </summary>
+      <param name="embeddedImageAnnotation">The embedded image annotation object containing the configured values.</param>
+      <example> This sample shows how to add a embedded image to the selected image page.
+            <code lang="vbnet">
+              Dim m_EmbeddedImageAnnotation As ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation = New ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation()
+              m_EmbeddedImageAnnotation.Width = 150
+              m_EmbeddedImageAnnotation.Height = 100
+              m_EmbeddedImageAnnotation.X = 50
+              m_EmbeddedImageAnnotation.Y = 50
+              m_EllipseAnnotation.EmbeddedImage = 'Your byte array bitmap';
+              ImgAnnotations1.AddEmbeddedImage(m_EmbeddedImageAnnotation)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation m_EmbeddedImageAnnotation = new ImageComponents.WPF.Imaging.Annotations.Objects.ICEmbeddedImageAnnotation();
+              m_EmbeddedImageAnnotation.Width = 150;
+              m_EmbeddedImageAnnotation.Height = 100;
+              m_EmbeddedImageAnnotation.X = 50;
+              m_EmbeddedImageAnnotation.Y = 50;
+              m_EmbeddedImageAnnotation.EmbeddedImage = 'Your byte array bitmap';
+              ImgAnnotations1.AddEmbeddedImage(m_EmbeddedImageAnnotation);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.RedrawAnnotations">
+      <summary>
+            Clears and redraws the selected page annotations.
+            </summary>
+      <example> This sample shows how to redraw all annotations in the selected page.
+            <code lang="vbnet">
+              ImgAnnotations1.RedrawAnnotations()
+            </code><code lang="C#">
+              ImgAnnotations1.RedrawAnnotations();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.RedrawAnnotations(System.Int32)">
+      <summary>
+            Redraw annotations in the specified page.
+            </summary>
+      <param name="PageIndex">Image page index.</param>
+      <example> This sample shows how to redraw all annotations in the first page.
+            <code lang="vbnet">
+              ImgAnnotations1.RedrawAnnotations(0)
+            </code><code lang="C#">
+              ImgAnnotations1.RedrawAnnotations(0);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.RemoveAnnotation(ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject)">
+      <summary>
+            Removes the specified annotation object from the selected image page.
+            </summary>
+      <example> This sample shows how to remove one annotation from the selected page.
+            <code lang="vbnet">
+              Dim m_AnnotationObject As ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject = ImgAnnotations1.SelectedAnnotationObject
+              ImgAnnotations1.RemoveAnnotation(m_AnnotationObject)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject m_AnnotationObject = ImgAnnotations1.SelectedAnnotationObject;
+              ImgAnnotations1.RemoveAnnotation(m_AnnotationObject);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.ClearAnnotations">
+      <summary>
+            Clears all the annotations of the displayed image.
+            </summary>
+      <example> This sample shows how to clear all annotations of the displayed image.
+            <code lang="vbnet">
+              ImgAnnotations1.ClearAnnotations()
+            </code><code lang="C#">
+              ImgAnnotations1.ClearAnnotations();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.ClearAnnotations(System.Int32)">
+      <summary>
+            Clears all the annotations of the specified image page.
+            </summary>
+      <example> This sample shows how to clear all annotations of the first image page.
+            <param name="PageIndex">Page index position.</param><code lang="vbnet">
+              ImgAnnotations1.ClearAnnotations(0)
+            </code><code lang="C#">
+              ImgAnnotations1.ClearAnnotations(0);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.ProtectAnnotations(System.Boolean)">
+      <summary>
+            Protects or unprotects all the annotations of the image pages.
+            </summary>
+      <param name="IsProtected">Sets the protect value of the annotations.</param>
+      <example> This sample shows how to protect all annotations of the image pages.
+            <code lang="vbnet">
+              ImgAnnotations1.ProtectAnnotations(True)
+            </code><code lang="C#">
+              ImgAnnotations1.ProtectAnnotations(true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.ProtectAnnotations(System.Int32,System.Boolean)">
+      <summary>
+            Protects or unprotects all the annotations of a specific image pages.
+            </summary>
+      <param name="PageIndex">The specified image page to protect annotations.</param>
+      <param name="IsProtected">Sets the protect value of the annotations.</param>
+      <example> This sample shows how to protect the annotations of the first image page.
+            <code lang="vbnet">
+              ImgAnnotations1.ProtectAnnotations(0, True)
+            </code><code lang="C#">
+              ImgAnnotations1.ProtectAnnotations(0, true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.GetAnnotations(System.Int32)">
+      <summary>
+            Gets all the annotations of the specified image page.
+            </summary>
+      <param name="PageIndex">Image page index.</param>
+      <returns>ICAnnotationObjects page collection object.</returns>
+      <example> This sample shows how to get all annotations in the specified page.
+            <code lang="vbnet">
+              Dim m_AnnotationObjects As ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects()
+              m_AnnotationObjects = ImgAnnotations1.GetAnnotations(0)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects m_AnnotationObjects;
+              m_AnnotationObjects = ImgAnnotations1.GetAnnotations(0);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.GetAnnotations(ImageComponents.WPF.Imaging.Annotations.AnnotationType)">
+      <summary>
+            Gets the annotations of the specified type.
+            </summary>
+      <param name="AnnotationsType">Annotations objects type.</param>
+      <returns>ICAnnotationObjects page collection object.</returns>
+      <example> This sample shows how to get the text annotations in the specified image.
+            <code lang="vbnet">
+              Dim m_AnnotationObjects As ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects()
+              m_AnnotationObjects = ImgAnnotations1.GetAnnotations(Imaging.Annotations.AnnotationType.TextAnnotation)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects m_AnnotationObjects;
+              m_AnnotationObjects = ImgAnnotations1.GetAnnotations(Imaging.Annotations.AnnotationType.TextAnnotation);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.GetAnnotations(ImageComponents.WPF.Imaging.Annotations.AnnotationType,System.Int32)">
+      <summary>
+            Gets the annotations of the specified page and type.
+            </summary>
+      <param name="AnnotationsType">Annotations objects type.</param>
+      <param name="PageIndex">Image page index.</param>
+      <returns>ICAnnotationObjects page collection object.</returns>
+      <example> This sample shows how to get the text annotations in the first image page.
+            <code lang="vbnet">
+              Dim m_AnnotationObjects As ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects()
+              m_AnnotationObjects = ImgAnnotations1.GetAnnotations(Imaging.Annotations.AnnotationType.TextAnnotation, 0)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.ICAnnotationObjects m_AnnotationObjects;
+              m_AnnotationObjects = ImgAnnotations1.GetAnnotations(Imaging.Annotations.AnnotationType.TextAnnotation, 0);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.GetAnnotation(System.Int32)">
+      <summary>
+            Gets the annotation of the specified zone id.
+            </summary>
+      <param name="ZoneID">Annotation zone ID.</param>
+      <returns>ICAnnotationObjects page collection object.</returns>
+      <example> This sample shows how to get the annotation object by zone id.
+            <code lang="vbnet">
+              Dim m_AnnotationObject As ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject()
+              m_AnnotationObject = ImgAnnotations1.GetAnnotation(1)
+            </code><code lang="C#">
+              ImageComponents.WPF.Imaging.Annotations.ICAnnotationObject m_AnnotationObject;
+              m_AnnotationObject = ImgAnnotations1.GetAnnotation(1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.BurnAnnotations">
+      <summary>
+            Burns the existent annotations in the displayed image page.
+            </summary>
+      <example> This sample shows how to burn the annotation objects into the displayed page.
+            <code lang="vbnet">
+              ImgAnnotations1.BurnAnnotations()
+            </code><code lang="C#">
+              ImgAnnotations1.BurnAnnotations();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.LoadAnnotations">
+      <summary>
+            Loads the xml annotations definition to the displayed image.
+            </summary>
+      <example> This sample shows how to load the annotations definition into the displayed image.
+            <code lang="vbnet">
+              Dim m_FileDialog As New OpenFileDialog()
+              m_FileDialog.Multiselect = False
+              m_FileDialog.Filter = "Image Annotations File (*.ann) |*.ann"
+              Dim m_DialogResult As System.Nullable(Of Boolean) = m_FileDialog.ShowDialog()
+              If Convert.ToBoolean(m_DialogResult) Then
+            	 Dim fs As FileStream = m_FileDialog.File.OpenRead()
+            	 Dim br As New BinaryReader(fs)
+            	 Dim m_AnnotationsByteArray As Byte() = New Byte(fs.Length - 1)
+            	 m_AnnotationsByteArray = br.ReadBytes(CInt(fs.Length))
+            	 br.Close()
+            	 br = Nothing
+            	 fs.Close()
+            	 fs.Dispose()
+            	 fs = Nothing
+            	 ImgAnnotations1.ICImageAnnotations = m_AnnotationsByteArray
+            	 ImgAnnotations1.LoadAnnotations()
+              End If
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.Multiselect = false;
+              m_FileDialog.Filter = "Image Annotations File (*.ann) |*.ann";
+              Boolean? m_DialogResult = m_FileDialog.ShowDialog();
+              if (Convert.ToBoolean(m_DialogResult))
+              {
+                  FileStream fs = m_FileDialog.File.OpenRead();
+                  BinaryReader br = new BinaryReader(fs);
+                  Byte[] m_AnnotationsByteArray = new Byte[fs.Length];
+                  m_AnnotationsByteArray = br.ReadBytes((int)fs.Length);
+                  br.Close();
+                  br = null;
+                  fs.Close();
+                  fs.Dispose();
+                  fs = null;
+                  ImgAnnotations1.ICImageAnnotations = m_AnnotationsByteArray;
+                  ImgAnnotations1.LoadAnnotations();
+              }
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.LoadAnnotations(System.IO.Stream)">
+      <summary>
+            Loads the xml annotations definition to the displayed image.
+            </summary>
+      <param name="ImageAnnotation">Image annotations definition stream.</param>
+      <example> This sample shows how to load the annotations definition into the displayed image.
+            <code lang="vbnet">
+              Dim m_FileDialog As New OpenFileDialog()
+              m_FileDialog.Multiselect = False
+              m_FileDialog.Filter = "Image Annotations File (*.ann) |*.ann"
+              Dim m_DialogResult As System.Nullable(Of Boolean) = m_FileDialog.ShowDialog()
+              If Convert.ToBoolean(m_DialogResult) Then
+            	 Dim fs As FileStream = m_FileDialog.File.OpenRead()
+            	 ImgAnnotations1.LoadAnnotations(fs)
+              End If
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.Multiselect = false;
+              m_FileDialog.Filter = "Image Annotations File (*.ann) |*.ann";
+              Boolean? m_DialogResult = m_FileDialog.ShowDialog();
+              if (Convert.ToBoolean(m_DialogResult))
+              {
+                  FileStream fs = m_FileDialog.File.OpenRead();
+                  ImgAnnotations1.LoadAnnotations(fs);
+              }
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.LoadAnnotations(System.String)">
+      <summary>
+            Loads the xml annotations definition to the displayed image.
+            </summary>
+      <param name="ImageAnnotation">Image annotations definition string.</param>
+      <example> This sample shows how to load the annotations definition into the displayed image.
+            <code lang="vbnet">
+              Dim m_FileDialog As New OpenFileDialog()
+              m_FileDialog.Multiselect = False
+              m_FileDialog.Filter = "Image Annotations File (*.ann) |*.ann"
+              Dim m_DialogResult As System.Nullable(Of Boolean) = m_FileDialog.ShowDialog()
+              If Convert.ToBoolean(m_DialogResult) Then
+            	 Dim fs As FileStream = m_FileDialog.File.OpenRead()
+            	 Dim m_StreamReader As StreamReader = New StreamReader(fs)
+            	 Dim m_AnnotationsString = m_StreamReader.ReadToEnd()
+            	 ImgAnnotations1.LoadAnnotations(m_AnnotationsString)
+              End If
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.Multiselect = false;
+              m_FileDialog.Filter = "Image Annotations File (*.ann) |*.ann";
+              Boolean? m_DialogResult = m_FileDialog.ShowDialog();
+              if (Convert.ToBoolean(m_DialogResult))
+              {
+                  FileStream fs = m_FileDialog.File.OpenRead();
+                  StreamReader m_StreamReader = new StreamReader(fs);
+                  String m_AnnotationsString =  m_StreamReader.ReadToEnd();
+                  ImgAnnotations1.LoadAnnotations(m_AnnotationsString);
+              }
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.SaveAnnotationsString(ImageComponents.WPF.Imaging.ImgAnnotations.ObjectsType)">
+      <summary>
+            Saves the xml annotations definition to a string object.
+            </summary>
+      <param name="AnnotationsType">Annotation objects type.</param>
+      <returns>Image annotations definition XML string.</returns>
+      <example> This sample shows how to save the annotations definition.
+            <code lang="vbnet">
+              Dim m_AnnotationsDefinition = ImgAnnotations1.SaveAnnotationsString()
+              Dim m_AnnotationsByteArray as Byte()
+              m_AnnotationsByteArray = Encoding.UTF8.GetBytes(m_AnnotationsDefinition)
+              Dim m_SaveFileDialog As New SaveFileDialog()
+              	If Not [String].IsNullOrEmpty(m_AnnotationsDefinition) Then
+              	  m_SaveFileDialog.Filter = "Image Components Annotations (*.ann)|*.ann"
+                  If Convert.ToBoolean(m_SaveFileDialog.ShowDialog()) Then
+                     Using fs As Stream = DirectCast(m_SaveFileDialog.OpenFile(), Stream)
+                     	fs.Write(m_AnnotationsByteArray, 0, m_AnnotationsByteArray.Length)
+                        fs.Close()
+                        fs.Close();
+                     End Using
+                  End If   
+              End If
+            </code><code lang="C#">
+              String m_AnnotationsDefinition = ImgAnnotations1.SaveAnnotationsString();
+              Byte[] m_AnnotationsByteArray = Encoding.UTF8.GetBytes(m_AnnotationsDefinition);
+              SaveFileDialog m_SaveFileDialog = new SaveFileDialog();
+              if (!String.IsNullOrEmpty(m_AnnotationsDefinition))
+              {
+                  m_SaveFileDialog.Filter = "Image Components Annotations (*.ann)|*.ann";
+                  if (Convert.ToBoolean(m_SaveFileDialog.ShowDialog()))
+                  {
+                     using (Stream fs = (Stream)m_SaveFileDialog.OpenFile())
+                     {
+                        fs.Write(m_AnnotationsByteArray, 0, m_AnnotationsByteArray.Length);
+                        fs.Close();
+                     }
+                  }
+              }
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgAnnotations.SaveAnnotationsStream(ImageComponents.WPF.Imaging.ImgAnnotations.ObjectsType)">
+      <summary>
+            Saves the xml annotations definition to a string object.
+            </summary>
+      <param name="AnnotationsType">Annotation objects type.</param>
+      <returns>Image annotations definition stream.</returns>
+      <example> This sample shows how to save the annotations definition.
+            <code lang="vbnet">
+              Dim m_SaveFileDialog As New SaveFileDialog()
+              If ImgAnnotations1.SaveAnnotationsStream(ImageComponents.WPF.Imaging.ImgAnnotations.ObjectsType.All) IsNot Nothing Then
+              	  m_SaveFileDialog.Filter = "Image Components Annotations (*.ann)|*.ann"
+                  If Convert.ToBoolean(m_SaveFileDialog.ShowDialog()) Then
+                     Using fs As Stream = DirectCast(m_SaveFileDialog.OpenFile(), Stream)
+                     	fs.Write(ImgAnnotations1.ICImageAnnotations, 0, ImgAnnotations1.ICImageAnnotations.Length)
+                        fs.Close()
+                        fs.Close();
+                     End Using
+                  End If   
+              End If
+            </code><code lang="C#">
+              SaveFileDialog m_SaveFileDialog = new SaveFileDialog();
+              if (ImgAnnotations1.SaveAnnotationsStream(ImageComponents.WPF.Imaging.ImgAnnotations.ObjectsType.All) != null)
+              {
+                  m_SaveFileDialog.Filter = "Image Components Annotations (*.ann)|*.ann";
+                  if (Convert.ToBoolean(m_SaveFileDialog.ShowDialog()))
+                  {
+                     using (Stream fs = (Stream)m_SaveFileDialog.OpenFile())
+                     {
+                        fs.Write(ImgAnnotations1.ICImageAnnotations, 0, ImgAnnotations1.ICImageAnnotations.Length);
+                        fs.Close();
+                     }
+                  }
+              }
+            </code></example>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgAnnotations.SelectedAnnotation">
+      <summary>
+            Occurrs everytime an annotation is selected.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgAnnotations.AnnotationDoubleClick">
+      <summary>
+            Occurrs everytime an annotation is double clicked.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgAnnotations.AnnotationAdded">
+      <summary>
+            Occurs when an annotation is added to the document.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgAnnotations.AnnotationChanged">
+      <summary>
+            Occurs when the properties of one annotation object are changed.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgAnnotations.AnnotationLayoutChanged">
+      <summary>
+            Occurs when an annotation position and size is changed.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgAnnotations.AnnotationDeleted">
+      <summary>
+            Occurs when an annotation is delete from the document.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgAnnotations.ErrorOccurred">
+      <summary>
+            Occurs every time one error is raised.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgAnnotations.ImgEditComponent">
+      <summary>
+            Gets or sets the ImgEdit container component.
+            </summary>
+      <value>Sets the ImgEdit container component.</value>
+      <returns>Gets the ImgEdit container component.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgAnnotations.EnableAnnotationType">
+      <summary>
+            Enables the creation of annotation types by selection.
+            </summary>
+      <value>Sets the creation of annotation type.</value>
+      <returns>Gets the creation annotation type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgAnnotations.SelectedAnnotationObject">
+      <summary>
+            Gets the selected annotation object.
+            </summary>
+      <returns>Gets the selected annotation object.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgAnnotations.AddAnnotationPreview">
+      <summary>
+            Gets or sets the annotation object before an enable annotation type.
+            </summary>
+      <value>Sets the annotation object before an enable annotation type.</value>
+      <returns>Gets  the annotation object before an enable annotation type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgAnnotations.ICImageAnnotations">
+      <summary>
+            Gets or sets the actual image annotations definition byte array.
+            </summary>
+      <value>Sets the actual image annotations definition byte array.</value>
+      <returns> Gets the actual image annotations definition byte array.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgAnnotations.DrawAnnotationsType">
+      <summary>
+            Gets or sets the draw of annotation zones.
+            </summary>
+      <value>Sets the draw of annotation zones.</value>
+      <returns> Gets the draw of annotation zones.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgAnnotations.SelectedAnnotationEventHandler">
+      <summary>
+            Occurrs everytime an annotation is selected.
+            </summary>
+      <param name="sender">ImgAnnotations component object.</param>
+      <param name="AnnotationObject">Selected annotation.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgAnnotations.AnnotationDoubleClickEventHandler">
+      <summary>
+            Occurrs everytime an annotation is double clicked.
+            </summary>
+      <param name="sender">ImgAnnotations component object.</param>
+      <param name="AnnotationObject">Double clicked annotation.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgAnnotations.AnnotationAddedEventHandler">
+      <summary>
+            Occurs when an annotation is added to the document.
+            </summary>
+      <param name="sender">ImgAnnotations component object.</param>
+      <param name="AnnotationObject">Added annotation object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgAnnotations.AnnotationChangedEventHandler">
+      <summary>
+            Occurs when the properties of one annotation object are changed.
+            </summary>
+      <param name="sender">Changed annotation object.</param>
+      <param name="PageIndex">The page index position of the changed annotation object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgAnnotations.AnnotationLayoutChangedEventHandler">
+      <summary>
+            Occurs when an annotation position and size is changed.
+            </summary>
+      <param name="sender">Changed annotation object.</param>
+      <param name="AnnotationPosition">Annotation object position.</param>
+      <param name="AnnotationSize">Annotation object size.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgAnnotations.AnnotationDeletedEventHandler">
+      <summary>
+            Occurs when an annotation is delete from the document.
+            </summary>
+      <param name="sender">ImgAnnotations component object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgAnnotations.ErrorOccurredEventHandler">
+      <summary>
+            Occurs every time one error is raised.
+            </summary>
+      <param name="sender">ImgAnnotations component object.</param>
+      <param name="ControlName">The control name were the error was raised.</param>
+      <param name="MethodName">The mmethod name were the error was raised.</param>
+      <param name="ErrorMessage">The error message.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgAnnotations.ObjectsType">
+      <summary>
+            Draw annotation type enumeration.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgAnnotations.ObjectsType.All">
+      <summary>
+            All annotations type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgAnnotations.ObjectsType.Annotation">
+      <summary>
+            Non zone annotations type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgAnnotations.ObjectsType.AnnotationZones">
+      <summary>
+            Zone annotations type.
+            </summary>
+    </member>
+  </members>
+</doc>

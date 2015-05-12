@@ -1,0 +1,4349 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>ImageComponents.WPF.ImgEdit</name>
+  </assembly>
+  <members>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit">
+      <summary>
+            Image Components ImgEdit control.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Dispose">
+      <summary>
+            Dispose ImgEdit object.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Dispose(System.Boolean)">
+      <summary>
+            Dispose Image Components Image Edit Object
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.OnApplyTemplate">
+      <summary>
+            On apply template event.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+      <summary>
+            On preview mouse down event.
+            </summary>
+      <param name="e">Mouse button event args.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+      <summary>
+            On mouse move event.
+            </summary>
+      <param name="e">Mouse event args.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+      <summary>
+            On mouse left button up event.
+            </summary>
+      <param name="e">Mouse event args.</param>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ImageFilePathProperty">
+      <summary>
+            Image file path dependency property.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ImageBorderColorProperty">
+      <summary>
+            Image border color dependency property.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ImageSelectionStrokeProperty">
+      <summary>
+            Image selection stroke dependency property.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ImageSelectionColorProperty">
+      <summary>
+            Image selection fill color dependency property.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.SearchHighlightColorProperty">
+      <summary>
+            Text search highlight color dependency property.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.RegistrationProperty">
+      <summary>
+            Registration dependency property.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.NewImage(ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate,ImageComponents.WPF.Imaging.ImgEdit.ICImageDPISize,System.Windows.Media.Color)">
+      <summary>
+            Creates a new template image in memory and displays it.
+            </summary>
+      <param name="ImageTemplate">The image size template.</param>
+      <param name="DPISize">The image dpi size.</param>
+      <param name="BackColor">The image background color.</param>
+      <example> This sample shows how to create and display a new image bitmap in memory.
+            <code lang="vbnet">
+              imgEdit.NewImage(Imaging.ImgEdit.ICImageSizeTemplate.Template_A4, Imaging.ImgEdit.ICImageDPISize.DPI_200, Colors.White)
+            </code><code lang="C#">
+              imgEdit.NewImage(Imaging.ImgEdit.ICImageSizeTemplate.Template_A4, Imaging.ImgEdit.ICImageDPISize.DPI_200, Colors.White);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.NewImage(System.Int32,System.Int32,ImageComponents.WPF.Imaging.ImgEdit.ICImageDPISize,System.Windows.Media.Color)">
+      <summary>
+             Creates a new image in memory and displays it.
+            </summary>
+      <param name="PixelWidth">The image width pixel size.</param>
+      <param name="PixelHeight">The image height pixel size.</param>
+      <param name="DPISize">The image dpi size.</param>
+      <param name="BackColor">The image background color.</param>
+      <example> This sample shows how to create a new image bitmap in memory.
+            <code lang="vbnet">
+              .NewImage(100, 200, Imaging.ImgEdit.ICImageDPISize.DPI_200, Colors.White)
+            </code><code lang="C#">
+              .NewImage(100, 200, Imaging.ImgEdit.ICImageDPISize.DPI_200, Colors.White);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Display">
+      <summary>
+            Loads the image file path in memory and displays it.
+            </summary>
+      <example> This sample shows how to display a image file path.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs as FileStream = m_FileDialog.File.OpenRead()
+              imgEdit.ImageFileStream = fs
+              imgEdit.Display()
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              FileStream fs = m_FileDialog.File.OpenRead();
+              imgEdit.ImageFileStream = fs;
+              imgEdit.Display();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Display(System.IO.FileStream)">
+      <summary>
+            Loads the image file stream in memory and displays it.
+            </summary>
+      <param name="ImageFileStream">The image file stream.</param>
+      <example> This sample shows how to display a image file stream.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs as FileStream = m_FileDialog.File.OpenRead()
+              imgEdit.Display(fs)
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              FileStream fs = m_FileDialog.File.OpenRead();
+              imgEdit.Display(fs);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Display(System.Byte[])">
+      <summary>
+            Loads the image byte array and displays it.
+            </summary>
+      <param name="ImageSource">The image source byte array.</param>
+      <example> This sample shows how to display a image from a image byte array.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs as FileStream = m_FileDialog.File.OpenRead()
+              Dim br As New BinaryReader(ImageFileStream)
+              Dim m_ImageByteArray As Byte() = New Byte(ImageFileStream.Length - 1) 
+              m_ImageByteArray = br.ReadBytes(CInt(ImageFileStream.Length))
+              br.Close()
+              br = Nothing
+              fs.Close()
+              fs.Dispose()
+              imgEdit.Display(m_ImageByteArray)
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              FileStream fs = m_FileDialog.File.OpenRead();
+              BinaryReader br = new BinaryReader(fs);
+              Byte[] m_ImageByteArray = new Byte[fs.Length];
+              m_ImageByteArray = br.ReadBytes((int)fs.Length);
+              br.Close();
+              br = null;
+              fs.Close();
+              fs.Dispose();
+              imgEdit.Display(m_ImageByteArray);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Display(System.Uri)">
+      <summary>
+            Loads the image uri in memory and displays it.
+            </summary>
+      <param name="ImageUri">The image resource identifier path.</param>
+      <example> This sample shows how to display a image uri.
+            <code lang="vbnet">
+              imgEdit.Display(new Uri("http://www.imagecomponents.net/Test/Testing.tif", UriKind.Absolute))
+            </code><code lang="C#">
+              ImgEdit.Display(new Uri("http://www.imagecomponents.net/Test/Testing.tif", UriKind.Absolute));
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ImgEditRefresh(System.Boolean)">
+      <summary>
+            Refreshes the ImgEdit component.
+            </summary>
+      <param name="Repaint">Repaints the selected image page.</param>
+      <example> The following example refreshes the ImgEdit component without repainting the displayed image.
+            <code lang="vbnet">
+              imgEdit.ImgEditRefresh(False)
+            </code><code lang="C#">
+              imgEdit.ImgEditRefresh(false);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ImageZoom(System.Single)">
+      <summary>
+            Sets the displayed image zoom value.
+            </summary>
+      <param name="Value"> The image zoom value. Value = 1 is the original image zoom size.</param>
+      <example> The following example sets the displayed image zoom to half size.
+            <code lang="vbnet">
+              imgEdit.ImageZoom(0.5)
+            </code><code lang="C#">
+              imgEdit.ImageZoom(Convert.ToSingle(0.5));
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.MoreZoom">
+      <summary>
+            Magnifies the image display.
+            </summary>
+      <example>The following example magnifies the image display.
+            <code lang="vbnet">
+              imgEdit.MoreZoom()
+            </code><code lang="C#">
+              imgEdit.MoreZoom();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.LessZoom">
+      <summary>
+            Reduces the image display.
+            </summary>
+      <example>The following example reduces the image display.
+            <code lang="vbnet">
+              imgEdit.LessZoom()
+            </code><code lang="C#">
+              imgEdit.LessZoom();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ZoomToSelection">
+      <summary>
+            Zooms the selected page to the existing selection rectangle.
+            </summary>
+      <example> The following zooms the image to the specified selection rectangle.
+            <code lang="vbnet">
+              imgEdit.SetSelectionRectangle(0,0,100,100)
+              imgEdit.ZoomToSelection()
+            </code><code lang="C#">
+              imgEdit.SetSelectionRectangle(0,0,100,100);
+              imgEdit.ImageZoom();
+            </code></example>
+      <remarks>An image selection must exist.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FitTo(ImageComponents.WPF.Imaging.ImgEdit.ICImageFit,System.Boolean)">
+      <summary>
+            Fits the image display.
+            </summary>
+      <param name="Option">The image fit selection (Best fit, fit to width, original size).</param>
+      <param name="Repaint">Refreshes the image display.</param>
+      <example>The following example fits the image to the best fit and refreshes the display.
+            <code lang="vbnet">
+              imgEdit.FitTo(ImageComponents.ImgEdit.ImageFit.BestFit, True)
+            </code><code lang="C#">
+              imgEdit.FitTo(ImageComponents.ImgEdit.ImageFit.BestFit, true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.PreviousPage">
+      <summary>
+            Navigates to the previous image page.
+            </summary>
+      <example>The following example navigates to the previous page.
+            <code lang="vbnet">
+              imgEdit.PreviousPage()
+            </code><code lang="C#">
+              imgEdit.PreviousPage();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.NextPage">
+      <summary>
+            Navigates to the next image page.
+            </summary>
+      <example>The following example navigates to the next page.
+            <code lang="vbnet">
+              imgEdit.NextPage()
+            </code><code lang="C#">
+              imgEdit.NextPage();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.RotateLeft">
+      <summary>
+            Rotates the displayed image to the left.
+            </summary>
+      <example>The following example rotates the displayed image to the left.
+            <code lang="vbnet">
+              imgEdit.RotateLeft()
+            </code><code lang="C#">
+              imgEdit.RotateLeft();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.RotateRight">
+      <summary>
+            Rotates the displayed image to the right.
+            </summary>
+      <example>The following example rotates the displayed image to the right.
+            <code lang="vbnet">
+              imgEdit.RotateRight()
+            </code><code lang="C#">
+              imgEdit.RotateRight();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Flip">
+      <summary>
+            Flips the displayed image.
+            </summary>
+      <example>The following example flips the displayed image.
+            <code lang="vbnet">
+              imgEdit.Flip()
+            </code><code lang="C#">
+              imgEdit.Flip();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Mirror">
+      <summary>
+            Mirrors the displayed image.
+            </summary>
+      <example>The following example mirrors the displayed image.
+            <code lang="vbnet">
+              imgEdit.Mirror()
+            </code><code lang="C#">
+              imgEdit.Mirror();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ResizeImage(System.Single)">
+      <summary>
+            Resizes the displayed image to the specified value.
+            </summary>
+      <param name="Value">The percentage resizing value.</param>
+      <example>The following example shows how to resize the displayed image to one half of the original size.
+            <code lang="vbnet">
+              imgEdit.ResizeImage(0.5)
+            </code><code lang="C#">
+              imgEdit.ResizeImage(0.5);
+            </code></example>
+      <remarks>The resize value must be higher than zero.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ResizeImage(System.Int32,System.Int32,System.Boolean)">
+      <summary>
+            Resizes the displayed image to the specified values and can maintain the aspect ratio.
+            </summary>
+      <param name="Width">The width resizing value.</param>
+      <param name="Height">The height resizing value.</param>
+      <param name="MaintainRatio">Maintain aspect ration if one of the values is zero (0).</param>
+      <example>The following example shows how to resize the displayed image with free values.
+            <code lang="vbnet">
+              imgEdit.ResizeImage(150,100,False)
+            </code><code lang="C#">
+              imgEdit.ResizeImage(150,100,false);
+            </code></example>
+      <remarks>One value must be higher than zero and the other must be zero.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.CropImage">
+      <summary>
+            Crops the displayed image to the selection rectangle size.
+            </summary>
+      <example>The following example shows how to set a manual selection rectangle and crop the displayed image selection.
+            <code lang="vbnet">
+              imgEdit.SetSelectionRectangle(0,0,100,100)
+              imgEdit.CropImage()
+            </code><code lang="C#">
+              imgEdit.SetSelectionRectangle(0,0,100,100);
+              imgEdit.CropImage();
+            </code></example>
+      <remarks>A selection rectangle must exist in the displayed image.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ClearSelection">
+      <summary>
+            Clears the selection rectangle size of the displayed image.
+            </summary>
+      <example>The following example shows how to set a manual selection rectangle and clear the displayed image selection.
+            <code lang="vbnet">
+              imgEdit.SetSelectionRectangle(0,0,100,100)
+              imgEdit.ClearSelection()
+            </code><code lang="C#">
+              imgEdit.SetSelectionRectangle(0,0,100,100);
+              imgEdit.ClearSelection();
+            </code></example>
+      <remarks>A selection rectangle must exist in the displayed image.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ClearSelectionRectangle">
+      <summary>
+            Clears the selection rectangle.
+            </summary>
+      <example>The following example shows how to clear selection rectangle.
+            <code lang="vbnet">
+              imgEdit.ClearSelectionRectangle()
+            </code><code lang="C#">
+              imgEdit.ClearSelectionRectangle();
+            </code></example>
+      <summary>
+            Clear image selection.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.SetSelectionRectangle(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Sets a manual selection rectangle in the displayed image.
+            </summary>
+      <param name="x">The start x point of the selection rectangle.</param>
+      <param name="y">The start y point of the selection rectangle.</param>
+      <param name="width">The width value of the selection rectangle.</param>
+      <param name="height">The height value of the selection rectangle.</param>
+      <example>The following example sets a selection rectangle.
+            <code lang="vbnet">
+              imgEdit.SetSelectionRectangle(0,0,100,100)
+            </code><code lang="C#">
+              imgEdit.SetSelectionRectangle(0,0,100,100);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.AppendPage(System.String)">
+      <summary>
+            Appends all pages from the file to the loaded image.
+            </summary>
+      <param name="FileName">The file that the pages will be appended to the loaded image.</param>
+      <example> This sample shows how to append a file to the loaded image.
+            <code lang="vbnet">
+              imgEdit.AppendPage("C:\Test\01.tif")
+            </code><code lang="C#">
+              imgEdit.AppendPage("C:\\Test\\01.tif");
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.AppendPage(System.String,System.Int32,System.Int32)">
+      <summary>
+            Appends a range of pages from the file to the loaded image.
+            </summary>
+      <param name="FileName">The file that the pages will be appended to the loaded image.</param>
+      <param name="StartPage">The start page group that will be appended.</param>
+      <param name="EndPage">The end page group that will be appended.</param>
+      <example> This sample shows how to append the first two pages from a file to the loaded image.
+            <code lang="vbnet">
+              imgEdit.AppendPage("C:\Test\01.tif",0,1)
+            </code><code lang="C#">
+              imgEdit.AppendPage("C:\\Test\\01.tif",0,1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.AppendPage(System.IO.Stream)">
+      <summary>
+            Appends all pages from an image stream to the loaded image.
+            </summary>
+      <param name="ImageStream">The image stream that the pages will be appended to the loaded image.</param>
+      <example> This sample shows how to append an image stream to the loaded image.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs As Stream = m_FileDialog.OpenFile()
+              imgEdit.AppendPage(fs)
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              Stream fs = m_FileDialog.OpenFile();
+              imgEdit.AppendPage(fs);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.AppendPage(System.IO.Stream,System.Int32,System.Int32)">
+      <summary>
+            Appends all pages from an image stream to the loaded image.
+            </summary>
+      <param name="ImageStream">The image stream that the pages will be appended to the loaded image.</param>
+      <param name="StartPage">The start page group that will be appended.</param>
+      <param name="EndPage">The end page group that will be appended.</param>
+      <example> This sample shows how to append the first two pages from an image stream to the loaded image.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs as Stream = m_FileDialog.OpenFile()
+              imgEdit.AppendPage(fs, 0, 2)
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              Stream fs = m_FileDialog.OpenFile();
+              imgEdit.AppendPage(fs, 0, 2);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.AppendPage(System.Byte[])">
+      <summary>
+            Appends all pages from an image byte array to the loaded image.
+            </summary>
+      <param name="ImageByteArray">The image byte array that the pages will be appended to the loaded image.</param>
+      <example> This sample shows how to append an image byte array to the loaded image.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs As Stream = m_FileDialog.OpenFile()
+              Dim br As New BinaryReader(ImageFileStream)
+              Dim m_ImageByteArray As Byte() = New Byte(ImageFileStream.Length - 1) 
+              m_ImageByteArray = br.ReadBytes(CInt(ImageFileStream.Length))
+              br.Close()
+              br = Nothing
+              fs.Close()
+              fs.Dispose()
+              imgEdit.AppendPage(m_ImageByteArray)
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              Stream ImageStream = m_FileDialog.OpenFile();
+              BinaryReader br = new BinaryReader(ImageStream);
+              Byte[] m_ImageByteArray = new Byte[ImageStream.Length];
+              m_ImageByteArray = br.ReadBytes((int)ImageStream.Length);
+              br.Close();
+              br = null;
+              ImageStream.Close();
+              ImageStream.Dispose();
+              ImageStream = null;
+              imgEdit.AppendPage(m_ImageByteArray);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.AppendPage(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+            Appends all pages from an image byte array to the loaded image.
+            </summary>
+      <param name="ImageByteArray">The image byte array that the pages will be appended to the loaded image.</param>
+      <param name="StartPage">The start page group that will be appended.</param>
+      <param name="EndPage">The end page group that will be appended.</param>
+      <example> This sample shows how to append the first two pages from an image byte array to the loaded image.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs As Stream = m_FileDialog.OpenFile()
+              Dim br As New BinaryReader(ImageFileStream)
+              Dim m_ImageByteArray As Byte() = New Byte(ImageFileStream.Length - 1) 
+              m_ImageByteArray = br.ReadBytes(CInt(ImageFileStream.Length))
+              br.Close()
+              br = Nothing
+              fs.Close()
+              fs.Dispose()
+              imgEdit.AppendPage(m_ImageByteArray, 0, 2)
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              Stream ImageStream = m_FileDialog.OpenFile();
+              BinaryReader br = new BinaryReader(ImageStream);
+              Byte[] m_ImageByteArray = new Byte[ImageStream.Length];
+              m_ImageByteArray = br.ReadBytes((int)ImageStream.Length);
+              br.Close();
+              br = null;
+              ImageStream.Close();
+              ImageStream.Dispose();
+              ImageStream = null;
+              imgEdit.AppendPage(m_ImageByteArray, 0, 2);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.AppendPage(System.Uri)">
+      <summary>
+            Appends all pages from an image uri to the loaded image.
+            </summary>
+      <param name="ImageUri">The image uri that the pages will be appended to the loaded image.</param>
+      <example> This sample shows how to append an image uri to the loaded image.
+            <code lang="vbnet">
+              imgEdit.AppendPage(new Uri("http://www.imagecomponents.net/Test/Testing.tif", UriKind.Absolute))
+            </code><code lang="C#">
+              imgEdit.AppendPage(new Uri("http://www.imagecomponents.net/Test/Testing.tif", UriKind.Absolute));
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.AppendPage(System.Uri,System.Int32,System.Int32)">
+      <summary>
+            Appends the specified pages from an image uri to the loaded image.
+            </summary>
+      <param name="ImageUri">The image file uri that the pages will be appended to the loaded image.</param>
+      <param name="StartPage">The start page group that will be appended.</param>
+      <param name="EndPage">The end page group that will be appended.</param>
+      <example> This sample shows how to append the first two pages from an image uri to the loaded image.
+            <code lang="vbnet">
+              imgEdit.AppendPage(new Uri("http://www.imagecomponents.net/Test/Testing.tif", UriKind.Absolute), 0, 1)
+            </code><code lang="C#">
+              imgEdit.AppendPage(new Uri("http://www.imagecomponents.net/Test/Testing.tif", UriKind.Absolute), 0, 1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.InsertPage(System.String,System.Int32)">
+      <summary>
+            Inserts all pages from the file to the loaded image starting at the specified position.
+            </summary>
+      <param name="FileName">The file that the pages will be inserted to the loaded image.</param>
+      <param name="BeginPosition">The page position of the loaded image that the pages will be inserted.</param>
+      <example>This sample shows how to insert a file to the loaded image starting at the second page.
+            <code lang="vbnet">
+              imgEdit.InsertPage("C:\Test\01.tif",1)
+            </code><code lang="C#">
+              imgEdit.InsertPage("C:\\Test\\01.tif",1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.InsertPage(System.String,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Inserts a range of pages from the file to the loaded image starting at the specified position.
+            </summary>
+      <param name="FileName">The file that the pages will be inserted to the loaded image.</param>
+      <param name="BeginPosition">The page position of the loaded image that the pages will be inserted.</param>
+      <param name="StartPage">The start page group that will be inserted.</param>
+      <param name="EndPage">The end page group that will be inserted.</param>
+      <example> This sample shows how to insert two pages from a file to the loaded image starting at the second page.
+            <code lang="vbnet">
+              imgEdit.InsertPage("C:\Test\01.tif",0,1,1)
+            </code><code lang="C#">
+              imgEdit.InsertPage("C:\\Test\\01.tif",0,1,1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.InsertPage(System.IO.Stream,System.Int32)">
+      <summary>
+            Inserts all pages from an image stream to the loaded image.
+            </summary>
+      <param name="ImageStream">The image stream that the pages will be appended to the loaded image.</param>
+      <param name="BeginPosition">The page position of the loaded image that the pages will be inserted.</param>
+      <example> This sample shows how to insert an image stream to the loaded image starting at the second page.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs As Stream = m_FileDialog.OpenFile()
+              imgEdit.InsertPage(fs,1);
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              Stream fs = m_FileDialog.OpenFile();
+              imgEdit.InsertPage(fs,1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.InsertPage(System.IO.Stream,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Inserts a range of pages from an image stream to the loaded image starting at the specified position.
+            </summary>
+      <param name="ImageStream">The image stream that the pages will be appended to the loaded image.</param>
+      <param name="BeginPosition">The page position of the loaded image that the pages will be inserted.</param>
+      <param name="StartPage">The start page group that will be inserted.</param>
+      <param name="EndPage">The end page group that will be inserted.</param>
+      <example>This sample shows how to insert two pages from an image stream to the loaded image starting at the second page.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs as Stream = m_FileDialog.OpenFile()
+              imgEdit.InsertPage(fs,0,1,1);
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              Stream fs = m_FileDialog.OpenFile();
+              imgEdit.InsertPage(fs,0,1,1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.InsertPage(System.Byte[],System.Int32)">
+      <summary>
+            Inserts all pages from an image byte array to the loaded image.
+            </summary>
+      <param name="ImageByteArray">The image byte array that the pages will be appended to the loaded image.</param>
+      <param name="BeginPosition">The page position of the loaded image that the pages will be inserted.</param>
+      <example> This sample shows how to insert an image byte array to the loaded image starting at the second page.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs As Stream = m_FileDialog.OpenFile()
+              Dim br As New BinaryReader(ImageFileStream)
+              Dim m_ImageByteArray As Byte() = New Byte(ImageFileStream.Length - 1) 
+              m_ImageByteArray = br.ReadBytes(CInt(ImageFileStream.Length))
+              br.Close()
+              br = Nothing
+              fs.Close()
+              fs.Dispose()
+              imgEdit.InsertPage(m_ImageByteArray,1);
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              Stream fs = m_FileDialog.OpenFile();
+              BinaryReader br = new BinaryReader(ImageStream);
+              Byte[] m_ImageByteArray = new Byte[ImageStream.Length];
+              m_ImageByteArray = br.ReadBytes((int)ImageStream.Length);
+              br.Close();
+              br = null;
+              ImageStream.Close();
+              ImageStream.Dispose();
+              ImageStream = null;
+              imgEdit.InsertPage(m_ImageByteArray,1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.InsertPage(System.Byte[],System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Inserts a range of pages from an image byte array to the loaded image starting at the specified position.
+            </summary>
+      <param name="ImageByteArray">The image byte array that the pages will be appended to the loaded image.</param>
+      <param name="BeginPosition">The page position of the loaded image that the pages will be inserted.</param>
+      <param name="StartPage">The start page group that will be inserted.</param>
+      <param name="EndPage">The end page group that will be inserted.</param>
+      <example>This sample shows how to insert two pages from an image byte array to the loaded image starting at the second page.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs as Stream = m_FileDialog.OpenFile()
+              Dim br As New BinaryReader(ImageFileStream)
+              Dim m_ImageByteArray As Byte() = New Byte(ImageFileStream.Length - 1) 
+              m_ImageByteArray = br.ReadBytes(CInt(ImageFileStream.Length))
+              br.Close()
+              br = Nothing
+              fs.Close()
+              fs.Dispose()
+              imgEdit.InsertPage(m_ImageByteArray,0,1,1);
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              Stream fs = m_FileDialog.OpenFile();
+              BinaryReader br = new BinaryReader(ImageStream);
+              Byte[] m_ImageByteArray = new Byte[ImageStream.Length];
+              m_ImageByteArray = br.ReadBytes((int)ImageStream.Length);
+              br.Close();
+              br = null;
+              ImageStream.Close();
+              ImageStream.Dispose();
+              ImageStream = null;
+              imgEdit.InsertPage(m_ImageByteArray,0,1,1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.InsertPage(System.Uri,System.Int32)">
+      <summary>
+            Inserts all pages from an image uri to the loaded image starting at the specified position.
+            </summary>
+      <param name="ImageUri">The image uri that the pages will be inserted to the loaded image.</param>
+      <param name="BeginPosition">The page position of the loaded image that the pages will be inserted.</param>
+      <example> This sample shows how to insert an image uri to the loaded image starting at the second page.
+            <code lang="vbnet">
+              imgEdit.InsertPage(new Uri("http://www.imagecomponents.net/Test/Testing.tif", UriKind.Absolute), 1)
+            </code><code lang="C#">
+              imgEdit.InsertPage(new Uri("http://www.imagecomponents.net/Test/Testing.tif", UriKind.Absolute), 1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.InsertPage(System.Uri,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Inserts a range of pages from an image uri to the loaded image starting at the specified position.
+            </summary>
+      <param name="ImageUri">The image uri that the pages will be inserted to the loaded image.</param>
+      <param name="BeginPosition">The page position of the loaded image that the pages will be inserted.</param>
+      <param name="StartPage">The start page group that will be inserted.</param>
+      <param name="EndPage">The end page group that will be inserted.</param>
+      <example> This sample shows how to insert the first two pages from an image uri to the loaded image starting at the second page.
+            <code lang="vbnet">
+              imgEdit.InsertPage(new Uri("http://www.imagecomponents.net/Test/Testing.tif", UriKind.Absolute), 2, 0, 1)
+            </code><code lang="C#">
+              imgEdit.InsertPage(new Uri("http://www.imagecomponents.net/Test/Testing.tif", UriKind.Absolute), 2, 0, 1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.DeletePage">
+      <summary>
+            Deletes the displayed page from the loaded image.
+            </summary>
+      <example> This sample shows how to delete the displayed page from loaded image.
+            <code lang="vbnet">
+              imgEdit.DeletePage()
+            </code><code lang="C#">
+              imgEdit.DeletePage();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.DeletePage(System.Int32)">
+      <summary>
+            Deletes the specified page from the loaded image.
+            </summary>
+      <param name="Page">The page position of the loaded image that the page will be deleted.</param>
+      <example> This sample shows how to delete the second page from loaded image.
+            <code lang="vbnet">
+              imgEdit.DeletePage(1)
+            </code><code lang="C#">
+              imgEdit.DeletePage(1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.MovePage(System.Int32,System.Int32)">
+      <summary>
+            Moves the specified page image page to the specified target position.
+            </summary>
+      <param name="SourcePage">The page position of the loaded image that will be moved.</param>
+      <param name="TargetPage">The target page position of the loaded image.</param>
+      <example> This sample shows how to move the first page to the third position.
+            <code lang="vbnet">
+              imgEdit.MovePage(0,2)
+            </code><code lang="C#">
+              imgEdit.MovePage(0,2);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ReplacePage(System.String,System.Int32)">
+      <summary>
+            Replaces the current page with one specified image filename page.
+            </summary>
+      <param name="FileName">The file containing the page that will replace the displayed image.</param>
+      <param name="SourcePage">The page position to replace of the specified image.</param>
+      <example>This sample shows how to replace the displayed page with the second page of the specified filename.
+            <code lang="vbnet">
+              imgEdit.ReplacePage("C:\Test\01.tif",1)
+            </code><code lang="C#">
+              imgEdit.ReplacePage("C:\\Test\\01.tif",1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ReplacePage(System.IO.Stream,System.Int32)">
+      <summary>
+            Replaces the current page with one specified image stream page.
+            </summary>
+      <param name="ImageStream">The image stream containing the page that will replace the displayed image.</param>
+      <param name="SourcePage">The page position to replace of the specified image.</param>
+      <example>This sample shows how to replace the displayed page with the second page of the specified image stream.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs As Stream = m_FileDialog.OpenFile()
+              imgEdit.ReplacePage(fs,1);
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              Stream fs = m_FileDialog.OpenFile();
+              imgEdit.ReplacePage(fs,1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ReplacePage(System.Byte[],System.Int32)">
+      <summary>
+            Replaces the current page with one specified image sbyte array page.
+            </summary>
+      <param name="ImageByteArray">The image byte array containing the page that will replace the displayed image.</param>
+      <param name="SourcePage">The page position to replace of the specified image.</param>
+      <example>This sample shows how to replace the displayed page with the second page of the specified image byte array.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs As Stream = m_FileDialog.OpenFile()
+              Dim br As New BinaryReader(ImageFileStream)
+              Dim m_ImageByteArray As Byte() = New Byte(ImageFileStream.Length - 1) 
+              m_ImageByteArray = br.ReadBytes(CInt(ImageFileStream.Length))
+              br.Close()
+              br = Nothing
+              fs.Close()
+              fs.Dispose()
+              imgEdit.ReplacePage(m_ImageByteArray,1);
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              Stream fs = m_FileDialog.OpenFile();
+              BinaryReader br = new BinaryReader(ImageStream);
+              Byte[] m_ImageByteArray = new Byte[ImageStream.Length];
+              m_ImageByteArray = br.ReadBytes((int)ImageStream.Length);
+              br.Close();
+              br = null;
+              ImageStream.Close();
+              ImageStream.Dispose();
+              ImageStream = null;
+              imgEdit.ReplacePage(m_ImageByteArray,1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Undo">
+      <summary>
+            Undoes a modification from the loaded image page.
+            </summary>
+      <example>The following example shows how to undone the loaded image page modification.
+            <code lang="vbnet">
+              imgEdit.Undo()
+            </code><code lang="C#">
+              imgEdit.Undo();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Redo">
+      <summary>
+            Redoes a modification from the loaded image page.
+            </summary>
+      <example>The following example shows how to redone the loaded image page modification.
+            <code lang="vbnet">
+              imgEdit.Redo()
+            </code><code lang="C#">
+              imgEdit.Redo();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.IsBlankPage">
+      <summary>
+            Detects if the selected image page is blank with a standard deviation tolerance of 5 percent.
+            </summary>
+      <returns>Returns the value indicating if the selected image page is blank, not blank or indeterminated.</returns>
+      <example>The following example shows how detect if the selected image page is blank.
+            <code lang="vbnet">
+              imgEdit.IsBlankPage()
+            </code><code lang="C#">
+              imgEdit.IsBlankPage();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.IsBlankPage(System.Double,System.Boolean)">
+      <summary>
+            Detects if the selected image page is blank with a specified standard deviation tolerance.
+            </summary>
+      <param name="Tolerance">The standard deviation tolerance value.</param>
+      <param name="RemoveEmptyData">Removes the blank empty data borders.</param>
+      <returns>Returns the value indicating if the selected image page is blank, not blank or indeterminated.</returns>
+      <example>The following example shows how detect if the selected image page is blank with a 5 percent tolerance.
+            <code lang="vbnet">
+              imgEdit.IsBlankPage(0.05)
+            </code><code lang="C#">
+              imgEdit.IsBlankPage(0.05);
+            </code></example>
+      <remarks>The tolerance value must be between 0 and 1.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.GetImagePageStream(System.Int32)">
+      <summary>
+            Retrieves the specified image page byte array.
+            </summary>
+      <param name="PageNumber">The page to retrieve the byte array.</param>
+      <returns>The byte array of the specified page.</returns>
+      <example>The following example gets the byte array of the second page.
+            <code lang="vbnet">
+              Dim bmp As Byte() = Nothing
+              bmp = imgEdit.GetImagePageStream(1)
+            </code><code lang="C#">
+              byte[] bmp = null;
+              bmp = imgEdit.GetImagePageStream(1);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.GetImagePageStream(System.Int32,System.Boolean)">
+      <summary>
+            Retrieves the specified image page byte array.
+            </summary>
+      <param name="PageNumber">The page to retrieve the byte array.</param>
+      <param name="BurnAnnotations">Burn existent image annotations.</param>
+      <returns>The byte array of the specified page.</returns>
+      <example>The following example gets the byte array of the second page with burned annotations.
+            <code lang="vbnet">
+              Dim bmp As Byte() = Nothing
+              bmp = imgEdit.GetImagePageStream(1, True)
+            </code><code lang="C#">
+              byte[] bmp = null;
+              bmp = imgEdit.GetImagePageStream(1, true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ChangeImagePagePixelFormat(ImageComponents.WPF.Imaging.ImgEdit.ICImageBitFormat)">
+      <summary>
+            Changes the displayed image page pixel format.
+            </summary>
+      <param name="PixelFormat">The pixel format value.</param>
+      <example>The following example changes the displayed image page pixel format.
+            <code lang="vbnet">
+              imgEdit.ChangeImagePagePixelFormat(ICImageBitFormat.PixelFormat_8Bit)
+            </code><code lang="C#">
+              imgEdit.ChangeImagePagePixelFormat(ICImageBitFormat.PixelFormat_8Bit);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ChangeImagePageColorDepth(ImageComponents.WPF.Imaging.ImgEdit.ICImageColorDepth)">
+      <summary>
+            Changes the displayed image page color depth.
+            </summary>
+      <param name="ColorDepth">The color depth value.</param>
+      <example>The following example changes the displayed image page color depth.
+            <code lang="vbnet">
+              imgEdit.ChangeImagePageColorDepth(ICImageColorDepth.ColorDepth_8BPP)
+            </code><code lang="C#">
+              imgEdit.ChangeImagePagePixelFormat(ICImageColorDepth.ColorDepth_8BPP);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterMedian">
+      <summary>
+            Applies the median filter to the displayed image page.
+            </summary>
+      <example>The following example shows how to apply the median filter to the displayed image with a value of 3.
+            <code lang="vbnet">
+              imgEdit.FilterMedian()
+            </code><code lang="C#">
+              imgEdit.FilterMedian();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterBlackAndWhite(System.Single)">
+      <summary>
+            Applies the black and white filter to the displayed image page.
+            </summary>
+      <param name="Value">Brightness value.</param>
+      <example>The following example shows how to apply the black and white filter to the displayed image with a brightness value of 0.5F.
+            <code lang="vbnet">
+              imgEdit.FilterBlackAndWhite(0.5)
+            </code><code lang="C#">
+              imgEdit.FilterBlackAndWhite(0.5F);
+            </code></example>
+      <remarks>The value of the filter should be between 0 and 1.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterInvert">
+      <summary>
+            Applies the invert filter to the displayed image page.
+            </summary>
+      <example>The following example shows how to apply the invert filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterInvert()
+            </code><code lang="C#">
+              imgEdit.FilterInvert();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterBayerDithering">
+      <summary>
+            Applies the bayer dithering filter to the displayed image page.
+            </summary>
+      <example>The following example shows how to apply the bayer dithering filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterBayerDithering()
+            </code><code lang="C#">
+              imgEdit.FilterBayerDithering();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterFloydSteinbergDithering">
+      <summary>
+            Applies the floyd steinberg dithering filter to the displayed image page.
+            </summary>
+      <example>The following example shows how to apply the floyd steinberg dithering filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterFloydSteinbergDithering()
+            </code><code lang="C#">
+              imgEdit.FilterFloydSteinbergDithering();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterOrderedDithering">
+      <summary>
+            Applies the ordered dithering filter to the displayed image page.
+            </summary>
+      <example>The following example shows how to apply the ordered dithering filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterOrderedDithering()
+            </code><code lang="C#">
+              imgEdit.FilterOrderedDithering();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterGrayScale">
+      <summary>
+            Applies the grayscale filter to the displayed image page.
+            </summary>
+      <example>The following example shows how to apply the grayscale filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterGrayScale()
+            </code><code lang="C#">
+              imgEdit.FilterGrayScale();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterSmooth">
+      <summary>
+            Applies the smooth filter to the displayed image page.
+            </summary>
+      <example>The following example shows how to apply the smooth filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterSmooth()
+            </code><code lang="C#">
+              imgEdit.FilterSmooth();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterBrightness(System.Int32)">
+      <summary>
+            Applies the brightness filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the brightness filter.</param>
+      <example>The following example shows how to apply the brightness filter to the displayed image with a value of 50.
+            <code lang="vbnet">
+              imgEdit.FilterBrightness(50)
+            </code><code lang="C#">
+              imgEdit.FilterBrightness(50);
+            </code></example>
+      <remarks>The value of the filter must be between -100 and 100.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterContrast(System.SByte)">
+      <summary>
+            Applies the contrast filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the contrast filter.</param>
+      <example>The following example shows how to apply the contrast filter to the displayed image with a value of 50.
+            <code lang="vbnet">
+              imgEdit.FilterContrast(50)
+            </code><code lang="C#">
+              imgEdit.FilterContrast(50);
+            </code></example>
+      <remarks>The value of the filter must be between -100 and 100.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterGamma(System.Double,System.Double,System.Double)">
+      <summary>
+            Applies the gamma filter to the displayed image page.
+            </summary>
+      <param name="RedValue">The red value to apply.</param>
+      <param name="GreenValue">The green value to apply.</param>
+      <param name="BlueValue">The blue value to apply.</param>
+      <example>The following example shows how to apply the gamma filter to the displayed image with a red value of 3.
+            <code lang="vbnet">
+              imgEdit.FilterGamma(3,0,0)
+            </code><code lang="C#">
+              imgEdit.FilterGamma(3,0,0);
+            </code></example>
+      <remarks>The red, green and blue values must be between 0.2 and 5.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterColor(System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Applies the color filter to the displayed image page.
+            </summary>
+      <param name="RedValue">The red value to apply.</param>
+      <param name="GreenValue">The green value to apply.</param>
+      <param name="BlueValue">The blue value to apply.</param>
+      <example>The following example shows how to apply the color filter to the displayed image with a red value of 50.
+            <code lang="vbnet">
+              imgEdit.FilterColor(50,0,0)
+            </code><code lang="C#">
+              imgEdit.FilterColor(50,0,0);
+            </code></example>
+      <remarks>The red, green and blue values must be between -255 and 255.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterGaussianBlur(System.Int32)">
+      <summary>
+            Applies the gaussian blur filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the gaussian blur filter.</param>
+      <example>The following example shows how to apply the gaussian blur filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterGaussianBlur(4)
+            </code><code lang="C#">
+              imgEdit.FilterGaussianBlur(4);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterMeanRemoval(System.Int32)">
+      <summary>
+            Applies the mean removal filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the mean removal filter.</param>
+      <example>The following example shows how to apply the mean removal filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterMeanRemoval(9)
+            </code><code lang="C#">
+              imgEdit.FilterMeanRemoval(9);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterSharpen">
+      <summary>
+            Applies the sharpen filter to the displayed image page.
+            </summary>
+      <example>The following example shows how to apply the sharpen filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterSharpen()
+            </code><code lang="C#">
+              imgEdit.FilterSharpen();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterEmbossLaplacian">
+      <summary>
+            Applies the emboss laplacian filter to the displayed image page.
+            </summary>
+      <example>The following example shows how to apply the emboss laplacian filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterEmbossLaplacian()
+            </code><code lang="C#">
+              imgEdit.FilterEmbossLaplacian();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterEdgeDetectQuick">
+      <summary>
+            Applies the edge detect quick filter to the displayed image page.
+            </summary>
+      <example>The following example shows how to apply the edge detect quick filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterEdgeDetectQuick()
+            </code><code lang="C#">
+              imgEdit.FilterEdgeDetectQuick();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterRandomJitter(System.Int16)">
+      <summary>
+            Applies the random jitter filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the degree of the random jitter filter.</param>
+      <example>The following example shows how to apply the random jitter filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterRandomJitter(5)
+            </code><code lang="C#">
+              imgEdit.FilterRandomJitter(5);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterMoire(System.Double)">
+      <summary>
+            Applies the moire filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the degree of the moire filter.</param>
+      <example>The following example shows how to apply the moire filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterMoire(3)
+            </code><code lang="C#">
+              imgEdit.FilterMoire(3);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterEdgeHorizontal">
+      <summary>
+            Applies the edge horizontal filter to the displayed image page.
+            </summary>
+      <example>The following example shows how to apply the edge horizontal filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterEdgeHorizontal()
+            </code><code lang="C#">
+              imgEdit.FilterEdgeHorizontal();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterEdgeVertical">
+      <summary>
+            Applies the edge vertical filter to the displayed image page.
+            </summary>
+      <example>The following example shows how to apply the edge vertical filter to the displayed image.
+            <code lang="vbnet">
+              imgEdit.FilterEdgeVertical()
+            </code><code lang="C#">
+              imgEdit.FilterEdgeVertical();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterEdgeKirsh(System.Byte)">
+      <summary>
+            Applies the edge kirsh filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the edge kirsh filter.</param>
+      <example>The following example shows how to apply the edge kirsh filter to the displayed image with a value of 50.
+            <code lang="vbnet">
+              imgEdit.FilterEdgeKirsh(50)
+            </code><code lang="C#">
+              imgEdit.FilterEdgeKirsh(50);
+            </code></example>
+      <remarks>The value of the filter must be between 0 and 255.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterEdgePrewitt(System.Byte)">
+      <summary>
+            Applies the edge prewitt filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the edge prewitt filter.</param>
+      <example>The following example shows how to apply the edge prewitt filter to the displayed image with a value of 50.
+            <code lang="vbnet">
+              imgEdit.FilterEdgePrewitt(50)
+            </code><code lang="C#">
+              imgEdit.FilterEdgePrewitt(50);
+            </code></example>
+      <remarks>The value of the filter must be between 0 and 255.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterEdgeSobell(System.Byte)">
+      <summary>
+            Applies the edge sobell filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the edge sobell filter.</param>
+      <example>The following example shows how to apply the edge sobell filter to the displayed image with a value of 50.
+            <code lang="vbnet">
+              imgEdit.FilterEdgeSobell(50)
+            </code><code lang="C#">
+              imgEdit.FilterEdgeSobell(50);
+            </code></example>
+      <remarks>The value of the filter must be between 0 and 255.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterEdgeHomogenity(System.Byte)">
+      <summary>
+            Applies the edge homogenity filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the edge homogenity filter.</param>
+      <example>The following example shows how to apply the edge homogenity filter to the displayed image with a value of 50.
+            <code lang="vbnet">
+              imgEdit.FilterEdgeHomogenity(50)
+            </code><code lang="C#">
+              imgEdit.FilterEdgeHomogenity(50);
+            </code></example>
+      <remarks>The value of the filter must be between 0 and 255.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterCharImprovement(System.Byte)">
+      <summary>
+            Applies the char improvement filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the char improvement filter.</param>
+      <example>The following example shows how to apply the char improvement filter to the displayed image with a value of 50.
+            <code lang="vbnet">
+              imgEdit.FilterCharImprovement(3)
+            </code><code lang="C#">
+              imgEdit.FilterCharImprovement(3);
+            </code></example>
+      <remarks>The value of the filter must be between 0 and 255.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterEdgeDifference(System.Byte)">
+      <summary>
+            Applies the edge difference filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the edge difference filter.</param>
+      <example>The following example shows how to apply the edge difference filter to the displayed image with a value of 50.
+            <code lang="vbnet">
+              imgEdit.FilterEdgeDifference(50)
+            </code><code lang="C#">
+              imgEdit.FilterEdgeDifference(50);
+            </code></example>
+      <remarks>The value of the filter must be between 0 and 255.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterEdgeEnhance(System.Byte)">
+      <summary>
+            Applies the edge enhance filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the edge enhance filter.</param>
+      <example>The following example shows how to apply the edge enhance filter to the displayed image with a value of 50.
+            <code lang="vbnet">
+              imgEdit.FilterEdgeEnhance(50)
+            </code><code lang="C#">
+              imgEdit.FilterEdgeEnhance(50);
+            </code></example>
+      <remarks>The value of the filter must be between 0 and 255.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterSwirl(System.Double,System.Boolean)">
+      <summary>
+            Applies the swirl filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the degree of the moire filter.</param>
+      <param name="AntiAlias">Applies or not the filter with anti-alias.</param>
+      <example>The following example shows how to apply the swirl filter to the displayed image with anti-alias.
+            <code lang="vbnet">
+              imgEdit.FilterSwirl(0.04,True)
+            </code><code lang="C#">
+              imgEdit.FilterSwirl(0.04,true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterSphere(System.Boolean)">
+      <summary>
+            Applies the sphere filter to the displayed image page.
+            </summary>
+      <param name="AntiAlias">Applies or not the filter with anti-alias.</param>
+      <example>The following example shows how to apply the sphere filter to the displayed image with anti-alias.
+            <code lang="vbnet">
+              imgEdit.FilterSphere(True)
+            </code><code lang="C#">
+              imgEdit.FilterSphere(true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterTimeWarp(System.Byte,System.Boolean)">
+      <summary>
+            Applies the time warp filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the factor of the time warp filter.</param>
+      <param name="AntiAlias">Applies or not the filter with anti-alias.</param>
+      <example>The following example shows how to apply the time warp filter to the displayed image with anti-alias.
+            <code lang="vbnet">
+              imgEdit.FilterTimeWarp(15,True)
+            </code><code lang="C#">
+              imgEdit.FilterTimeWarp(15,true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterWater(System.Int16,System.Boolean)">
+      <summary>
+            Applies the water filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the wave of the water filter.</param>
+      <param name="AntiAlias">Applies or not the filter with anti-alias.</param>
+      <example>The following example shows how to apply the water filter to the displayed image with anti-alias.
+            <code lang="vbnet">
+              imgEdit.FilterWater(15,True)
+            </code><code lang="C#">
+              imgEdit.FilterWater(15,true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.FilterPixelate(System.Int16,System.Boolean)">
+      <summary>
+            Applies the pixelate filter to the displayed image page.
+            </summary>
+      <param name="Value">The value of the pixel of the pixelate filter.</param>
+      <param name="Grid">Shows or not the grid in the displayed image.</param>
+      <example>The following example shows how to apply the pixelate filter to the displayed image with no grid.
+            <code lang="vbnet">
+              imgEdit.FilterPixelate(15,False)
+            </code><code lang="C#">
+              imgEdit.FilterPixelate(15,false);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.RemoveBorders">
+      <summary>
+            Removes the black borders from the displayed image.
+            </summary>
+      <example>The following example shows how to remove the black borders from the displayed image.
+            <code lang="vbnet">
+              imgEdit.RemoveBorders()
+            </code><code lang="C#">
+              imgEdit.RemoveBorders();
+            </code></example>
+      <remarks>The pixel format of then image must be 1BPP.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.AutoCropImage">
+      <summary>
+            Automatic cropping of the displayed image.
+            </summary>
+      <example>The following example shows how to auto crop the displayed image.
+            <code lang="vbnet">
+              imgEdit.AutoCropImage()
+            </code><code lang="C#">
+              imgEdit.AutoCropImage();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.AutoCropImage(System.Windows.Media.Color,System.Double)">
+      <summary>
+            Automatic cropping of the displayed image.
+            </summary>
+      <param name="BackColor">The crop background color.</param>
+      <param name="Tolerance">The tolerance of the background color.</param>
+      <example>The following example shows how to auto crop the displayed image with a white background and no tolerance.
+            <code lang="vbnet">
+              imgEdit.AutoCropImage(Color.White, 1)
+            </code><code lang="C#">
+              imgEdit.AutoCropImage(Color.White, 1);
+            </code></example>
+      <remarks>The tolerance goes between 0 (maximum tolerance) and 1 (no tolerance).</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.DeskewImage">
+      <summary>
+            Automatic deskewing of the displayed image.
+            </summary>
+      <example>The following example shows how to deskew the displayed image.
+            <code lang="vbnet">
+              imgEdit.DeskewImage()
+            </code><code lang="C#">
+              imgEdit.DeskewImage();
+            </code></example>
+      <remarks>By default the edges of the image are not preserved on rotation.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.DeskewImage(System.Boolean)">
+      <summary>
+            Automatic deskewing of the displayed image.
+            </summary>
+      <param name="PreserveEdges">Preserves the image edges on image deskew.</param>
+      <example>The following example shows how to deskew the displayed image.
+            <code lang="vbnet">
+              imgEdit.DeskewImage(True)
+            </code><code lang="C#">
+              imgEdit.DeskewImage(True);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Print">
+      <summary>
+            Prints all pages of the loaded image with specific print properties settings.
+            </summary>
+      <example>The following example shows how to print all pages with some properties settings.
+            <code lang="vbnet">
+              imgEdit.PrintFitOptions = ImageComponents.ImgEdit.PrintOptions.BestFit
+              imgEdit.PrintLayout = ImageComponents.ImgEdit.PrintOrientation.Automatic
+              imgEdit.Print()
+            </code><code lang="C#">
+              imgEdit.PrintFitOptions = ImageComponents.ImgEdit.PrintOptions.BestFit;
+              imgEdit.PrintLayout = ImageComponents.ImgEdit.PrintOrientation.Automatic;
+              imgEdit.Print();
+            </code></example>
+      <remarks>Check the print properties help for more information.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Print(System.Int32)">
+      <summary>
+            Prints the specified page from the loaded image with specific print properties settings.
+            </summary>
+      <param name="Page">The page number that will be printed.</param>
+      <example>The following example shows how to print the second loaded image page with some properties settings.
+            <code lang="vbnet">
+              imgEdit.PrintFitOptions = ImageComponents.ImgEdit.PrintOptions.BestFit
+              imgEdit.PrintLayout = ImageComponents.ImgEdit.PrintOrientation.Automatic
+              imgEdit.Print(1)
+            </code><code lang="C#">
+              imgEdit.PrintFitOptions = ImageComponents.ImgEdit.PrintOptions.BestFit;
+              imgEdit.PrintLayout = ImageComponents.ImgEdit.PrintOrientation.Automatic;
+              imgEdit.Print(1);
+            </code></example>
+      <remarks>Check the print properties help for more information.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.PrintSelectedPage">
+      <summary>
+            Prints the displayed image with specific print properties settings.
+            </summary>
+      <example>The following example shows how to print the displayed image page with some properties settings.
+            <code lang="vbnet">
+              imgEdit.PrintWithAnnotations = False
+              imgEdit.PrintFitOptions = ImageComponents.ImgEdit.PrintOptions.BestFit
+              imgEdit.PrintLayout = ImageComponents.ImgEdit.PrintOrientation.Automatic
+              imgEdit.PrintSelectedPage()
+            </code><code lang="C#">
+              imgEdit.PrintWithAnnotations = false;
+              imgEdit.PrintFitOptions = ImageComponents.ImgEdit.PrintOptions.BestFit;
+              imgEdit.PrintLayout = ImageComponents.ImgEdit.PrintOrientation.Automatic;
+              imgEdit.PrintSelectedPage();
+            </code></example>
+      <remarks>Check the print properties help for more information.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.OCRImage">
+      <summary>
+            Converts the content of the displayed image to text.
+            </summary>
+      <example>The following example shows how to OCR all the image pages using the alfanumeric English language.
+            <code lang="vbnet">
+              imgEdit.ImageOCRLanguage = Imaging.ImgEdit.ICImageOCRLanguages.English
+              imgEdit.ImageOCRType = Imaging.ImgEdit.ICImageOCRType.Alfanumeric
+              imgEdit.ImageOCRPageType = Imaging.ImgEdit.ICImageOCRPageType.AllPages
+              imgEdit.OCRImage()
+            </code><code lang="C#">
+              imgEdit.ImageOCRLanguage = Imaging.ImgEdit.ICImageOCRLanguages.English;
+              imgEdit.ImageOCRType = Imaging.ImgEdit.ICImageOCRType.Alfanumeric;
+              imgEdit.ImageOCRPageType = Imaging.ImgEdit.ICImageOCRPageType.AllPages;
+              imgEdit.OCRImage();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.OCRImage(ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages)">
+      <summary>
+            Converts the content of the displayed image to text.
+            </summary>
+      <param name="imageOCRLanguage">OCR language.</param>
+      <example>The following example shows how to OCR  the selected image page using the alfanumeric English language.
+            <code lang="vbnet">
+              imgEdit.ImageOCRType = Imaging.ImgEdit.ICImageOCRType.Alfanumeric
+              imgEdit.ImageOCRPageType = Imaging.ImgEdit.ICImageOCRPageType.SelectedPage
+              imgEdit.OCRImage(Imaging.ImgEdit.ICImageOCRLanguages.English)
+            </code><code lang="C#">
+              imgEdit.ImageOCRType = Imaging.ImgEdit.ICImageOCRType.Alfanumeric;
+              imgEdit.ImageOCRPageType = Imaging.ImgEdit.ICImageOCRPageType.SelectedPage;
+              imgEdit.OCRImage(Imaging.ImgEdit.ICImageOCRLanguages.English);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.OCRImage(ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages,ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRType,ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRPageType)">
+      <summary>
+            Converts the content of the displayed image to text.
+            </summary>
+      <param name="imageOCRLanguage">OCR language.</param>
+      <param name="imageOCRType">The OCR reader type.</param>
+      <param name="imageOCRPageType">The object type the the OCR will read.</param>
+      <example>The following example shows how to OCR  the selected image page using the alfanumeric English language.
+            <code lang="vbnet">
+              imgEdit.OCRImage(Imaging.ImgEdit.ICImageOCRLanguages.English, Imaging.ImgEdit.ICImageOCRType.Alfanumeric, Imaging.ImgEdit.ICImageOCRPageType.SelectedPage)
+            </code><code lang="C#">
+              imgEdit.OCRImage(Imaging.ImgEdit.ICImageOCRLanguages.English, Imaging.ImgEdit.ICImageOCRType.Alfanumeric, Imaging.ImgEdit.ICImageOCRPageType.SelectedPage);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.OCRImageAbort">
+      <summary>
+            Aborts the current image OCR process.
+            </summary>
+      <example>The following example shows how to abort a running OCR process.
+            <code lang="vbnet">
+              imgEdit.OCRImageAbort()
+            </code><code lang="C#">
+              imgEdit.OCRImageAbort();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.CaptureScreen(System.Boolean)">
+      <summary>
+            Captures the full or a mouse selection of the screen.
+            </summary>
+      <param name="FullScreen">Do capture all screen.</param>
+      <example>The following example shows how to capture the full screen image.
+            <code lang="vbnet">
+              imgEdit.CaptureScreen(True)
+            </code><code lang="C#">
+              imgEdit.CaptureScreen(true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.CaptureScreen(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Captures a specified image portion of the screen.
+            </summary>
+      <param name="x">The x position of the screen to capture.</param>
+      <param name="y">The y position of the screen to capture.</param>
+      <param name="width">The width value of the screen to capture.</param>
+      <param name="height">The height value of the screen to capture.</param>
+      <example>The following example shows how to capture the a specified image portion of the screen.
+            <code lang="vbnet">
+              imgEdit.CaptureScreen(0, 0, 100, 100)
+            </code><code lang="C#">
+              imgEdit.CaptureScreen(0, 0, 100, 100);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.CopyImage(System.Boolean,System.Boolean)">
+      <summary>
+            Copies the displayed image with or without annotations into the clipboard.
+            </summary>
+      <param name="CopyAnnotations">Copies the image with burned annotations.</param>
+      <param name="ClearOnExit">Clear the clipboard data on application exit.</param>
+      <example>The following example shows how to copy the displayed image without annotations into the clipboard.
+            <code lang="vbnet">
+              imgEdit.CopyImage(False, True)
+            </code><code lang="C#">
+              imgEdit.CopyImage(false, true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.CopyImage(System.Drawing.Rectangle,System.Boolean,System.Boolean)">
+      <summary>
+            Copies an image selection with or without annotations into the clipboard.
+            </summary>
+      <param name="Selection">Image rectangle selection.</param>
+      <param name="CopyAnnotations">Copies the image with burned annotations.</param>
+      <param name="ClearOnExit">Clears the clipboard image on application exit.</param>
+      <example>The following example shows how to copy the specified image selection without annotations into the clipboard.
+            <code lang="vbnet">
+              imgEdit.CopyImage(New System.Drawing.Rectangle(0, 0, 100, 100), False, True)
+            </code><code lang="C#">
+              imgEdit.CopyImage(new System.Drawing.Rectangle(0, 0, 100, 100), false, true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.CutImage(System.Boolean,System.Boolean)">
+      <summary>
+            Cuts the selection rectangle size of the displayed image.
+            </summary>
+      <param name="CopyAnnotations">Copies the image with burned annotations.</param>
+      <param name="ClearOnExit">Clear the clipboard data on application exit.</param>
+      <example>The following example shows how to set a manual selection rectangle and cut the displayed image selection without annotations.
+            <code lang="vbnet">
+              imgEdit.SetSelectionRectangle(0,0,100,100)
+              imgEdit.CutImage()
+            </code><code lang="C#">
+              imgEdit.SetSelectionRectangle(0,0,100,100);
+              imgEdit.CutImage();
+            </code></example>
+      <remarks>A selection rectangle must exist in the displayed image.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.CutImage(System.Drawing.Rectangle,System.Boolean,System.Boolean)">
+      <summary>
+            Cuts the selection rectangle size of the displayed image.
+            </summary>
+      <param name="Selection">Image rectangle selection.</param>
+            /// <param name="CopyAnnotations">Copies the image with burned annotations.</param><param name="ClearOnExit">Clear the clipboard data on application exit.</param><example>The following example shows how to cut a specified displayed image rectangle selection without annotations.
+            <code lang="vbnet">
+              imgEdit.CutImage(New System.Drawing.Rectangle(0, 0, 100, 100))
+            </code><code lang="C#">
+              imgEdit.CutImage(new System.Drawing.Rectangle(0, 0, 100, 100));
+            </code></example></member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.PasteImage(System.Boolean)">
+      <summary>
+            Pastes a clipboard image into the control and display it.
+            </summary>
+      <param name="ClearOnFinish">Clear clipboard on finish.</param>
+      <example>The following example shows how to paste one existing clipboard saved image into ImgEdit control.
+            <code lang="vbnet">
+              imgEdit.PasteImage(True)
+            </code><code lang="C#">
+              imgEdit.PasteImage(true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.PasteIntoImage(System.Boolean)">
+      <summary>
+            Pastes one saved clipboard image into the displayed image.
+            </summary>
+      <param name="ClearOnFinish">Clear clipboard on finish.</param>
+      <example>The following example shows how to paste one existing clipboard image into the displayed image.
+            <code lang="vbnet">
+              imgEdit.PasteIntoImage(True)
+            </code><code lang="C#">
+              imgEdit.PasteIntoImage(true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.PasteIntoImage(System.Int32,System.Int32,System.Boolean)">
+      <summary>
+            Pastes one saved clipboard image into the displayed image in a specified position.
+            </summary>
+      <param name="x">The image X position value.</param>
+      <param name="y">The image Y position value.</param>
+      <param name="ClearOnFinish">Clear clipboard on finish.</param>
+      <example>The following example shows how to paste one existing clipboard image into a displayed image specific position.
+            <code lang="vbnet">
+              imgEdit.PasteIntoImage(100, 100, True)
+            </code><code lang="C#">
+              imgEdit.PasteIntoImage(100, 100, true);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.PasteIntoImage(System.Int32,System.Int32,System.Byte[])">
+      <summary>
+            Pastes one image byte array into the displayed image in a specified position.
+            </summary>
+      <param name="x">The image X position value.</param>
+      <param name="y">The image Y position value.</param>
+      <param name="ImageByteArray">The image byte array</param>
+      <example>The following example shows how to paste one existing image byte array into a displayed image specific position.
+            <code lang="vbnet">
+              Dim m_FileDialog As OpenFileDialog  = new OpenFileDialog()
+              m_FileDialog.ShowDialog()
+              Dim fs as FileStream = m_FileDialog.File.OpenRead()
+              Dim br As New BinaryReader(ImageFileStream)
+              Dim m_ImageByteArray As Byte() = New Byte(ImageFileStream.Length - 1) 
+              m_ImageByteArray = br.ReadBytes(CInt(ImageFileStream.Length))
+              br.Close()
+              br = Nothing
+              fs.Close()
+              fs.Dispose()
+              imgEdit.PasteIntoImage(100, 100, m_ImageByteArray)
+            </code><code lang="C#">
+              OpenFileDialog m_FileDialog = new OpenFileDialog();
+              m_FileDialog.ShowDialog();
+              FileStream fs = m_FileDialog.File.OpenRead();
+              BinaryReader br = new BinaryReader(fs);
+              Byte[] m_ImageByteArray = new Byte[fs.Length];
+              m_ImageByteArray = br.ReadBytes((int)fs.Length);
+              br.Close();
+              br = null;
+              fs.Close();
+              fs.Dispose();
+              imgEdit.PasteIntoImage(100, 100, m_ImageByteArray);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.SearchText(System.String,System.Boolean,System.Boolean,System.Boolean)">
+      <summary>
+            Reads and searches the image for the specified word or phrase and highlighting the value.
+            </summary>
+      <param name="Value">The text value to search.</param>
+      <param name="MatchAllWord">Match all word.</param>
+      <param name="MatchCase">Match case.</param>
+      <param name="SearchUp">Searches the text from finish to the begining.</param>
+      <example>The following example shows how to search all pages of the image for a specified value.
+            <code lang="vbnet">
+              imgEdit.SearchText("Image Components", False, False, False)
+            </code><code lang="C#">
+              imgEdit.SearchText("Image Components", false, false, false);
+            </code></example>
+      <remarks>The highlight color can be set specifying the color value of the SearchHighlightColor property.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.SearchText(System.String,System.Int32,System.Boolean,System.Boolean)">
+      <summary>
+            Reads and searches the specified page for the word or phrase and highlighting the value.
+            </summary>
+      <param name="Value">The text value to search.</param>
+      <param name="PageIndex">The page index position to search.</param>
+      <param name="MatchAllWord">Match all word.</param>
+      <param name="MatchCase">Match case.</param>
+      <example>The following example shows how to search the first page of the image for a specified value.
+            <code lang="vbnet">
+              imgEdit.SearchText("Image Components", 0, False, False)
+            </code><code lang="C#">
+              imgEdit.SearchText("Image Components", 0, false, false);
+            </code></example>
+      <remarks>The highlight color can be set specifying the color value of the SearchHighlightColor property.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.NextTextSeach(System.Boolean,System.Boolean,System.Boolean)">
+      <summary>
+            Reads and searches the image for the next specified word or phrase and highlighting the value.
+            </summary>
+      <param name="MatchAllWord">Match all word.</param>
+      <param name="MatchCase">Match case.</param>
+      <param name="SearchUp">Searches the text from finish to the begining.</param>
+      <example>The following example shows how to search the next page for a specified value.
+            <code lang="vbnet">
+              imgEdit.NextTextSeach(False, False, False)
+            </code><code lang="C#">
+              imgEdit.NextTextSeach(false, false, false);
+            </code></example>
+      <remarks>The highlight color can be set specifying the color value of the SearchHighlightColor property.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ClearTextSearch">
+      <summary>
+            Clears the previous highlight search values.
+            </summary>
+      <example>The following example shows how to clear the highlight values from all image pages.
+            <code lang="vbnet">
+              imgEdit.ClearTextSearch()
+            </code><code lang="C#">
+              imgEdit.ClearTextSearch();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ClearTextSearch(System.Int32)">
+      <summary>
+            Clears the previous highlight search values.
+            </summary>
+      <example>The following example shows how to clear the highlight values from the first image page.
+            <code lang="vbnet">
+              imgEdit.ClearTextSearch(0)
+            </code><code lang="C#">
+              imgEdit.ClearTextSearch(0);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.SaveImage">
+      <summary>
+            Saves the loaded image to a file with the specified properties settings.
+            </summary>
+      <example>The following example shows how to save the loaded image.
+            <code lang="vbnet">
+              imgEdit.SaveImage()
+            </code><code lang="C#">
+              imgEdit.SaveImage();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.SaveImageAs">
+      <summary>
+            Saves the loaded image to a file with the specified properties settings.
+            </summary>
+      <example>The following example shows how to save the loaded image with the jpg image format, the jpg compression and the best jpg quality.
+            <code lang="vbnet">
+              imgEdit.SaveImageFormat = ImageComponents.Imaging.ICImageOutputFormat.JPG
+              imgEdit.SaveImageCompression = ImageComponents.Imaging.ICImageCompression.JPG
+              imgEdit.SaveJPGQuality = 100
+              imgEdit.SaveImageAs()
+            </code><code lang="C#">
+              imgEdit.SaveImageFormat = ImageComponents.Imaging.ICImageOutputFormat.JPG;
+              imgEdit.SaveImageCompression = ImageComponents.Imaging.ICImageCompression.JPG;
+              imgEdit.SaveJPGQuality = 100;
+              imgEdit.SaveImageAs();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.SaveImageAs(System.String)">
+      <summary>
+            Saves the loaded image to a file with the specified properties settings.
+            </summary>
+      <param name="SaveImagePath">The saved image file path.</param>
+      <example>The following example shows how to save the loaded image with the jpg image format, the jpg compression and the best jpg quality.
+            <code lang="vbnet">
+              imgEdit.SaveImageFormat = ImageComponents.Imaging.ICImageOutputFormat.JPG
+              imgEdit.SaveImageCompression = ImageComponents.Imaging.ICImageCompression.JPG
+              imgEdit.SaveJPGQuality = 100
+              imgEdit.SaveImageAs("C:\Test.jpg")
+            </code><code lang="C#">
+              imgEdit.SaveImageFormat = ImageComponents.Imaging.ICImageOutputFormat.JPG;
+              imgEdit.SaveImageCompression = ImageComponents.Imaging.ICImageCompression.JPG;
+              imgEdit.SaveJPGQuality = 100;
+              imgEdit.SaveImageAs("C:\\Test.jpg");
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.SaveImageAs(System.String,ImageComponents.WPF.Imaging.ImgEdit.ICImageOutputFormat,ImageComponents.WPF.Imaging.ImgEdit.ICImageCompression)">
+      <summary>
+            Saves the loaded image to a file with a specific image format and image compression.
+            </summary>
+      <param name="SaveImagePath">The saved image file path.</param>
+      <param name="SaveImageFormat">The avaliable save image format enumeration.</param>
+      <param name="SaveImageCompression">The avaliable save image compression enumeration.</param>
+      <example>The following example shows how to save the loaded image with the tif image format and the CCITT4 compression.
+            <code lang="vbnet">
+              imgEdit.SaveImageAs("C:\Test.tif", ImageComponents.Imaging.ICImageOutputFormat.TIF, ImageComponents.Imaging.ICImageCompression.CCITT4)
+            </code><code lang="C#">
+              imgEdit.SaveImageAs("C:\\Test.tif", ImageComponents.Imaging.ICImageOutputFormat.TIF, ImageComponents.Imaging.ICImageCompression.CCITT4);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.SaveImageAs(System.String,ImageComponents.WPF.Imaging.ImgEdit.ICImageOutputFormat,ImageComponents.WPF.Imaging.ImgEdit.ICImageCompression,ImageComponents.WPF.Imaging.ImgEdit.ICImageSavePageOptions)">
+      <summary>
+            Saves the selected image page to a file with a specific image format and image compression.
+            </summary>
+      <param name="SaveImagePath">The saved image file path.</param>
+      <param name="SaveImageFormat">The avaliable save image format enumeration.</param>
+      <param name="SaveImageCompression">The avaliable save image compression enumeration.</param>
+      <param name="PageOptions">The avaliable save image page options enumeration.</param>
+      <example>The following example shows how to save the selected page with the tif image format and the CCITT4 compression.
+            <code lang="vbnet">
+              imgEdit.SaveImageAs("C:\Test.tif", ImageComponents.Imaging.ICImageOutputFormat.TIF, ImageComponents.Imaging.ICImageCompression.CCITT4, ImageComponents.Imaging.ICImageSavePageOptions.SelectedPage)
+            </code><code lang="C#">
+              imgEdit.SaveImageAs("C:\\Test.tif", ImageComponents.Imaging.ICImageOutputFormat.TIF, ImageComponents.Imaging.ICImageCompression.CCITT4, ImageComponents.Imaging.ICImageSavePageOptions.SelectedPage);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ClosePage">
+      <summary>
+            Closes the current image page from the display and from the memory.
+            </summary>
+      <example>The following example closes the current image page from the display and from the memory.
+            <code lang="vbnet">
+              imgEdit.ClosePage()
+            </code><code lang="C#">
+              imgEdit.ClosePage();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.ClosePage(System.Int32)">
+      <summary>
+            Closes the specified image page from the display and from the memory.
+            </summary>
+      <param name="PageIndex">Page index position.</param>
+      <example>The following example closes the first image page.
+            <code lang="vbnet">
+              imgEdit.ClosePage(0)
+            </code><code lang="C#">
+              imgEdit.ClosePage(0);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgEdit.Close">
+      <summary>
+            Closes the image from the display and from the memory.
+            </summary>
+      <example>The following example closes the displayed image.
+            <code lang="vbnet">
+              imgEdit.Close()
+            </code><code lang="C#">
+              imgEdit.Close();
+            </code></example>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.EnableAsynchronousWork">
+      <summary>
+            Gets or sets the multi thread work value.
+            </summary>
+      <value>Sets the multi thread work value.</value>
+      <returns>Gets the multi thread work value.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImageManager">
+      <summary>
+            Gets the Image Manager object.
+            </summary>
+      <returns> Gets the Image Manager object..</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImageFilePath">
+      <summary>
+            Gets or sets the image file path.
+            </summary>
+      <value>Sets the image file path.</value>
+      <returns>Gets the image file path.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.Page">
+      <summary>
+            Gets or sets the displayed image page.
+            </summary>
+      <value>Sets the displayed image page number.</value>
+      <returns>Gets the displayed image page number.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.Fit">
+      <summary>
+            Gets or sets the displayed image fit.
+            </summary>
+      <value>Sets the displayed image fit.</value>
+      <returns>Gets the displayed image fit.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.PageCount">
+      <summary>
+            Gets the number of pages of the displayed image.
+            </summary>
+      <returns>Gets the number of pages of the displayed image.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.GetImageZoom">
+      <summary>
+            Gets the current displayed image zoom value.
+            </summary>
+      <returns>Gets the current displayed image zoom value.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.SelectedPage">
+      <summary>
+            Gets the selected page number.
+            </summary>
+      <returns>Gets the selected page number.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.EnableSelectionType">
+      <summary>
+            Gets or sets the image selection type.
+            </summary>
+      <value>Sets the image selection type.</value>
+      <returns>Gets the image selection type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.HasSelectionRectangle">
+      <summary>
+            Gets the has selection rectangle value.
+            </summary>
+      <value>Gets the has selection rectangle value.</value>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.SelectionRectangle">
+      <summary>
+            Gets the selection rectangle values.
+            </summary>
+      <value>Gets the selection rectangle values.</value>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.SaveImageFormat">
+      <summary>
+            Gets or sets the output image format.
+            </summary>
+      <value>Sets the output image format.</value>
+      <returns>Gets the output image format.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.SaveImageCompression">
+      <summary>
+            Gets or sets the output image compression.
+            </summary>
+      <value>Sets the output image compression.</value>
+      <returns>Gets the output image compression.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.SavePageOptions">
+      <summary>
+            Gets or sets the output image save page option.
+            </summary>
+      <value>Sets the output image save page option.</value>
+      <returns>Gets the output image save page option.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.SaveOutputType">
+      <summary>
+            Gets or sets the output image save type.
+            </summary>
+      <value>Sets the output image save type.</value>
+      <returns>Gets the output image save type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.SavePageRange">
+      <summary>
+            Gets or sets the output image save page range.
+            </summary>
+      <value>Sets the output image save page range.</value>
+      <returns>Gets the output image save page range.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.SaveJPGQuality">
+      <summary>
+            Gets or sets the output jpg image save quality.
+            </summary>
+      <value>Sets the output jpg image save quality.</value>
+      <returns>Gets the output jpg image save quality.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.SavePDFAsSearchable">
+      <summary>
+            Gets or sets the output PDF file as searchable.
+            </summary>
+      <value>Sets the output PDF file as searchable.</value>
+      <returns>Gets the output PDF file as searchable.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.CompressSavedStream">
+      <summary>
+             Gets or sets the save compressed stream value.
+             </summary>
+      <value>Sets the save compressed stream value.</value>
+      <returns>Gets the save compressed stream value.</returns>
+      <remarks>If the stream is compressed the image will be unavaliable to other image viewers.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.PDFViewDPISize">
+      <summary>
+            Gets or sets the PDF view DPI size.
+            </summary>
+      <value>Sets the PDF view DPI size.</value>
+      <returns>Gets the PDF view DPI size.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.PDFOutlineItems">
+      <summary>
+            Gets the PDF outline items.
+            </summary>
+      <returns>Gets the PDF outline items.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.OCRLanguagesPath">
+      <summary>
+            Gets or sets the OCR custom languages path.
+            </summary>
+      <value>Sets the OCR custom languages path.</value>
+      <returns>Gets the OCR custom languages path.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImageOCRLanguage">
+      <summary>
+            Gets or sets the image OCR language.
+            </summary>
+      <value>Sets the image OCR language.</value>
+      <returns>Gets the image OCR language.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImageOCRType">
+      <summary>
+            Gets or sets the image OCR type.
+            </summary>
+      <value>Sets the image OCR type.</value>
+      <returns>Gets the image OCR type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImageOCRPageType">
+      <summary>
+            Gets or sets the image OCR page type.
+            </summary>
+      <value>Sets the image OCR page type.</value>
+      <returns>Gets the image OCR page type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.PrinterName">
+      <summary>
+            Gets or sets the printer name.
+            </summary>
+      <value>Sets the printer name.</value>
+      <returns>Gets the printer name.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.PrintWithAnnotations">
+      <summary>
+            Gets or sets the print image with annotations.
+            </summary>
+      <value>Sets the print image with annotations.</value>
+      <returns>Gets the print image with annotations.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ShowPrinterSettings">
+      <summary>
+            Gets or sets the visibility of the printer settings dialog.
+            </summary>
+      <value>Sets the visibility of the printer settings dialog.</value>
+      <returns>Gets the visibility of the printer settings dialog.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ShowPrintingDialog">
+      <summary>
+            Gets or sets the visibility of the printing dialog.
+            </summary>
+      <value>Sets the visibility of the printing dialog.</value>
+      <returns>Gets the visibility of the printing dialog.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImagePrintFitOptions">
+      <summary>
+            Gets or sets the image print fit options.
+            </summary>
+      <value>Sets the image print fit options.</value>
+      <returns>Gets the image print fit options.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImagePrintOrientation">
+      <summary>
+            Gets or sets the image print orientation.
+            </summary>
+      <value>Sets the image print orientation.</value>
+      <returns>Gets the image print orientation.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImageBorderColor">
+      <summary>
+            Gets or sets the image border color.
+            </summary>
+      <value>Sets the image border color.</value>
+      <returns>Gets the image border color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImageSelectionStroke">
+      <summary>
+            Gets or sets the image selection stroke.
+            </summary>
+      <value>Sets the image selection stroke.</value>
+      <returns>Gets the image selection stroke.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImageSelectionColor">
+      <summary>
+             Gets or sets the image selection fill color.
+            </summary>
+      <value>Sets the image selection fill color.</value>
+      <returns>Gets the image selection fill color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.SearchHighlightColor">
+      <summary>
+             Gets or sets the text search highlight color.
+            </summary>
+      <value>Sets the text search highlight color.</value>
+      <returns>Gets the text search highlight color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.MagnifyingGlassRadius">
+      <summary>
+            Gets or sets the magnifying glass radius.
+            </summary>
+      <value>Sets the the magnifying glass radius.</value>
+      <returns>Gets the the magnifying glass radius.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImageFileProperties">
+      <summary>
+            Gets the loaded image properties.
+            </summary>
+      <returns>Gets the loaded image properties.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImagePageProperties">
+      <summary>
+            Gets the displayed page properties.
+            </summary>
+      <returns>Gets the displayed page properties.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImagePageMetadata">
+      <summary>
+            Gets or sets the displayed page metadata.
+            </summary>
+      <value>Sets the displayed page metadata.</value>
+      <returns>Gets the displayed page metadata.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImagePagePaperSize">
+      <summary>
+            Gets or sets the displayed page paper size.
+            </summary>
+      <value>Sets the displayed page paper size.</value>
+      <returns>Gets the displayed page paper size.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ImageEditCanvas">
+      <summary>
+            Gets the image display canvas.
+            </summary>
+      <returns>Gets the image display canvas.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.LastError">
+      <summary>
+            Gets the last error message.
+            </summary>
+      <returns>Gets the last error message.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ErrorTraceOutputType">
+      <summary>
+            Gets or sets the trace log output type.
+            </summary>
+      <value>Sets the trace log output type.</value>
+      <returns>Gets the trace log output type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.ErrorFilePath">
+      <summary>
+            Gets or sets the error log file path.
+            </summary>
+      <value>Sets the error log file path.</value>
+      <returns>Gets the error log file path.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgEdit.Registration">
+      <summary>
+            Loads the component registration dialog
+            </summary>
+      <returns>Gets the developer machine key code.</returns>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.ImageLoaded">
+      <summary>
+            Occurs every sucessfully loaded image.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.ImageChanged">
+      <summary>
+            Occurs every sucessfully changed image.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.ImageSaved">
+      <summary>
+            Occurs every sucessfully saved image.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.ImageClosed">
+      <summary>
+            Occurs every sucessfully closed image.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.PageLoaded">
+      <summary>
+            Occurs every sucessfully loaded page.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.PageSaved">
+      <summary>
+            Occurs every sucessfully saved image page.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.PageChanged">
+      <summary>
+            Occurs every sucessfully changed page.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.PageRequested">
+      <summary>
+             Occurs every requested image page values.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.PageDisplayed">
+      <summary>
+            Occurs every sucessfully displayed page.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.PageRepainted">
+      <summary>
+            Occurs everytime a page redraw has finished.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.PageNavigated">
+      <summary>
+             Occurs every sucessfully navigated page.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.SelectionStarted">
+      <summary>
+            Occurs when a image selection is started.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.SelectionChanged">
+      <summary>
+            Occurs when a image selection is in progress.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.SelectionFinished">
+      <summary>
+            Occurs when a image selection is completed.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.OCRCompleted">
+      <summary>
+            Occurs in every sucessfull completed page OCR.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.OCRZoneCompleted">
+      <summary>
+            Occurs in every sucessfull completed page zone OCR.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.TextSearchCompleted">
+      <summary>
+            Occurs in every completed page text search.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.ScreenCaptureCompleted">
+      <summary>
+            Occurs when the screen capture function is completed.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.MouseLeftButtonDown">
+      <summary>
+            Occurs when the left mouse button is pressed while the mouse pointer is over this element.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.MouseDown">
+      <summary>
+            Occurs when any mouse button is pressed while the pointer is over this element.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.ErrorOccurred">
+      <summary>
+            Occurs every time one error is raised.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.WorkingProgress">
+      <summary>
+            Occurs in every processed long work.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.WorkingStarted">
+      <summary>
+            Occurs in every start process long work.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.WorkingFinished">
+      <summary>
+            Occurs in every finished process long work.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgEdit.TextSelectionCompleted">
+      <summary>
+            Occurs in every completed page text selection.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImageCompression">
+      <summary>
+            Image Compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageCompression.UNKNOWN">
+      <summary>
+            Unknown compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageCompression.DEFAULT">
+      <summary>
+            Default compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageCompression.NONE">
+      <summary>
+            None save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageCompression.RLE">
+      <summary>
+            RLE save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageCompression.CCITT3">
+      <summary>
+            CCITT3 save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageCompression.CCITT4">
+      <summary>
+            CCITT4 save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageCompression.LZW">
+      <summary>
+            LZW save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageCompression.JPEG">
+      <summary>
+            JPEG save compression.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImageOutputFormat">
+      <summary>
+            Image output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOutputFormat.UNKNOWN">
+      <summary>
+            Unknown output format
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOutputFormat.DEFAULT">
+      <summary>
+            Default output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOutputFormat.BMP">
+      <summary>
+            BMP output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOutputFormat.JPEG">
+      <summary>
+            JPEG output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOutputFormat.PNG">
+      <summary>
+            PNG output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOutputFormat.TIFF">
+      <summary>
+            TIFF output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOutputFormat.GIF">
+      <summary>
+            GIF output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOutputFormat.PDF">
+      <summary>
+            PDF image output format.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImageSavePageOptions">
+      <summary>
+            Image Save Page Options
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSavePageOptions.Page">
+      <summary>
+            A specific page.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSavePageOptions.Range">
+      <summary>
+            A range of pages.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSavePageOptions.All">
+      <summary>
+            All pages.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate">
+      <summary>
+            Image size templates.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_9x11">
+      <summary>
+            9x11 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_10x11">
+      <summary>
+            10x11 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_10x14">
+      <summary>
+            10x14 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_12x11">
+      <summary>
+            12x11 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_15x11">
+      <summary>
+            15x11 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A0">
+      <summary>
+            A0 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A1">
+      <summary>
+            A1 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A2">
+      <summary>
+            A2 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A3">
+      <summary>
+            A3 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A3_Extra">
+      <summary>
+            A3 Extra Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A3_Rotated">
+      <summary>
+            A3 Rotated Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A4">
+      <summary>
+            A4 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A4_Extra">
+      <summary>
+            A4 Extra Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A4_Plus">
+      <summary>
+            A4 Plus Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A4_Rotated">
+      <summary>
+            A4 Rotated Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A5">
+      <summary>
+            A5 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A5_Extra">
+      <summary>
+            A5 Extra Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A5_Rotated">
+      <summary>
+            A5 Rotated Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A6">
+      <summary>
+            A6 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_A6_Rotated">
+      <summary>
+            A6 Rotated Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B0_ISO_1000x1414mm">
+      <summary>
+            B0 ISO (1000 x 1414 mm) Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B0_JIS_1030x1456mm">
+      <summary>
+            B0 JIS (1030 x 1456 mm) Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B1_ISO_707x1000mm">
+      <summary>
+            B1 ISO (707 x 1000 mm) Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B1_JIS_728x1030mm">
+      <summary>
+            B1 JIS (728 x 1030 mm) Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B2_ISO_500x707mm">
+      <summary>
+            B2 ISO (500 x 707 mm) Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B2_JIS_515x728mm">
+      <summary>
+            B2 JIS (515 x 728 mm) Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B3_ISO_353x500mm">
+      <summary>
+            B3 ISO (353 x 500 mm) Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B3_JIS_364x515mm">
+      <summary>
+            B3 JIS (364 x 515 mm) Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B4_ISO">
+      <summary>
+            B4 (ISO) Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B4_JIS">
+      <summary>
+            B4 (JIS) Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B4_JIS_Rotated">
+      <summary>
+            B4 (JIS) Rotated Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B5_JIS">
+      <summary>
+            B5 (JIS) Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B5_JIS_Rotated">
+      <summary>
+            B5 (JIS) Rotated Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B6_JIS">
+      <summary>
+            B6 (JIS) Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_B6_JIS_Rotated">
+      <summary>
+            B6 (JIS) Rotated Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_C_size_sheet">
+      <summary>
+            C size sheet Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_D_size_sheet">
+      <summary>
+            D size sheet Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_E_size_sheet">
+      <summary>
+            E size sheet Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope">
+      <summary>
+            Envelope Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_9">
+      <summary>
+            Envelope #9 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_10">
+      <summary>
+            Envelope #10 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_11">
+      <summary>
+            Envelope #11 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_12">
+      <summary>
+            Envelope #12 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_14">
+      <summary>
+            Envelope #14 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_DL">
+      <summary>
+            Envelope DL Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_C3">
+      <summary>
+            Envelope C3 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_C4">
+      <summary>
+            Envelope C4 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_C5">
+      <summary>
+            Envelope C5 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_C6">
+      <summary>
+            Envelope C6 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_C65">
+      <summary>
+            Envelope C65 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_B4">
+      <summary>
+            Envelope B4 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_B5">
+      <summary>
+            Envelope B5 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_B6">
+      <summary>
+            Envelope B6 Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_Monarch">
+      <summary>
+            Envelope Monarch Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Envelope_Invite">
+      <summary>
+            Envelope Invite Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Executive">
+      <summary>
+            Executive Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Folio">
+      <summary>
+            Folio Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_F_size_sheet">
+      <summary>
+            F size sheet Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Japanese_Postcard">
+      <summary>
+            Japanese Postcard Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Japanese_Double_Postcard">
+      <summary>
+            Japanese Double Postcard Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Ledger">
+      <summary>
+            Ledger Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Legal">
+      <summary>
+            Legal Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Legal_Extra">
+      <summary>
+            Legal Extra Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Letter">
+      <summary>
+            Letter Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Letter_Plus">
+      <summary>
+            Letter Plus Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Letter_Extra">
+      <summary>
+            Letter Extra Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Quarto">
+      <summary>
+            Quarto Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Square_64x64mm">
+      <summary>
+            Square 64 x 64 mm Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Square_128x128mm">
+      <summary>
+            Square 128 x 128 mm Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Square_256x256mm">
+      <summary>
+            Square 256 x 256 mm Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Square_512x512mm">
+      <summary>
+            Square 512 x 512 mm Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Statement">
+      <summary>
+            Statement Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_SuperA">
+      <summary>
+            SuperA Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_SuperB">
+      <summary>
+            SuperB Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Tabloid">
+      <summary>
+            Tabloid Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_Tabloid_Extra">
+      <summary>
+            Tabloid Extra Image size template.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSizeTemplate.Template_US_Std_Fanfold">
+      <summary>
+            US Std Fanfold Image size template.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImageDPISize">
+      <summary>
+            Image dpi size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageDPISize.DPI_72">
+      <summary>
+            72 dpi image size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageDPISize.DPI_96">
+      <summary>
+            96 dpi image size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageDPISize.DPI_100">
+      <summary>
+            100 dpi image size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageDPISize.DPI_150">
+      <summary>
+            150 dpi image size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageDPISize.DPI_200">
+      <summary>
+            200 dpi image size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageDPISize.DPI_300">
+      <summary>
+            300 dpi image size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageDPISize.DPI_600">
+      <summary>
+            600 dpi image size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageDPISize.DPI_1200">
+      <summary>
+            1200 dpi image size.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImageFit">
+      <summary>
+            Display image fit.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageFit.None">
+      <summary>
+            None fit image display.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageFit.BestFit">
+      <summary>
+            Best fit image display.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageFit.FitToWidth">
+      <summary>
+            Fit to width image display.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageFit.FitToHeight">
+      <summary>
+            Fit to height image display.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageFit.OriginalSize">
+      <summary>
+            Original size image display.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageFit.ParentWidth">
+      <summary>
+            Fit to parent width image display.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageFit.ParentHeight">
+      <summary>
+            Fit to parent height image display.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICSelectionType">
+      <summary>
+            Selection type enumeration.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICSelectionType.None">
+      <summary>
+            No selection.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICSelectionType.Selection">
+      <summary>
+            No function selection.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICSelectionType.ZoomSelection">
+      <summary>
+            Zoom selection.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICSelectionType.ClearSelection">
+      <summary>
+            Clear selction.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICSelectionType.CropSelection">
+      <summary>
+            Crop selection.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICSelectionType.HandPan">
+      <summary>
+            Hand pan selection.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICSelectionType.MagnifyingGlass">
+      <summary>
+            Magnifying glass selection.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICSelectionType.AnnotationSelection">
+      <summary>
+            Annotation selection.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICSelectionType.TextSelection">
+      <summary>
+            Text selection.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages">
+      <summary>
+            Image OCR languages.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.English">
+      <summary>
+            English OCR Language.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.French">
+      <summary>
+            French OCR Language.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Italian">
+      <summary>
+            Italian OCR Language.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.German">
+      <summary>
+            German OCR Language.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Spanish">
+      <summary>
+            Spanish OCR Language.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Dutch">
+      <summary>
+            Dutch OCR Language.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Portuguese">
+      <summary>
+            Portuguese OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Ukrainian">
+      <summary>
+            Ukrainian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Turkish">
+      <summary>
+            Turkish OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Thai">
+      <summary>
+            Thai OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Swedish">
+      <summary>
+            Swedish OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Swahili">
+      <summary>
+            Swahili OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Serbian">
+      <summary>
+            Serbian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Albanian">
+      <summary>
+            Albanian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Slovenian">
+      <summary>
+            Slovenian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Slovakian">
+      <summary>
+            Slovakian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Romanian">
+      <summary>
+            Romanian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Polish">
+      <summary>
+            Polish OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Norwegian">
+      <summary>
+            Norwegian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Lithuanian">
+      <summary>
+            Lithuanian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Korean">
+      <summary>
+            Korean OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Kannada">
+      <summary>
+            Kannada OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Icelandic">
+      <summary>
+            Icelandic OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Indonesian">
+      <summary>
+            Indonesian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Hindi">
+      <summary>
+            Hindi OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Hungarian">
+      <summary>
+            Hungarian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Croatian">
+      <summary>
+            Croatian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Hebrew">
+      <summary>
+            Hebrew OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Galician">
+      <summary>
+            Galician OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Finnish">
+      <summary>
+            Finnish OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Basque">
+      <summary>
+            Basque OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Estonian">
+      <summary>
+            Estonian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Esperanto">
+      <summary>
+            Esperanto OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Greek">
+      <summary>
+            Greek OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Danish">
+      <summary>
+            Danish OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Czech">
+      <summary>
+            Czech OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Catalan">
+      <summary>
+            Catalan OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Bulgarian">
+      <summary>
+            Bulgarian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Belarusian">
+      <summary>
+            Belarusian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Azerbaijani">
+      <summary>
+            Azerbaijani OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Arabic">
+      <summary>
+            Arabic OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Afrikaans">
+      <summary>
+            Afrikaans OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Japanese">
+      <summary>
+            Japanese OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Chinese_Simplified">
+      <summary>
+            Chinese Simplified OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Chinese_Traditional">
+      <summary>
+            Chinese Traditional OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Russian">
+      <summary>
+            Russian OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Vietnamese">
+      <summary>
+            Vietnamese OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Frankish">
+      <summary>
+            Frankish OCR Language
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRLanguages.Math_Equation">
+      <summary>
+            Math Equation OCR Language
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRType">
+      <summary>
+            Image OCR type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRType.OEM_TESSERACT_ONLY">
+      <summary>
+            Run Tesseract only OCR type - fastest.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRType.OEM_CUBE_ONLY">
+      <summary>
+            Cube only OCR type - better accuracy, but slower.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRType.OEM_TESSERACT_CUBE_COMBINED">
+      <summary>
+            Combine results OCR type - best accuracy.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRType.OEM_DEFAULT">
+      <summary>
+            Default OCR type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRPageType">
+      <summary>
+            Image OCR page type enumerations.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRPageType.AllPages">
+      <summary>
+            All pages OCR.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRPageType.SelectedPage">
+      <summary>
+            Selected page OCR.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRPageType.PageSelection">
+      <summary>
+            Page selection OCR.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageOCRPageType.ImageZoneOCR">
+      <summary>
+            Image Zone OCR.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImagePrintOptions">
+      <summary>
+            Image print options.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImagePrintOptions.ActualSize">
+      <summary>
+            Actual size print options.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImagePrintOptions.BestFit">
+      <summary>
+            Best fit print options.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImagePrintOptions.FitToPage">
+      <summary>
+            Fit to page print options.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImagePrintOrientation">
+      <summary>
+            Image print orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImagePrintOrientation.Automatic">
+      <summary>
+            Automatic print orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImagePrintOrientation.Normal">
+      <summary>
+            Normal print orientation.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImageSaveOutputType">
+      <summary>
+            Image save output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSaveOutputType.FileSystem">
+      <summary>
+            File system output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSaveOutputType.ByteArray">
+      <summary>
+            Byte array output type
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageSaveOutputType.MemoryStream">
+      <summary>
+            Memory stream output type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImageBitFormat">
+      <summary>
+            Image bit conversion bits per pixel.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageBitFormat.PixelFormat_1Bit">
+      <summary>
+            Bit conversion to 1 bit per pixel.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageBitFormat.PixelFormat_4Bit">
+      <summary>
+            Bit conversion to 4 bits per pixel.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageBitFormat.PixelFormat_8Bit">
+      <summary>
+            Bit conversion to 8 bits per pixel.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageBitFormat.PixelFormat_16Bit">
+      <summary>
+            Bit conversion to 16 bits per pixel.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageBitFormat.PixelFormat_24Bit">
+      <summary>
+            Bit conversion to 24 bits per pixel.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageBitFormat.PixelFormat_32Bit">
+      <summary>
+            Bit conversion to 32 bits per pixel.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ICImageColorDepth">
+      <summary>
+            Image color depth.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageColorDepth.ColorDepth_1BPP">
+      <summary>
+            Color conversion to 1 bit per pixel.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageColorDepth.ColorDepth_4BPP">
+      <summary>
+            Color conversion to 4 bit per pixel.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageColorDepth.ColorDepth_8BPP">
+      <summary>
+            Color conversion to 8 bit per pixel.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageColorDepth.ColorDepth_16BPP">
+      <summary>
+            Color conversion to 16 bit per pixel.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageColorDepth.ColorDepth_24BPP">
+      <summary>
+            Color conversion to 24 bit per pixel.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.ICImageColorDepth.ColorDepth_32BPP">
+      <summary>
+            Color conversion to 32 bit per pixel.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.TraceOutputType">
+      <summary>
+            Trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.TraceOutputType.None">
+      <summary>
+            None trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.TraceOutputType.DebugWindow">
+      <summary>
+            Debug window trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.TraceOutputType.File">
+      <summary>
+            File trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgEdit.TraceOutputType.EventViewerLog">
+      <summary>
+            Event viewer output type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ImageLoadedEventHandler">
+      <summary>
+            Occurs every sucessfully loaded image.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ImageChangedEventHandler">
+      <summary>
+            Occurs every sucessfully changed image.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ImageSavedEventHandler">
+      <summary>
+            Occurs every sucessfully saved image.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="e">Image saved output event args.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ImageClosedEventHandler">
+      <summary>
+            Occurs every sucessfully closed image.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.PageLoadedEventHandler">
+      <summary>
+            Occurs every sucessfully loaded page.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="PagePosition">The page position in the image.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.PageSavedEventHandler">
+      <summary>
+            Occurs every sucessfully saved image page.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="e">Image page saved output event args.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.PageChangedEventHandler">
+      <summary>
+            Occurs every sucessfully changed page.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="PagePosition">The page position in the image.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.PageRequestedEventHandler">
+      <summary>
+            Occurs every requested image page values.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="e">Image requested event args.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.PageDisplayedEventHandler">
+      <summary>
+            Occurs every sucessfully displayed page.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="PagePosition">The page position in the image.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.PageRepaintedEventHandler">
+      <summary>
+            Occurs everytime a page redraw has finished.
+            </summary>
+      <param name="sender">The Image Components ImgEdit object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.PageNavigatedEventHandler">
+      <summary>
+            Occurs every sucessfully navigated page.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="PagePosition">The page position in the image.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.SelectionStartedEventHandler">
+      <summary>
+             Occurs when a image selection is started.
+             </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="e">Selection event args location and size.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.SelectionEventHandler">
+      <summary>
+             Occurs when a image selection is in progress.
+             </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="e">Selection event args location and size.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.SelectionFinishedEventHandler">
+      <summary>
+             Occurs when a image selection is completed.
+             </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="e">Selection event args location and size.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.OCRCompletedEventHandler">
+      <summary>
+            Occurs in every sucessfull completed page OCR.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="PagePosition">The page position in the image.</param>
+      <param name="Result">The OCR image word list collection.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.OCRZoneCompletedEventHandler">
+      <summary>
+            Occurs in every sucessfull completed page zone OCR.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="PagePosition">The page position in the image.</param>
+      <param name="ZoneID">OCR zone ID.</param>
+      <param name="Result">The OCR text results.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.TextSearchCompletedEventHandler">
+      <summary>
+            Occurs in every completed page text search.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="PagePosition">The page position in the image.</param>
+      <param name="Result">The searched word list collection.</param>
+      <param name="SearchFinished">Text search finished.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ScreenCaptureCompletedEventHandler">
+      <summary>
+            Occurs when the screen capture function is completed.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="ScreenCaptured">Screen captured sucessfully.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.ErrorOccurredEventHandler">
+      <summary>
+            Occurs every time one error is raised.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="ControlName">The control name were the error was raised.</param>
+      <param name="MethodName">The method name were the error was raised.</param>
+      <param name="ErrorMessage">The error message.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.WorkingProgressEventHandler">
+      <summary>
+            Occurs in every processed item long work.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="Total">The total number of items to work.</param>
+      <param name="Value">The work item index.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.WorkingStartedEventHandler">
+      <summary>
+            Occurs in every start process long work.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.WorkingFinishedEventHandler">
+      <summary>
+            Occurs in every finished process long work.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgEdit.TextSelectionCompletedEventHandler">
+      <summary>
+            Occurs in every completed page text selection.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="Result">The searched word list collection.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.PageProperties">
+      <summary>
+            Image Components page properties class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.PageProperties.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageProperties.Width">
+      <summary>
+            Gets the displayed page width value.
+            </summary>
+      <returns>Gets the displayed page width value.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageProperties.Height">
+      <summary>
+            Gets the displayed page height value.
+            </summary>
+      <returns>Gets the displayed page height value.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageProperties.XResolution">
+      <summary>
+            Gets the displayed page horizontal resolution.
+             </summary>
+      <returns>Gets the displayed page horizontal resolution.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageProperties.YResolution">
+      <summary>
+            Gets the displayed page vertical resolution.
+            </summary>
+      <returns>Gets the displayed page vertical resolution.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageProperties.BitsPerSample">
+      <summary>
+            Gets the displayed page bits per sample.
+            </summary>
+      <returns>Gets the displayed page bits per sample.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageProperties.SamplesPerPixel">
+      <summary>
+            Gets the displayed page samples per pixel.
+            </summary>
+      <returns>Gets the displayed page samples per pixel.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageProperties.Compression">
+      <summary>
+            Gets the displayed page compression.
+            </summary>
+      <returns>Gets the displayed page compression.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression">
+      <summary>
+            Image Compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.UNKNOWN">
+      <summary>
+            Unknown compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.DEFAULT">
+      <summary>
+            Default compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.NONE">
+      <summary>
+            None save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.RLE">
+      <summary>
+            RLE save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.CCITT3">
+      <summary>
+            CCITT3 save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.CCITT4">
+      <summary>
+            CCITT4 save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.LZW">
+      <summary>
+            LZW save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.OJPEG">
+      <summary>
+            OJPG save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.JPEG">
+      <summary>
+            JPEG save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.NEXT">
+      <summary>
+            NEXT save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.CCITTRLEW">
+      <summary>
+            CCITTRLEW save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.PACKBITS">
+      <summary>
+            PACKBITS compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.THUNDERSCAN">
+      <summary>
+            THUNDERSCAN save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.IT8CTPAD">
+      <summary>
+            IT8CTPAD save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.IT8LW">
+      <summary>
+            IT8LW save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.IT8MP">
+      <summary>
+            IT8MP save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.IT8BL">
+      <summary>
+            IT8BL save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.PIXARFILM">
+      <summary>
+            PIXARFILM save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.PIXARLOG">
+      <summary>
+            PIXARLOG save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.DEFLATE">
+      <summary>
+            DEFLATE save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.ADOBE_DEFLATE">
+      <summary>
+            ADOBE_DEFLATE save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.DCS">
+      <summary>
+            DCS save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.JBIG">
+      <summary>
+            JBIG save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.SGILOG">
+      <summary>
+            SGILOG save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.SGILOG24">
+      <summary>
+            SGILOG24 save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.PageProperties.ICImageCompression.JP2000">
+      <summary>
+            JP2000 save compression.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.PageMetadata">
+      <summary>
+            Image Components page metadata class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.PageMetadata.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.Artist">
+      <summary>
+            Gets or sets the image page author.
+            </summary>
+      <value>Sets the image page author.</value>
+      <returns>Gets the image page author.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.EquipmentMaker">
+      <summary>
+            Gets or sets the image page equipment maker.
+            </summary>
+      <value>Sets the image page equipment maker.</value>
+      <returns>Gets the image page equipment maker.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.EquipmentModel">
+      <summary>
+            Gets or sets the image page equipment model.
+            </summary>
+      <value>Sets the image page equipment model.</value>
+      <returns>Gets the image page equipment model.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.SoftwareUsed">
+      <summary>
+            Get/Set Software Used
+            </summary>
+      <value>Sets the image page equipment maker.</value>
+      <returns>Gets the image page equipment maker.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.DateTimeLastModified">
+      <summary>
+            Gets or sets the image page last modified date time.
+            </summary>
+      <value>Sets the image page last modified date time.</value>
+      <returns>Gets the image page last modified date time.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.DateTimeOriginal">
+      <summary>
+            Gets or sets the image page original date time.
+            </summary>
+      <value>Sets the image page original date time.</value>
+      <returns>Gets the image page original date time.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.DateTimeDigitized">
+      <summary>
+            Gets or sets the image page digitilized date time.
+            </summary>
+      <value>Sets the image page digitilized date time.</value>
+      <returns>Gets the image page digitilized date time.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.ImageTitle">
+      <summary>
+            Gets or sets the image page title.
+            </summary>
+      <value>Sets the image page title.</value>
+      <returns>Gets the image page title.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.UserComment">
+      <summary>
+            Gets or sets the image page user comment.
+            </summary>
+      <value>Sets the image page user comment.</value>
+      <returns>Gets the image page user comment.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.ImageDescription">
+      <summary>
+            Gets or sets the image page image description.
+            </summary>
+      <value>Sets the image page image description.</value>
+      <returns>Gets the image page image description.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.ImageCopyright">
+      <summary>
+            Gets or sets the image page copyright.
+            </summary>
+      <value>Sets the image page copyright.</value>
+      <returns>Gets the image page copyright.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.DocumentName">
+      <summary>
+            Gets or sets the image page document name.
+            </summary>
+      <value>Sets the image page document name.</value>
+      <returns>Gets the image page document name.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PageMetadata.PageName">
+      <summary>
+            Gets or sets the image page name.
+            </summary>
+      <value>Sets the image page name.</value>
+      <returns>Gets the image page name.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.PagePaperSize">
+      <summary>
+            Image Components page paper size class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.PagePaperSize.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PagePaperSize.PaperInchesX">
+      <summary>
+            Gets the image page X paper inches.
+            </summary>
+      <returns>Gets the image page X paper inches.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PagePaperSize.PaperInchesY">
+      <summary>
+            Gets the image page Y paper inches.
+            </summary>
+      <returns>Gets the image page Y paper inches.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PagePaperSize.PaperName">
+      <summary>
+            Gets the image page paper name.
+            </summary>
+      <returns>Gets the image page paper name.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PagePaperSize.PaperCmX">
+      <summary>
+            Gets the image page X paper centimeters.
+            </summary>
+      <returns>Gets the image page X paper centimeters.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.PagePaperSize.PaperCmY">
+      <summary>
+            Gets the image page Y paper centimeters.
+            </summary>
+      <returns>Gets the image page Y paper centimeters.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImageProperties">
+      <summary>
+            Image Components image properties class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImageProperties.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageProperties.ImageFilePath">
+      <summary>
+            Gets the image file path.
+            </summary>
+      <returns>Gets the image file path.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageProperties.ImageFileDirectory">
+      <summary>
+            Gets the image file directory.
+            </summary>
+      <returns>Gets the image file directory.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageProperties.ImageFileName">
+      <summary>
+            Gets the image file name.
+            </summary>
+      <returns>Gets the image file name.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageProperties.ImageFileExtension">
+      <summary>
+            Gets the image file extension.
+            </summary>
+      <returns>Gets the image file extension.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageProperties.ImageFileSize">
+      <summary>
+            Gets the image byte size.
+            </summary>
+      <returns>Gets the image byte size.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageProperties.ImageFormat">
+      <summary>
+            Gets the image file format.
+            </summary>
+      <returns>Gets the image file format.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat">
+      <summary>
+            Image Format
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.UNKNOWN">
+      <summary>
+            Unknown format
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.BMP">
+      <summary>
+            Windows or OS/2 Bitmap File (*.BMP)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.ICO">
+      <summary>
+            Windows Icon (*.ICO)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.JPEG">
+      <summary>
+            Independent JPEG Group (*.JPG, *.JIF, *.JPEG, *.JPE)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.JNG">
+      <summary>
+            JPEG Network Graphics (*.JNG)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.KOALA">
+      <summary>
+            Commodore 64 Koala format (*.KOA)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.LBM">
+      <summary>
+            Amiga IFF (*.IFF, *.LBM)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.IFF">
+      <summary>
+            Amiga IFF (*.IFF, *.LBM)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.MNG">
+      <summary>
+            Multiple Network Graphics (*.MNG)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.PBM">
+      <summary>
+            Portable Bitmap (ASCII) (*.PBM)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.PBMRAW">
+      <summary>
+            Portable Bitmap (BINARY) (*.PBM)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.PCD">
+      <summary>
+            Kodak PhotoCD (*.PCD)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.PCX">
+      <summary>
+            Zsoft Paintbrush PCX bitmap format (*.PCX)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.PGM">
+      <summary>
+            Portable Graymap (ASCII) (*.PGM)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.PGMRAW">
+      <summary>
+            Portable Graymap (BINARY) (*.PGM)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.PNG">
+      <summary>
+            Portable Network Graphics (*.PNG)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.PPM">
+      <summary>
+            Portable Pixelmap (ASCII) (*.PPM)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.PPMRAW">
+      <summary>
+            Portable Pixelmap (BINARY) (*.PPM)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.RAS">
+      <summary>
+            Sun Rasterfile (*.RAS)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.TARGA">
+      <summary>
+            Truevision Targa files (*.TGA, *.TARGA)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.TIFF">
+      <summary>
+            Tagged Image File Format (*.TIF, *.TIFF)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.WBMP">
+      <summary>
+            Wireless Bitmap (*.WBMP)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.PSD">
+      <summary>
+            Adobe Photoshop (*.PSD)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.CUT">
+      <summary>
+            Dr. Halo (*.CUT)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.XBM">
+      <summary>
+            X11 Bitmap Format (*.XBM)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.XPM">
+      <summary>
+            X11 Pixmap Format (*.XPM)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.DDS">
+      <summary>
+            DirectDraw Surface (*.DDS)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.GIF">
+      <summary>
+            Graphics Interchange Format (*.GIF)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.HDR">
+      <summary>
+            High Dynamic Range (*.HDR)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.FAXG3">
+      <summary>
+            Raw Fax format CCITT G3 (*.G3)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.SGI">
+      <summary>
+            Silicon Graphics SGI image format (*.SGI)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.EXR">
+      <summary>
+            OpenEXR format (*.EXR)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.J2K">
+      <summary>
+            JPEG-2000 format (*.J2K, *.J2C)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.JP2">
+      <summary>
+            JPEG-2000 format (*.JP2)
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImageProperties.ICImageFormat.PDF">
+      <summary>
+            PDF format (*.PDF)
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.SelectionEventArgs">
+      <summary>
+            Image Components selection event args class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.SelectionEventArgs.#ctor(System.Windows.Point)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="StartSelectionLocation">Start selection location.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.SelectionEventArgs.#ctor(System.Windows.Point,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="StartSelectionLocation">Start selection location.</param>
+      <param name="SelectionSize">Selection size.</param>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.SelectionEventArgs.StartSelectionLocation">
+      <summary>
+            Get start selection location.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.SelectionEventArgs.SelectionSize">
+      <summary>
+            Get selection size.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.SelectionEventArgs.EndSelectionLocation">
+      <summary>
+            Get end selection location.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ICImageWordList">
+      <summary>
+            Image Components image word list class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ICImageWordList.Add(ImageComponents.WPF.Imaging.ICImageWordItem)">
+      <summary>
+            Add word item.
+            </summary>
+      <param name="WordItem">Word item.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ICImageWordList.Clear">
+      <summary>
+            Clear word list items.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ICImageWordList.GetEnumerator">
+      <summary>
+            Get collection enumerator.
+            </summary>
+      <returns>IEnumerator.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordList.Count">
+      <summary>
+            Gets the word items count.
+            </summary>
+      <returns>The word items count.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordList.Item(System.Int32)">
+      <summary>
+            Gets word item index.
+            </summary>
+      <param name="Index">Index position.</param>
+      <returns>Word item object.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordList.ICImageWordItems">
+      <summary>
+            Get/Set ICImageWordItem collection.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordList.ImageFormatedText">
+      <summary>
+            Get/Set Image formated text value.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordList.ImageText">
+      <summary>
+            Get/Set Image text value.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordList.IsOCRSource">
+      <summary>
+            Get/Set Is source from OCR.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordList.PageIndex">
+      <summary>
+            Get/Set Page index position.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ICImageWordItem">
+      <summary>
+            Image Components image word item class.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.X">
+      <summary>
+            Get/Set Word X position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.Y">
+      <summary>
+            Get/Set Word Y position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.Width">
+      <summary>
+            Get/Set Word width size.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.Height">
+      <summary>
+            Get/Set Word height size.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.Top">
+      <summary>
+            Get/Set Word top position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.Left">
+      <summary>
+            Get/Set Word left position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.Right">
+      <summary>
+            Get/Set Word right position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.Bottom">
+      <summary>
+            Get/Set Word bottom position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.Word">
+      <summary>
+            Get/Set Word value.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.FontSize">
+      <summary>
+            Get/Set font size.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.FontName">
+      <summary>
+            Get/Set font name.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.LineIndex">
+      <summary>
+            Get/Set line index position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.WordIndex">
+      <summary>
+            Get/Set Word index position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.PageIndex">
+      <summary>
+            Get/Set Page index position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageWordItem.Confidence">
+      <summary>
+            Get/Set Word confidence.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ICImageOutline">
+      <summary>
+            Image Components image outline object.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ICImageOutline.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageOutline.Title">
+      <summary>
+            Get/Set Outline title.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageOutline.Count">
+      <summary>
+            Get/Set Outline child items count.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageOutline.DestinationPage">
+      <summary>
+            Get/Set Outline destination page.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ICImageOutline.Items">
+      <summary>
+            Get/Set Outline child items.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImageSavedOutputEventArgs">
+      <summary>
+            Image Components image saved output event args class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImageSavedOutputEventArgs.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageSavedOutputEventArgs.OutputByteArray">
+      <summary>
+            Get/Set Output byte array.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageSavedOutputEventArgs.OutputAnnotations">
+      <summary>
+            Get/Set Output annotations file path.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageSavedOutputEventArgs.OutputFileName">
+      <summary>
+            Get/Set Output file name.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageSavedOutputEventArgs.OutputMemoryStream">
+      <summary>
+            Get/Set Output memory stream.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageSavedOutputEventArgs.PageCount">
+      <summary>
+            Get/Set Output page count.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageSavedOutputEventArgs.PagePosition">
+      <summary>
+            Get/Set Output page position.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImageRequestedEventArgs">
+      <summary>
+            Image Components image requested event args class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImageRequestedEventArgs.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageRequestedEventArgs.ImageByteArray">
+      <summary>
+            Get/Set Requested image byte array.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageRequestedEventArgs.IsBlankPage">
+      <summary>
+            Get/Set Is requested page blank.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImageRequestedEventArgs.IsRequestFinished">
+      <summary>
+            Get/Set Is requested finished.
+            </summary>
+    </member>
+  </members>
+</doc>

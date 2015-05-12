@@ -1,0 +1,1710 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>ImageComponents.WPF.ImgScan</name>
+  </assembly>
+  <members>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan">
+      <summary>
+            Image Components ImgScan control.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.Dispose">
+      <summary>
+            Dispose ImgScan object.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.Dispose(System.Boolean)">
+      <summary>
+            Dispose Image Components Image Scan Object
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.OnApplyTemplate">
+      <summary>
+            On apply template event.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.RegistrationProperty">
+      <summary>
+            Registration dependency property.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.SelectSource">
+      <summary>
+            Selects the scanning hardware source.
+            </summary>
+      <returns>The select source dialog result.</returns>
+      <example> This sample shows how to display the avaliable scanner sources window.
+            <code lang="vbnet">
+            imgScan.SelectSource()
+            </code><code lang="C#">
+            imgScan.SelectSource();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.SelectSource(System.Windows.Window)">
+      <summary>
+            Selects the scanning hardware source.
+            </summary>
+      <param name="Owner">The owner window.</param>
+      <returns>The select source dialog result.</returns>
+      <example> This sample shows how to display the avaliable scanner sources window.
+            <code lang="vbnet">
+            Dim Result as Boolean = imgScan.SelectSource(Me)
+            </code><code lang="C#">
+            Boolean Result = imgScan.SelectSource(this);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.IsSourceActive(System.String)">
+      <summary>
+            Checks if the specified source is active on the system.
+            </summary>
+      <param name="SourceName">Source name.</param>
+      <example> This sample shows how to checks if the specified source is active.
+            <code lang="vbnet">
+            Dim IsActive As Boolean = imgScan.IsSourceActive("MyScannerName")
+            </code><code lang="C#">
+            Boolean IsActive = imgScan.IsSourceActive("MyScannerName");
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.GetScannerSources">
+      <summary>
+            Gets a collection of all active sources on the system.
+            </summary>
+      <example> This sample shows how get all the active sources on the system.
+            <code lang="vbnet">
+            Dim Sources As ArrayList = imgScan.GetScannerSources()
+            </code><code lang="C#">
+            ArrayList Sources = imgScan.GetScannerSources();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.Acquire">
+      <summary>
+            Starts acquiring the images from the selected scanner.
+            </summary>
+      <example> This sample shows how start acquiring images from the selected scanner.
+            <code lang="vbnet">
+            imgScan.SaveImageFormat = ImageComponents.ImgScan.OutputFormat.TIF
+            imgScan.SaveImageCompression = ImageComponents.ImgScan.Compression.CCITT4
+            imgScan.ImageFileDirectory = "C:\Test\"
+            imgScan.Acquire()
+            </code><code lang="C#">
+            imgScan.SaveImageFormat = ImageComponents.ImgScan.OutputFormat.TIF;
+            imgScan.SaveImageCompression = ImageComponents.ImgScan.Compression.CCITT4;
+            imgScan.ImageFileDirectory = "C:\\Test\\";
+            imgScan.Acquire();
+            </code></example>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.EnableMessageLoop">
+      <summary>
+            Gets or sets the internal message loop value.
+            </summary>
+      <value>Sets the internal message loop value.</value>
+      <returns>Gets the internal message loop value.</returns>
+      <remarks>Enable the message loop if the component is called from a console or a service application.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.UseTwain32Manager">
+      <summary>
+            Enables or disables the use of the old twain 1.9 specification manager.
+            </summary>
+      <value>Sets the use of the old twain 1.9 specification manager.</value>
+      <returns>Gets the use of the old twain 1.9 specification manager.</returns>
+      <remarks>Setting the value 'true' enables the twain 1.9 specification manager(twain_32.dll).</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ImgEditComponent">
+      <summary>
+            Gets or sets the ImgEdit container component.
+            </summary>
+      <value>Sets the ImgEdit container component.</value>
+      <returns>Gets the ImgEdit container component.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ShowScannerUI">
+      <summary>
+            Gets or sets the display of the the scanner driver settings window.
+            </summary>
+      <value>Sets the display of the the scanner driver settings window.</value>
+      <returns>Gets the display of the the scanner driver settings window.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ShowIndicators">
+      <summary>
+            Gets or sets the display of the the scanner dialogs.
+            </summary>
+      <value>Sets the display of the the scanner dialogs.</value>
+      <returns>Gets the display of the the scanner dialogs.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ActiveSourceName">
+      <summary>
+            Gets or sets the active scanner source name.
+            </summary>
+      <value>Sets the active scanner source name.</value>
+      <returns>Gets the active scanner source name.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.GetAllSources">
+      <summary>
+            Gets all avaliable scanner sources.
+            </summary>
+      <returns>Gets all avaliable scanner sources.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ImageAcquireMode">
+      <summary>
+            Gets or sets the scanned multi page image acquire mode.
+            </summary>
+      <value>Sets the scanned multi page image acquire mode.</value>
+      <returns>Gets the scanned multi page image acquire mode.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.InsertAtPosition">
+      <summary>
+            Gets or sets the position of the scanned image pages.
+            </summary>
+      <value>Sets the position of the scanned image pages.</value>
+      <returns>Gets the position of the scanned image pages.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceTransferMode">
+      <summary>
+            Gets or sets the acquire image transfer mode.
+            </summary>
+      <value>Sets the acquire image transfer mode.</value>
+      <returns>Gets the acquire image transfer mode.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.RaiseFeederEmptyError">
+      <summary>
+            Gets or sets the raise feeder empty error.
+            </summary>
+      <value>Sets the raise feeder empty error.</value>
+      <returns>Gets the raise feeder empty error.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ImageFilePath">
+      <summary>
+            Gets or sets the output multi page file path.
+            </summary>
+      <value>Sets the output multi page file path.</value>
+      <returns>Gets the output multi page file path.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ImageFileDirectory">
+      <summary>
+            Gets or sets the output single page files directory.
+            </summary>
+      <value>Sets the output single page files directory.</value>
+      <returns>Gets the output single page files directory.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SaveImageFormat">
+      <summary>
+            Gets or sets the output image format.
+            </summary>
+      <value>Sets the output image format.</value>
+      <returns>Gets the output image format.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SaveImageCompression">
+      <summary>
+            Gets or sets the output image compression.
+            </summary>
+      <value>Sets the output image compression.</value>
+      <returns>Gets the output image compression.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SaveJPGQuality">
+      <summary>
+            Gets or sets the output jpg image save quality.
+            </summary>
+      <value>Sets the output jpg image save quality.</value>
+      <returns>Gets the output jpg image save quality.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SaveFileNamePrefix">
+      <summary>
+            Gets or sets the output image file name prefix.
+            </summary>
+      <value>Sets the output image file name prefix.</value>
+      <returns>Gets the output image file name prefix.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ImageBinarizationFilter">
+      <summary>
+            Gets or sets the image page binarization filter type.
+            </summary>
+      <value>Sets the image page binarization filter type.</value>
+      <returns>Gets the image page binarization filter type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.RemoveBlankPages">
+      <summary>
+            Gets or sets the remove blank pages value.
+            </summary>
+      <value>Sets the remove blank pages value.</value>
+      <returns>Gets the remove blank pages value.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ImagePageSeparation">
+      <summary>
+            Gets or sets the image page separation type.
+            </summary>
+      <value>Sets the image page separation type.</value>
+      <returns>Gets the image page separation type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ImageSeparationSettings">
+      <summary>
+            Gets or sets the image page separation settings.
+            </summary>
+      <value>Sets the image page separation settings.</value>
+      <returns>Gets the image page separation settings.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceCapabilities">
+      <summary>
+            Gets or sets the device user interface capabilities.
+            </summary>
+      <value>Sets the device user interface capabilities.</value>
+      <returns>Gets the device user interface capabilities.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceCapabilities">
+      <summary>
+            Gets the available device user interface capabilities.
+            </summary>
+      <returns>Gets the available device user interface capabilities.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SelectDialogBackgroung">
+      <summary>
+            Gets or sets the select sources dialog background color.
+            </summary>
+      <value>Sets the select sources dialog background color.</value>
+      <returns>Gets the select sources dialog background color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SelectDialogStyle">
+      <summary>
+            Gets or sets the select sources dialog style.
+            </summary>
+      <value>Sets the select sources dialog style.</value>
+      <returns>Gets the select sources dialog style.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SelectButtonDialogStyle">
+      <summary>
+            Gets or sets the select sources button dialog style.
+            </summary>
+      <value>Sets the select sources button dialog style.</value>
+      <returns>Gets the select sources button dialog style.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.LastError">
+      <summary>
+            Gets the last error message.
+            </summary>
+      <returns>Gets the last error message.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ErrorTraceOutputType">
+      <summary>
+            Gets or sets the trace log output type.
+            </summary>
+      <value>Sets the trace log output type.</value>
+      <returns>Gets the trace log output type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ErrorFilePath">
+      <summary>
+            Gets or sets the error log file path.
+            </summary>
+      <value>Sets the error log file path.</value>
+      <returns>Gets the error log file path.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.Registration">
+      <summary>
+            Loads the component registration dialog.
+            </summary>
+      <returns>Gets the developer machine key code.</returns>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgScan.ScanStarted">
+      <summary>
+            Occurs every time for every scan image start.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgScan.ScanPageStarted">
+      <summary>
+            Occurs every time for every scan image page start.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgScan.ScanFinished">
+      <summary>
+            Occurs when the scan operation has terminated.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgScan.ScanPageFinished">
+      <summary>
+            Occurs every time for every finished scanned image.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgScan.ScanImageSplitted">
+      <summary>
+            Occurs every time the scanned image is splitted.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgScan.ErrorOccurred">
+      <summary>
+            Occurs every time one error is raised.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICImageCompression">
+      <summary>
+            Image Compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageCompression.DEFAULT">
+      <summary>
+            Default compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageCompression.NONE">
+      <summary>
+            None save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageCompression.RLE">
+      <summary>
+            RLE save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageCompression.CCITT3">
+      <summary>
+            CCITT3 save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageCompression.CCITT4">
+      <summary>
+            CCITT4 save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageCompression.LZW">
+      <summary>
+            LZW save compression.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageCompression.JPEG">
+      <summary>
+            JPEG save compression.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICImageOutputFormat">
+      <summary>
+            Image output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageOutputFormat.DEFAULT">
+      <summary>
+            Default output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageOutputFormat.BMP">
+      <summary>
+            BMP output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageOutputFormat.JPEG">
+      <summary>
+            JPEG output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageOutputFormat.PNG">
+      <summary>
+            PNG output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageOutputFormat.TIFF">
+      <summary>
+            TIFF output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageOutputFormat.GIF">
+      <summary>
+            GIF output format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageOutputFormat.PDF">
+      <summary>
+            PDF image output format.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICImageTransferMode">
+      <summary>
+            Image acquire transfer mode.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageTransferMode.Native">
+      <summary>
+            Image native transfer mode.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageTransferMode.File">
+      <summary>
+            Image file transfer mode.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageTransferMode.Memory">
+      <summary>
+            Image memory transfer mode.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageTransferMode.MemoryFile">
+      <summary>
+            Image memory file transfer mode.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICImageAcquireMode">
+      <summary>
+            Image acquire mode.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageAcquireMode.Auto">
+      <summary>
+            Auto acquire mode (Depends on the loaded image type and selected page).
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageAcquireMode.Single">
+      <summary>
+            Single acquire mode.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageAcquireMode.Append">
+      <summary>
+            Image page append mode.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageAcquireMode.Insert">
+      <summary>
+            Image page insert mode.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType">
+      <summary>
+            Image Barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.AUTO">
+      <summary>
+            None or auto barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.CODE11">
+      <summary>
+            Code11 barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.CODE39EXT">
+      <summary>
+            Code39 extended barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.CODABAR">
+      <summary>
+            CODABAR 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.CODE39">
+      <summary>
+            CODE 39 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.CODE93">
+      <summary>
+            CODE 93 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.CODE128">
+      <summary>
+            CODE 128 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.EAN8">
+      <summary>
+            EAN-8 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.EAN13">
+      <summary>
+            EAN-13 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.ILV2OF5">
+      <summary>
+            Interleaved 2 of 5 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.PDF417">
+      <summary>
+            PDF417 barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.QRCODE">
+      <summary>
+            QR CODE 2D barcode barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.UPCA">
+      <summary>
+            UPC-A 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBarcodeType.UPCE">
+      <summary>
+            UPC-E 1D barcode type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICImagePageSeparationType">
+      <summary>
+            Image page separation enumeration.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImagePageSeparationType.None">
+      <summary>
+            None image page separation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImagePageSeparationType.BlankPage">
+      <summary>
+            Blank image page separation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImagePageSeparationType.Barcode">
+      <summary>
+            Barcode image page separation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImagePageSeparationType.PageCount">
+      <summary>
+            Image page count separation.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICImageBinarizationFilterType">
+      <summary>
+            Apply binarization filter type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBinarizationFilterType.None">
+      <summary>
+            None binarization filter type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBinarizationFilterType.FloydSteinbergDithering">
+      <summary>
+            Floyd Steinberg Dithering binarization filter type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBinarizationFilterType.BayerDithering">
+      <summary>
+            Bayer Dithering binarization filter type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICImageBinarizationFilterType.OrderedDithering">
+      <summary>
+            Ordered Dithering binarization filter type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.TraceOutputType">
+      <summary>
+            Trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.TraceOutputType.None">
+      <summary>
+            None trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.TraceOutputType.DebugWindow">
+      <summary>
+            Debug window trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.TraceOutputType.File">
+      <summary>
+            File trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.TraceOutputType.EventViewerLog">
+      <summary>
+            Event viewer output type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats">
+      <summary>
+            Image Components twain image file formats.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.TIFF">
+      <summary>
+            TIFF Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.PICT">
+      <summary>
+            PICT Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.BMP">
+      <summary>
+            BMP Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.XBM">
+      <summary>
+            XBM Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.JFIF">
+      <summary>
+            JFIF Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.FPX">
+      <summary>
+            FPX Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.TIFFMULTI">
+      <summary>
+            TIFFMULTI Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.PNG">
+      <summary>
+            PNG Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.SPIFF">
+      <summary>
+            SPIFF Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.EXIF">
+      <summary>
+            EXIF Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.PDF">
+      <summary>
+            PDF Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.JP2">
+      <summary>
+            JP2 Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.JPX">
+      <summary>
+            JPX Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.DEJAVU">
+      <summary>
+            DEJAVU Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.PDFA">
+      <summary>
+            PDFA Twain file format.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainImageFileFormats.PDFA2">
+      <summary>
+            PDFA2 Twain file format.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes">
+      <summary>
+            Image Components Twain pixel types.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.BW">
+      <summary>
+            BW pixel type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.GRAY">
+      <summary>
+            GRAY pixel type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.RGB">
+      <summary>
+            RGB pixel type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.PALETTE">
+      <summary>
+            PALETTE pixel type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.CMY">
+      <summary>
+            CMY pixel type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.CMYK">
+      <summary>
+            CMYK pixel type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.YUV">
+      <summary>
+            YUV pixel type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.YUVK">
+      <summary>
+            YUVK pixel type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.CIEXYZ">
+      <summary>
+            CIEXYZ pixel type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.LAB">
+      <summary>
+            LAB pixel type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.SRGB">
+      <summary>
+            SRGB pixel type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.SCRGB">
+      <summary>
+            SCRGB pixel type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainPixelTypes.INFRARED">
+      <summary>
+            INFRARED pixel type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes">
+      <summary>
+            Image Components Twain paper supported sizes.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.None">
+      <summary>
+            None supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.A4">
+      <summary>
+            A4 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.JISB5">
+      <summary>
+            JISB5 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.UsLetter">
+      <summary>
+            UsLetter supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.UsLegal">
+      <summary>
+            UsLegal supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.A5">
+      <summary>
+            A5 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.ISOB4">
+      <summary>
+            ISOB4 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.ISOB6">
+      <summary>
+            ISOB6 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.B">
+      <summary>
+            B supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.UsLedger">
+      <summary>
+            UsLedger supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.UsExecutive">
+      <summary>
+            UsExecutive supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.A3">
+      <summary>
+            A3 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.ISOB3">
+      <summary>
+            ISOB3 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.A6">
+      <summary>
+            A6 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.C4">
+      <summary>
+            C4 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.C5">
+      <summary>
+            C5 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.C6">
+      <summary>
+            C6 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes._4A0">
+      <summary>
+            _4A0 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes._2A0">
+      <summary>
+            _2A0 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.A0">
+      <summary>
+            A0 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.A1">
+      <summary>
+            A1 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.A2">
+      <summary>
+            A2 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.A7">
+      <summary>
+            A7 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.A8">
+      <summary>
+            A8 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.A9">
+      <summary>
+            A9 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.A10">
+      <summary>
+            A10 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.ISOB0">
+      <summary>
+            ISOB0 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.ISOB1">
+      <summary>
+            ISOB1 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.ISOB2">
+      <summary>
+            ISOB2 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.ISOB5">
+      <summary>
+            ISOB5 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.ISOB7">
+      <summary>
+            ISOB7 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.ISOB8">
+      <summary>
+            ISOB8 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.ISOB9">
+      <summary>
+            ISOB9 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.ISOB10">
+      <summary>
+            ISOB10 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.JISB0">
+      <summary>
+            JISB0 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.JISB1">
+      <summary>
+            JISB1 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.JISB2">
+      <summary>
+            JISB2 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.JISB3">
+      <summary>
+            JISB3 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.JISB4">
+      <summary>
+            JISB4 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.JISB6">
+      <summary>
+            JISB6 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.JISB7">
+      <summary>
+            JISB7 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.JISB8">
+      <summary>
+            JISB8 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.JISB9">
+      <summary>
+            JISB9 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.JISB10">
+      <summary>
+            JISB10 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.C0">
+      <summary>
+            C0 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.C1">
+      <summary>
+            C1 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.C2">
+      <summary>
+            C2 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.C3">
+      <summary>
+            C3 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.C7">
+      <summary>
+            C7 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.C8">
+      <summary>
+            C8 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.C9">
+      <summary>
+            C9 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.C10">
+      <summary>
+            C10 supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.UsStatement">
+      <summary>
+            UsStatement supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.BusinessCard">
+      <summary>
+            BusinessCard supported size.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainSupportedSizes.MaxSize">
+      <summary>
+            MaxSize supported size.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICTwainOrientations">
+      <summary>
+            Image Components Twain paper orientations.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainOrientations.Rot0">
+      <summary>
+            Rot0 paper orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainOrientations.Rot90">
+      <summary>
+            Rot90 paper orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainOrientations.Rot180">
+      <summary>
+            Rot180 paper orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainOrientations.Rot270">
+      <summary>
+            Rot270 paper orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainOrientations.Portrait">
+      <summary>
+            Portrait paper orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainOrientations.Landscape">
+      <summary>
+            Landscape paper orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainOrientations.Auto">
+      <summary>
+            Auto paper orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainOrientations.AutoText">
+      <summary>
+            AutoText paper orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainOrientations.AutoPic">
+      <summary>
+            AutoPic paper orientation.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICTwainDuplex">
+      <summary>
+            Image Components Twain duplex types.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainDuplex.None">
+      <summary>
+            No duplex is supported.
+            </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainDuplex.OnePassDuplex">
+      <summary>
+            Single-pass duplex will be used. Both sides are scanned in a single pass.
+            </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainDuplex.TwoPassDuplex">
+      <summary>
+            Double-pass duplex will be used.  Only one side at a time is scanned.
+            </summary>
+      <remarks>
+      </remarks>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ICTwainAutoDiscartBlankPages">
+      <summary>
+            Image Components Twain discart blank pages types.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainAutoDiscartBlankPages.DISABLE">
+      <summary>
+            Disable auto discart blank pages.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgScan.ICTwainAutoDiscartBlankPages.AUTO">
+      <summary>
+            Auto discart blank pages.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ScanStartedHandler">
+      <summary>
+            Occurs every time for every scan image start.
+            </summary>
+      <param name="sender">Sender object.</param>
+      <param name="e">Scan started event args.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ScanPageStartedHandler">
+      <summary>
+            Occurs every time for every scan image page start.
+            </summary>
+      <param name="sender">Sender object.</param>
+      <param name="e">Scan started event args.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ScanFinishedHandler">
+      <summary>
+            Occurs when the scan operation has terminated.
+            </summary>
+      <param name="sender">Sender object.</param>
+      <param name="e">Scan event args.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ScanPageFinishedHandler">
+      <summary>
+            Occurs every time for every finished scanned image page.
+            </summary>
+      <param name="sender">Sender object.</param>
+      <param name="e">Scan event args.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ScanImageSplittedHandler">
+      <summary>
+            Occurs every time the scanned image is splitted.
+            </summary>
+      <param name="sender">Sender object.</param>
+      <param name="e">Scan event args.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ErrorOccurredEventHandler">
+      <summary>
+            Occurs every time one error is raised.
+            </summary>
+      <param name="sender">ImgScan component object.</param>
+      <param name="ControlName">The control name were the error was raised.</param>
+      <param name="MethodName">The method name were the error was raised.</param>
+      <param name="ErrorMessage">The error message.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ScanEventArgs">
+      <summary>
+            Image Components Scan event args class.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ScanEventArgs.ScannedFilename">
+      <summary>
+            Get/Set Scanned filename.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ScanEventArgs.ScannedImage">
+      <summary>
+            Get/Set Scanned image.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ScanEventArgs.PagePosition">
+      <summary>
+            Get/Set Page position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ScanEventArgs.ScanEnded">
+      <summary>
+            Get/Set Scan process ended.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.ScanStartedEventArgs">
+      <summary>
+            Image Components Scan started event args class.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ScanStartedEventArgs.Handled">
+      <summary>
+            Get/Set Handled value.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ScanStartedEventArgs.ScannedImage">
+      <summary>
+            Get/Set Scanned image.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.ScanStartedEventArgs.CurrentFilename">
+      <summary>
+            Get/Set Current file name.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.SeparationSettings">
+      <summary>
+            Page separation settings class.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SeparationSettings.BarcodeSeparationType">
+      <summary>
+            Gets or sets the barcode separation type.
+            </summary>
+      <value>Sets the barcode separation type.</value>
+      <returns>Gets the barcode separation type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SeparationSettings.BarcodeSeparationValue">
+      <summary>
+            Gets or sets the barcode separation value.
+            </summary>
+      <value>Sets the barcode separation value.</value>
+      <returns>Gets the barcode separation value.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SeparationSettings.PageCountSeparationValue">
+      <summary>
+            Gets or sets the page count separation value.
+            </summary>
+      <value>Sets the page count separation value.</value>
+      <returns>Gets the page count separation value.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SeparationSettings.IsBarcodeInFirstPage">
+      <summary>
+            Gets or sets if the barcode is in the first page.
+            </summary>
+      <value>Sets if the barcode is in the first page.</value>
+      <returns>Gets if the barcode is in the first page.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SeparationSettings.RemoveBarcodePage">
+      <summary>
+            Gets or sets the remove barcode page value.
+            </summary>
+      <value>Sets the remove barcode page value.</value>
+      <returns>Gets the remove barcode page value.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.SeparationSettings.BlankPageTolerance">
+      <summary>
+            Gets or sets the blank page tolerance value.
+            </summary>
+      <value>Sets the blank page tolerance value.</value>
+      <returns>Gets the blank page tolerance value.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities">
+      <summary>
+            Twain Device UI capabilities class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.ToString">
+      <summary>
+            Object to string.
+            </summary>
+      <returns>Object string.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.TwainCapabilities">
+      <summary>
+            Gets or sets the Twain device capabilities.
+            </summary>
+      <value>Sets the Twain device capabilities.</value>
+      <returns>Gets the Twain device capabilities.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.TwainICapabilities">
+      <summary>
+            Gets or sets the Twain image capabilities.
+            </summary>
+      <value>Sets the Twain image capabilities.</value>
+      <returns>Gets the Twain image capabilities.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.Capabilities">
+      <summary>
+            Twain Device capabilities class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.Capabilities.ToString">
+      <summary>
+            Object to string.
+            </summary>
+      <returns>Object string.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.Capabilities.IsAutoDeskewEnabled">
+      <summary>
+            Gets or sets the value of automatic deskew.
+            </summary>
+      <value>Sets the value of automatic deskew.</value>
+      <returns>Gets the value of automatic deskew.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.Capabilities.IsAutoBorderDetectionEnabled">
+      <summary>
+            Gets or sets the value of automatic border detection.
+            </summary>
+      <value>Sets the value of automatic border detection.</value>
+      <returns>Gets the value of automatic border detection.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.Capabilities.IsAutoRotationEnabled">
+      <summary>
+            Gets or sets the value of automatic rotation.
+            </summary>
+      <value>Sets the value of automatic rotation.</value>
+      <returns>Gets the value of automatic rotation.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.Capabilities.IsDuplexEnabled">
+      <summary>
+            Gets or sets the value of duplex enabled.
+            </summary>
+      <value>Sets the value of duplex enabled.</value>
+      <returns>Gets the value of duplex enabled.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.Capabilities.DuplexTypeValue">
+      <summary>
+            Gets or sets whether to use duplex.
+            </summary>
+      <value>Sets whether to use duplex.</value>
+      <returns>Gets whether to use duplex.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.Capabilities.IsFeederEnabled">
+      <summary>
+            Gets or sets the use of document feeder.
+            </summary>
+      <value>Sets the use of document feeder.</value>
+      <returns>Gets the use of document feeder.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.Capabilities.IsAutoFeedEnabled">
+      <summary>
+            Gets or sets the use of auto feeder.
+            </summary>
+      <value>Sets the use of auto feeder.</value>
+      <returns>Gets the use of auto feeder.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.Capabilities.IsAutoScanEnabled">
+      <summary>
+            Gets or sets the use of auto cache feeder.
+            </summary>
+      <value>Sets the use of auto cache feeder.</value>
+      <returns>Gets the use of auto cache feeder.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.Capabilities.IsAutoRemoveBlankPagesEnabled">
+      <summary>
+            Gets or sets the use of auto remove blank pages.
+            </summary>
+      <value>Sets the use of auto remove blank pages.</value>
+      <returns>Gets the use of auto remove blank pages.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.Capabilities.AbortWhenNoPaperDetected">
+      <summary>
+            Gets or set the abort when no paper is detected.
+            </summary>
+      <value>Sets the abort when no paper is detected.</value>
+      <returns>Gets the abort when no paper is detected.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.ImageCapabilities">
+      <summary>
+            Twain Image capabilities class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.ImageCapabilities.ToString">
+      <summary>
+            Object to string.
+            </summary>
+      <returns>Object string.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.ImageCapabilities.ImageXferMech">
+      <summary>
+            Gets or sets the image transfer mechanism.
+            </summary>
+      <value>Sets the image transfer mechanism.</value>
+      <returns>Gets the image transfer mechanism.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.ImageCapabilities.ImageFileFormatValue">
+      <summary>
+            Gets or sets the image file format.
+            </summary>
+      <value>Sets the image file format.</value>
+      <returns>Gets the image file format.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.ImageCapabilities.PaperOrientationValue">
+      <summary>
+            Gets or sets the paper orientation value.
+            </summary>
+      <value>Sets the paper orientation value.</value>
+      <returns>Gets the paper orientation value.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.ImageCapabilities.PaperSizeValue">
+      <summary>
+            Gets or sets the paper size value.
+            </summary>
+      <value>Sets the paper size value.</value>
+      <returns>Gets the paper size value.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.ImageCapabilities.ResolutionValue">
+      <summary>
+            Gets or sets the DPI resolution value.
+            </summary>
+      <value>Sets the DPI resolution value.</value>
+      <returns>Gets the DPI resolution value.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.ImageCapabilities.PixelTypeValue">
+      <summary>
+            Gets or sets the pixel type value.
+            </summary>
+      <value>Sets the pixel type value.</value>
+      <returns>Gets the pixel type value.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.ImageCapabilities.IsAutoBrightEnabled">
+      <summary>
+            Gets or sets the current auto brightness value.
+            </summary>
+      <value> Sets the current auto brightness value.</value>
+      <returns>Gets the current auto brightness value.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.ImageCapabilities.BrightnessValue">
+      <summary>
+            Gets or sets the current brightness value.
+            </summary>
+      <value> Sets the current brightness value.</value>
+      <returns>Gets the current brightness value.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.DeviceUICapabilities.ImageCapabilities.ContrastValue">
+      <summary>
+            Gets or sets the current contrast value.
+            </summary>
+      <value> Sets the current contrast value.</value>
+      <returns>Gets the current contrast value.</returns>
+      <remarks> Set to null to use the current default setting.</remarks>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities">
+      <summary>
+            Available device UI capabilities class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ToString">
+      <summary>
+            Object to string.
+            </summary>
+      <returns>Object string.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.TwainCapabilities">
+      <summary>
+            Gets or sets the Twain device capabilities.
+            </summary>
+      <value>Sets the Twain device capabilities.</value>
+      <returns>Gets the Twain device capabilities.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.TwainICapabilities">
+      <summary>
+            Gets or sets the Twain image capabilities.
+            </summary>
+      <value>Sets the Twain image capabilities.</value>
+      <returns>Gets the Twain image capabilities.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.Capabilities">
+      <summary>
+            Twain Device capabilities class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.Capabilities.ToString">
+      <summary>
+            Object to string.
+            </summary>
+      <returns>Object string.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.Capabilities.IsAutoDeskewEnabled">
+      <summary>
+            Gets the value of automatic deskew.
+            </summary>
+      <returns>Gets the value of automatic deskew.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.Capabilities.IsAutoBorderDetectionEnabled">
+      <summary>
+            Gets the value of automatic border detection.
+            </summary>
+      <returns>Gets the value of automatic border detection.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.Capabilities.IsAutoRotationEnabled">
+      <summary>
+            Gets the value of automatic rotation.
+            </summary>
+      <returns>Gets the value of automatic rotation.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.Capabilities.IsDuplexEnabled">
+      <summary>
+            Gets the value of duplex enabled.
+            </summary>
+      <returns>Gets the value of duplex enabled.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.Capabilities.DuplexTypeValue">
+      <summary>
+            Gets whether to use duplex.
+            </summary>
+      <returns>Gets whether to use duplex.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.Capabilities.IsFeederEnabled">
+      <summary>
+            Gets the use of document feeder.
+            </summary>
+      <returns>Gets the use of document feeder.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.Capabilities.IsAutoFeedEnabled">
+      <summary>
+            Gets the use of auto feeder.
+            </summary>
+      <value>Sets the use of auto feeder.</value>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.Capabilities.IsAutoScanEnabled">
+      <summary>
+            Gets the use of auto cache feeder.
+            </summary>
+      <returns>Gets the use of auto cache feeder.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.Capabilities.IsAutoRemoveBlankPagesEnabled">
+      <summary>
+            Gets the use of auto remove blank pages.
+            </summary>
+      <returns>Gets the use of auto remove blank pages.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.Capabilities.CustomDSData">
+      <summary>
+            Gets the value of the custom data source data.
+            </summary>
+      <returns>Gets the value of the custom data source data.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities">
+      <summary>
+            Twain Image capabilities class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.ToString">
+      <summary>
+            Object to string.
+            </summary>
+      <returns>Object string.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.AvailableImageXferMechs">
+      <summary>
+            Gets the available image transfer mechanisms.
+            </summary>
+      <returns>Gets the available image transfer mechanisms.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.AvailableImageFileFormats">
+      <summary>
+            Gets the available image file formats.
+            </summary>
+      <returns>Gets the available image file formats.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.AvailablePaperSizes">
+      <summary>
+            Gets the available paper sizes.
+            </summary>
+      <returns>Gets the available paper sizes.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.AvailablePixelTypes">
+      <summary>
+            Gets the available pixel types.
+            </summary>
+      <returns>Gets the available paper sizes.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.AvailablePaperOrientations">
+      <summary>
+            Gets the available paper orientations.
+            </summary>
+      <returns>Gets the available paper orientations.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.AvailableXResolutions">
+      <summary>
+            Gets the available X resolutions.
+            </summary>
+      <returns>Gets the available X resolutions.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.AvailableYResolutions">
+      <summary>
+            Gets the available Y resolutions.
+            </summary>
+      <returns>Gets the available Y resolutions.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.ImageXferMech">
+      <summary>
+            Gets the current image transfer mechanism.
+            </summary>
+      <returns>Gets the current image transfer mechanism.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.ImageFileFormatValue">
+      <summary>
+            Gets the current image file format.
+            </summary>
+      <returns>Gets the current image file format.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.PaperOrientationValue">
+      <summary>
+            Gets the paper orientation value.
+            </summary>
+      <returns>Gets the paper orientation value.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.PaperSizeValue">
+      <summary>
+            Gets the paper size value.
+            </summary>
+      <returns>Gets the paper size value.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.XResolutionValue">
+      <summary>
+            Gets the current X resolution value.
+            </summary>
+      <returns>Gets the DPI to scan at.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.YResolutionValue">
+      <summary>
+            Gets the current Y resolution value.
+            </summary>
+      <returns>Gets the current Y resolution value.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.PixelTypeValue">
+      <summary>
+            Gets the pixel type value.
+            </summary>
+      <returns>Gets the pixel type value.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.IsAutoBrightEnabled">
+      <summary>
+            Gets the current auto brightness value.
+            </summary>
+      <returns>Gets the current auto brightness value.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.BrightnessValue">
+      <summary>
+            Gets the current brightness value.
+            </summary>
+      <returns>Gets the current brightness value.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgScan.AvailableDeviceUICapabilities.ImageCapabilities.ContrastValue">
+      <summary>
+            Gets the current contrast value.
+            </summary>
+      <returns>Gets the current contrast value.</returns>
+      <remarks> If null the capability is not supported.</remarks>
+    </member>
+  </members>
+</doc>

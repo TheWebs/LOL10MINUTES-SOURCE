@@ -1,0 +1,625 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>ImageComponents.WPF.ImgThumbnails</name>
+  </assembly>
+  <members>
+    <member name="T:ImageComponents.WPF.Imaging.Thumbnail">
+      <summary>
+            Image Components Thumbnail class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Thumbnail.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Thumbnail.Thumbnail_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+      <summary>
+            Thumbnail loaded event.
+            </summary>
+      <param name="sender">Sender object.</param>
+      <param name="e">Event args.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Thumbnail.OnApplyTemplate">
+      <summary>
+            On apply template event.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Thumbnail.Dispose">
+      <summary>
+            Dispose Thumbnail object.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.Thumbnail.Dispose(System.Boolean)">
+      <summary>
+            Dispose Image Components ImgThumbnails Object
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Thumbnail.HighLightColorBrush">
+      <summary>
+            Gets or sets the thumbnail highlight color brush.
+            </summary>
+      <value>Sets the thumbnail highlight color brush.</value>
+      <returns>Gets the thumbnail highlight color brush.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Thumbnail.BackColor">
+      <summary>
+            Gets or sets the thumbnail back color.
+            </summary>
+      <value>Sets the thumbnail back color.</value>
+      <returns>Gets the thumbnail back color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Thumbnail.SelectionThickness">
+      <summary>
+            Gets or sets the thumbnail back color.
+            </summary>
+      <value>Sets the thumbnail back color.</value>
+      <returns>Gets the thumbnail back color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Thumbnail.SelectionBorderColor">
+      <summary>
+            Gets or sets the thumbnail selection border color.
+            </summary>
+      <value>Sets the thumbnail selection border color.</value>
+      <returns>Gets the thumbnail selection border color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Thumbnail.BorderColor">
+      <summary>
+            Gets or sets the thumbnail border color.
+            </summary>
+      <value>Sets the thumbnail border color.</value>
+      <returns>Gets the thumbnail border color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.Thumbnail.CaptionForeground">
+      <summary>
+            Gets or sets the thumbnail caption foreground.
+            </summary>
+      <value>Sets the thumbnail caption foreground.</value>
+      <returns>Gets the thumbnail caption foreground.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgThumbnails">
+      <summary>
+            Image Components Image Thumbnails class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.Dispose">
+      <summary>
+            Dispose ImgBarDecoder object.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.Dispose(System.Boolean)">
+      <summary>
+            Dispose Image Components ImgThumbnails Object
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.ImgThumbnails_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+      <summary>
+            ImgThumbnails loaded event.
+            </summary>
+      <param name="sender">Sender object.</param>
+      <param name="e">Event args.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.OnApplyTemplate">
+      <summary>
+            On apply template event.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgThumbnails.RegistrationProperty">
+      <summary>
+            Registration dependency property.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.LoadThumbnails">
+      <summary>
+            Displays the specified image file name thumbnails.
+            </summary>
+      <example>This sample shows how to display the thumbnails of one previous loaded image in ImgEdit component.
+            <code lang="vbnet">
+              ImgThumbnails1.ImgEditComponent = ImgEdit1
+              ImgThumbnails1.ThumbnailSize = New System.Windows.Size(100, 150)
+              ImgThumbnails1.LoadThumbnails()
+            </code><code lang="C#">
+              ImgThumbnails1.ImgEditComponent = ImgEdit1;
+              ImgThumbnails1.ThumbnailSize = New System.Windows.Size(100, 150);
+              ImgThumbnails1.LoadThumbnails();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.LoadThumbnails(System.Drawing.Bitmap)">
+      <summary>
+            Displays the specified image bitmap thumbnails.
+            </summary>
+      <param name="ImageBitmap">The System.Drawing.Bitmap object.</param>
+      <example>This sample shows how to load and display the thumbnails of one image bitmap object.
+            <code lang="vbnet">
+              Dim bmp As New System.Drawing.Bitmap("C:\Test.tif")
+              ImgThumbnails1.ThumbnailSize = New System.Windows.Size(100, 150)
+              ImgThumbnails1.LoadThumbnails(bmp)
+            </code><code lang="C#">
+              System.Drawing.Bitmap bmp = new System.Drawing.Bitmap("C:\\Test.tif");
+              ImgThumbnails1.ThumbnailSize = New System.Windows.Size(100, 150);
+              ImgThumbnails1.LoadThumbnails(bmp);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.LoadThumbnails(System.Byte[])">
+      <summary>
+            Displays the specified image byte array thumbnails.
+            </summary>
+      <param name="ImageSource">The image source byte array.</param>
+      <example> This sample shows how to load and display the thumbnails of one image byte array object.
+            <code lang="vbnet">
+              Dim m_ImageByteArray As Byte() = File.ReadAllBytes("C:\Test.tif")
+              ImgThumbnails1.ThumbnailSize = New System.Windows.Size(100, 150)
+              ImgThumbnails1.LoadThumbnails(m_ImageByteArray)
+            </code><code lang="C#">
+              byte[] m_ImageByteArray = File.ReadAllBytes("C:\Test.tif");
+              ImgThumbnails1.ThumbnailSize = New System.Windows.Size(100, 150);
+              ImgThumbnails1.LoadThumbnails(m_ImageByteArray);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.LoadThumbnails(System.Uri)">
+      <summary>
+            Displays the specified image uri thumbnails.
+            </summary>
+      <example>This sample shows how to load and display the thumbnails of one image uri.
+            <code lang="vbnet">
+              Dim m_Uri as New Uri("http://www.imagecomponents.net/Images/Test.tif")
+              ImgThumbnails1.ThumbnailSize = New System.Windows.Size(100, 150)
+              ImgThumbnails1.LoadThumbnails(m_Uri)
+            </code><code lang="C#">
+              Uri m_uri = new Uri("http://www.imagecomponents.net/Images/Test.tif");
+              ImgThumbnails1.ThumbnailSize = New System.Windows.Size(100, 150);
+              ImgThumbnails1.LoadThumbnails(m_uri);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.LoadThumbnails(System.String)">
+      <summary>
+            Displays the specified directory images thumbnails.
+            </summary>
+      <example>This sample shows how to load and display the thumbnails of one specified directory.
+            <code lang="vbnet">
+              ImgThumbnails1.ThumbnailSize = New System.Windows.Size(100, 150)
+              ImgThumbnails1.LoadThumbnails("C:\MyImages\")
+            </code><code lang="C#">
+              ImgThumbnails1.ThumbnailSize = New System.Windows.Size(100, 150);
+              ImgThumbnails1.LoadThumbnails("C:\\MyImages\\");
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.LoadThumbnails(System.String,System.String)">
+      <summary>
+             Displays the specified directory images thumbnails.
+             </summary>
+      <param name="DirectoryPath">The thumbnails directory path.</param>
+      <param name="Filter">Image extension filter value.</param>
+      <example>This sample shows how to load and display the thumbnails of .jpg files from one specified directory.
+             <code lang="vbnet">
+               ImgThumbnails1.ThumbnailSize = New System.Windows.Size(100, 150)
+               ImgThumbnails1.LoadThumbnails("C:\MyImages\")
+             </code><code lang="C#">
+               ImgThumbnails1.ThumbnailSize = New System.Windows.Size(100, 150);
+               ImgThumbnails1.LoadThumbnails("C:\\MyImages\\", ".jpg");
+             </code></example>
+      <remarks>Filter extension example: .jpg;.tif;.bmp</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.ImgThumbnailsRefresh">
+      <summary>
+            Refreshes the display of all loaded image thumbnail pages.
+            </summary>
+      <example> The following example refreshes the image thumbnail display of the first page.
+            <code lang="vbnet">
+              ImgThumbnails1.ImgThumbnailsRefresh()
+            </code><code lang="C#">
+              ImgThumbnails1.ImgThumbnailsRefresh();
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.ImgThumbnailsRefresh(System.Int32)">
+      <summary>
+            Refreshes the display of the loaded image thumbnail page.
+            </summary>
+      <param name="PageIndex">The index position of the image thumbnail.</param>
+      <example> The following example refreshes the image thumbnail display of the first page.
+            <code lang="vbnet">
+              ImgThumbnails1.ImgThumbnailsRefresh(0)
+            </code><code lang="C#">
+              ImgThumbnails1.ImgThumbnailsRefresh(0);
+            </code></example>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgThumbnails.Close">
+      <summary>
+            Closes the image thumbnails from display and from memory.
+            </summary>
+      <example>The following example closes the displayed image thumbnails.
+            <code lang="vbnet">
+              ImgThumbnails1.Close()
+            </code><code lang="C#">
+              ImgThumbnails1.Close();
+            </code></example>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailLoaded">
+      <summary>
+            Occurs every time the thumbnail is loaded.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailSelected">
+      <summary>
+            Occurs every time the thumbnail is selected.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailDoubleClick">
+      <summary>
+            Occurs every time the thumbnail is double clicked.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailMouseLeftButtonDown">
+      <summary>
+            Occurs every time the mouse left button is pressed inside the thumbnail.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailDragStarted">
+      <summary>
+            Occurs every time the thumbnail drag is started.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailDragFinished">
+      <summary>
+            Occurs every time the thumbnail drag is finished.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgThumbnails.ErrorOccurred">
+      <summary>
+            Occurs every time one error is raised.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ImageFilePath">
+      <summary>
+            Gets or sets the image file path.
+            </summary>
+      <value>Sets the image file path.</value>
+      <returns>Gets the image file path.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ImgEditComponent">
+      <summary>
+            Gets or sets the ImgEdit container component.
+            </summary>
+      <value>Sets the ImgEdit container component.</value>
+      <returns>Gets the ImgEdit container component.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailSize">
+      <summary>
+            Gets or sets the displayed image thumbnails size.
+            </summary>
+      <value>Sets the displayed image thumbnails size.</value>
+      <returns>Gets the displayed image thumbnails size.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.SpaceBetweenThumbnails">
+      <summary>
+            Gets or sets the space between image thumbnails.
+            </summary>
+      <value>Sets the space between image thumbnails.</value>
+      <returns>Gets the space between image thumbnails.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.DrawAnnotations">
+      <summary>
+            Gets or sets the draw annotations on image thumbnail value.
+            </summary>
+      <value>Sets the draw annotations on image thumbnail value.</value>
+      <returns>Gets the draw annotations on image thumbnail value.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.SelectedThumbnail">
+      <summary>
+            Gets or sets the index position of the selected image thumbnail.
+            </summary>
+      <value>Sets the selected index position of the selected image thumbnail.</value>
+      <returns>Gets the selected index position of the selected image thumbnails.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.SelectedThumbnails">
+      <summary>
+            Gets the collection of the selected image thumbnails index positions.
+            </summary>
+      <returns>Gets the collection of the selected image thumbnails index positions.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.DefaultThumbnailCaption">
+      <summary>
+            Gets or sets the image thumbnails default caption text.
+            </summary>
+      <value>Sets the image thumbnails default caption text.</value>
+      <returns>Gets the image thumbnails default caption text.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ShowCaptionNumbers">
+      <summary>
+            Gets or sets the display of the caption numbers.
+            </summary>
+      <value>Sets the display of the caption numbers.</value>
+      <returns>Gets the display of the caption numbers.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.CaptionStartNumber">
+      <summary>
+            Gets or sets the image thumbnails starting caption number.
+            </summary>
+      <value>Sets the image thumbnails starting caption number.</value>
+      <returns>Gets the image thumbnails starting caption number.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailsCount">
+      <summary>
+            Gets the number of thumbnails of the loaded image.
+            </summary>
+      <returns>Gets the number of thumbnails of the loaded image.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailsOrientation">
+      <summary>
+            Gets or sets the thumbnails display layout orientation.
+            </summary>
+      <value>Sets the thumbnails display layout orientation.</value>
+      <returns>Gets the thumbnails display layout orientation.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ImageThumbnailObjects">
+      <summary>
+            Gets or sets the thumbnails objects collection.
+            </summary>
+      <value>Sets the thumbnails objects collection.</value>
+      <returns>Gets the thumbnails objects collection.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.DirectoryFilter">
+      <summary>
+            Gets or sets the directory browse filter.
+            </summary>
+      <value>Sets the directory browse filter.</value>
+      <returns>Gets the directory browse filter.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.NumberWorkingThreads">
+      <summary>
+            Gets or sets the number of working threads.
+            </summary>
+      <value>Sets the number of working threads.</value>
+      <returns>Gets the number of working threads.</returns>
+      <remarks>The value of 0 (zero) set the working threads to auto, depending of the machine cores number.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailSelectionBorderColor">
+      <summary>
+            Gets or sets the thumbnails selection border color.
+            </summary>
+      <value>Sets the thumbnails selection border color.</value>
+      <returns>Gets the thumbnails selection border color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailBorderColor">
+      <summary>
+            Gets or sets the thumbnails border color.
+            </summary>
+      <value>Sets the thumbnails border color.</value>
+      <returns>Gets the thumbnails border color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailBackground">
+      <summary>
+            Gets or sets the thumbnails background color.
+            </summary>
+      <value>Sets the thumbnails background color.</value>
+      <returns>Gets the thumbnails background color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailSelectionThickness">
+      <summary>
+            Gets or sets the thumbnails selection thickness.
+            </summary>
+      <value>Sets the thumbnails selection thickness.</value>
+      <returns>Gets the thumbnails selection thickness.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailHighlightColor">
+      <summary>
+            Gets or sets the thumbnails highlight color.
+            </summary>
+      <value>Sets the thumbnails highlight color.</value>
+      <returns>Gets the thumbnails highlight color.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailCaptionForeground">
+      <summary>
+            Gets or sets the thumbnails caption foreground.
+            </summary>
+      <value>Sets the thumbnails caption foreground.</value>
+      <returns>Gets the thumbnails caption foreground.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.LastError">
+      <summary>
+            Gets the last error message.
+            </summary>
+      <returns>Gets the last error message.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ErrorTraceOutputType">
+      <summary>
+            Gets or sets the trace log output type.
+            </summary>
+      <value>Sets the trace log output type.</value>
+      <returns>Gets the trace log output type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.ErrorFilePath">
+      <summary>
+            Gets or sets the error log file path.
+            </summary>
+      <value>Sets the error log file path.</value>
+      <returns>Gets the error log file path.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgThumbnails.Registration">
+      <summary>
+            Loads the component registration dialog
+            </summary>
+      <returns>Gets the developer machine key code.</returns>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgThumbnails.DisplayLayout">
+      <summary>
+            Display layout enumeration.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgThumbnails.DisplayLayout.Vertical">
+      <summary>
+            Thumbnails vertical layout.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgThumbnails.DisplayLayout.Horizontal">
+      <summary>
+            Thumbnails horizontal layout.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgThumbnails.TraceOutputType">
+      <summary>
+            Trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgThumbnails.TraceOutputType.None">
+      <summary>
+            None trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgThumbnails.TraceOutputType.DebugWindow">
+      <summary>
+            Debug window trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgThumbnails.TraceOutputType.File">
+      <summary>
+            File trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgThumbnails.TraceOutputType.EventViewerLog">
+      <summary>
+            Event viewer output type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailLoadedHandler">
+      <summary>
+            Occurs every time the thumbnail is loaded.
+            </summary>
+      <param name="sender">ImgThumbnails object.</param>
+      <param name="ImageThumbnail">Image thumbnail object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailSelectedHandler">
+      <summary>
+            Occurs every time the thumbnail is selected.
+            </summary>
+      <param name="sender">ImgThumbnails object.</param>
+      <param name="ImageThumbnail">Image thumbnail object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailDoubleClickHandler">
+      <summary>
+            Occurs every time the thumbnail is double clicked.
+            </summary>
+      <param name="sender">ImgThumbnails object.</param>
+      <param name="ImageThumbnail">Image thumbnail object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailMouseLeftButtonDownHandler">
+      <summary>
+            Occurs every time the mouse left button is pressed inside the thumbnail.
+            </summary>
+      <param name="sender">ImgThumbnails object.</param>
+      <param name="ImageThumbnail">Image thumbnail object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailDragStartedHandler">
+      <summary>
+            Occurs every time the thumbnail drag is started.
+            </summary>
+      <param name="sender">ImgThumbnails object.</param>
+      <param name="ImageThumbnail">The dragged image thumbnail object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgThumbnails.ThumbnailDragFinishedHandler">
+      <summary>
+            Occurs every time the thumbnail drag is finished.
+            </summary>
+      <param name="sender">ImgThumbnails object.</param>
+      <param name="DragImageThumbnail">The dragged image thumbnail object.</param>
+      <param name="DropImageThumbnail">The drop candidate image thumbnail object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgThumbnails.ErrorOccurredEventHandler">
+      <summary>
+            Occurs every time one error is raised.
+            </summary>
+      <param name="sender">ImgScan component object.</param>
+      <param name="ControlName">The control name were the error was raised.</param>
+      <param name="MethodName">The method name were the error was raised.</param>
+      <param name="ErrorMessage">The error message.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ThumbnailObject">
+      <summary>
+            Image Components Thumbnail object class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ThumbnailObject.#ctor(System.String)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="FilePath">The thumbnail file path.</param>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ThumbnailObject.ThumbnailIndex">
+      <summary>
+            Get Thumbnail index position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ThumbnailObject.ThumbnailFilePath">
+      <summary>
+            Get Thumbnail attached file path.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ThumbnailObject.ThumbnailCaption">
+      <summary>
+            Get or sets the thumbnail caption.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ThumbnailObjectCollection">
+      <summary>
+            Image Components Thumbnail Object Collection Class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ThumbnailObjectCollection.Add(ImageComponents.WPF.Imaging.ThumbnailObject)">
+      <summary>
+            Adds a thumbnail object to the end of the collection.
+            </summary>
+      <param name="Thumbnail">The thumbnail object to add.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ThumbnailObjectCollection.Insert(System.Int32,ImageComponents.WPF.Imaging.ThumbnailObject)">
+      <summary>
+            Inserts an thumbnail object into the collection.
+            </summary>
+      <param name="Index">The zero-based index at which item should be inserted.</param>
+      <param name="Thumbnail">The thumbnail object to insert.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ThumbnailObjectCollection.Remove(ImageComponents.WPF.Imaging.ThumbnailObject)">
+      <summary>
+            Removes the first occurence of a thumbnail object from the collection.
+            </summary>
+      <param name="Thumbnail">The thumbnail object to remove.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ThumbnailObjectCollection.RemoveAt(System.Int32)">
+      <summary>
+            Removes an thumbnail object at the specified index of the collection.
+            </summary>
+      <param name="Index">The zero-based index of the element to remove.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ThumbnailObjectCollection.GetEnumerator">
+      <summary>
+            Gets the thumbnails objects collection enumerator.
+            </summary>
+      <returns>IEnumerator.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ThumbnailObjectCollection.Count">
+      <summary>
+            Gets the thumbnail objects collection count.
+            </summary>
+      <returns>The thumbnail objects collection.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ThumbnailObjectCollection.Item(System.Int32)">
+      <summary>
+            Gets result item index.
+            </summary>
+      <param name="Index">Index position.</param>
+      <returns>Thumbnail object class.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ThumbnailObjectCollection.Item(System.String)">
+      <summary>
+            Gets result item by thumbnail file path.
+            </summary>
+      <param name="ThumbnailFilePath">The thumbnail file path.</param>
+      <returns>Thumbnail object class.</returns>
+    </member>
+  </members>
+</doc>

@@ -1,1 +1,1 @@
-[G]: Could not find file 'C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\HUDS\Ahri\hudatlas.dds'..
+convert "C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\Cursors\RedGreen Arrow\Hand1.tga" "C:\Users\Francisco\Documents\GitHub\LOL10MINUTES-SOURCE\LOL10MINUTES\bin\Debug\Cursors\RedGreen Arrow\Hand1.png"

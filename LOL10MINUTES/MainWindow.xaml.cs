@@ -184,5 +184,11 @@ namespace LOL10MINUTES
             pasta.ShowDialog();
             File.WriteAllText(Directory.GetCurrentDirectory() + "\\path.txt", pasta.SelectedPath.ToString());
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Change_cursor cursor = new Change_cursor();
+            cursor.Show();
+        }
     }
 }

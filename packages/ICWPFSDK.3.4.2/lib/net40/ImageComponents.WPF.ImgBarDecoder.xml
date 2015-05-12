@@ -1,0 +1,572 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>ImageComponents.WPF.ImgBarDecoder</name>
+  </assembly>
+  <members>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder">
+      <summary>
+            Image Components ImgBarDecoder control.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgBarDecoder.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgBarDecoder.Dispose">
+      <summary>
+            Dispose ImgBarDecoder object.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgBarDecoder.Dispose(System.Boolean)">
+      <summary>
+            Dispose Image Components Image BarDecoder Object
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgBarDecoder.OnApplyTemplate">
+      <summary>
+            On apply template event.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.RegistrationProperty">
+      <summary>
+            Registration dependency property.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgBarDecoder.ReadBarcodes">
+      <summary>
+            Reads the existing barcodes in a specified image page.
+            </summary>
+      <example>This sample shows how to read the existing barcodes in the first image page. 
+            <code lang="vbnet">
+              ImgBarDecoder1.ImgEditComponent = ImgEdit1
+              ImgBarDecoder1.ImageBarcodeType = Imaging.ImgBarDecoder.ICImageBarcodeType.AUTO
+              ImgBarDecoder1.ImageBarcodeOrientation = Imaging.ImgBarDecoder.ICImageBarcodeOrientation.LeftToRight
+              ImgBarDecoder1.StopOnFirstResult = False
+              ImgBarDecoder1.ImageBarcodePageType = Imaging.ImgBarDecoder.ICImageBarcodePageType.SelectedPage
+              ImgBarDecoder1.SelectedPage = 0
+              ImgBarDecoder1.ReadBarcodes()
+            </code><code lang="C#">
+              ImgBarDecoder1.ImgEditComponent = ImgEdit1
+              ImgBarDecoder1.ImageBarcodeType = Imaging.ImgBarDecoder.ICImageBarcodeType.AUTO;
+              ImgBarDecoder1.ImageBarcodeOrientation = Imaging.ImgBarDecoder.ICImageBarcodeOrientation.LeftToRight;
+              ImgBarDecoder1.StopOnFirstResult = false;
+              ImgBarDecoder1.ImageBarcodePageType = Imaging.ImgBarDecoder.ICImageBarcodePageType.SelectedPage;
+              ImgBarDecoder1.SelectedPage = 0;
+              ImgBarDecoder1.ReadBarcodes();
+            </code></example>
+      <remarks>The read results will be obtained on the ImgBarDecoder.ScanResult event for each valid barcode
+            or on the ImgBarDecoder.ReadedBarcodesResults collection property.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgBarDecoder.ReadBarcodes(System.Drawing.Bitmap)">
+      <summary>
+            Loads the image bitmap object and reads the existing valid barcodes.
+            </summary>
+      <param name="ImageBitmap">The System.Drawing.Bitmap object.</param>
+      <example>This sample shows how to read the existing barcodes from an image Bitmap. 
+            <code lang="vbnet">
+              Dim bmp As New System.Drawing.Bitmap("C:\Test.tif")
+              ImgBarDecoder1.ImageBarcodeType = Imaging.ImgBarDecoder.ICImageBarcodeType.AUTO
+              ImgBarDecoder1.ImageBarcodeOrientation = Imaging.ImgBarDecoder.ICImageBarcodeOrientation.LeftToRight
+              ImgBarDecoder1.StopOnFirstResult = False
+              ImgBarDecoder1.ImageBarcodePageType = Imaging.ImgBarDecoder.ICImageBarcodePageType.SelectedPage
+              ImgBarDecoder1.SelectedPage = 0
+              ImgBarDecoder1.ReadBarcodes(bmp)
+            </code><code lang="C#">
+              System.Drawing.Bitmap bmp = new System.Drawing.Bitmap("C:\\Test.tif");
+              ImgBarDecoder1.ImageBarcodeType = Imaging.ImgBarDecoder.ICImageBarcodeType.AUTO;
+              ImgBarDecoder1.ImageBarcodeOrientation = Imaging.ImgBarDecoder.ICImageBarcodeOrientation.LeftToRight;
+              ImgBarDecoder1.StopOnFirstResult = false;
+              ImgBarDecoder1.ImageBarcodePageType = Imaging.ImgBarDecoder.ICImageBarcodePageType.SelectedPage;
+              ImgBarDecoder1.SelectedPage = 0;
+              ImgBarDecoder1.ReadBarcodes(bmp);
+            </code></example>
+      <remarks>The read results will be obtained on the ImgBarDecoder.ScanResult event for each valid barcode
+            or on the ImgBarDecoder.ReadedBarcodesResults collection property.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgBarDecoder.ReadBarcodes(System.Byte[])">
+      <summary>
+            Loads the image byte array and reads the existing valid barcodes.
+            </summary>
+      <param name="ImageSource">The image source byte array.</param>
+      <example> This sample shows how to load a byte array image and read the valid barcodes from the first page.
+            <code lang="vbnet">
+              Dim m_ImageByteArray As Byte() = File.ReadAllBytes("C:\Test.tif")
+              ImgBarDecoder1.ImageBarcodeType = Imaging.ImgBarDecoder.ICImageBarcodeType.AUTO
+              ImgBarDecoder1.ImageBarcodeOrientation = Imaging.ImgBarDecoder.ICImageBarcodeOrientation.LeftToRight
+              ImgBarDecoder1.StopOnFirstResult = False
+              ImgBarDecoder1.ImageBarcodePageType = Imaging.ImgBarDecoder.ICImageBarcodePageType.SelectedPage
+              ImgBarDecoder1.SelectedPage = 0
+              ImgBarDecoder1.ReadBarcodes(m_ImageByteArray)
+            </code><code lang="C#">
+              byte[] m_ImageByteArray = File.ReadAllBytes("C:\Test.tif");
+              ImgBarDecoder1.ImageBarcodeType = Imaging.ImgBarDecoder.ICImageBarcodeType.AUTO;
+              ImgBarDecoder1.ImageBarcodeOrientation = Imaging.ImgBarDecoder.ICImageBarcodeOrientation.LeftToRight;
+              ImgBarDecoder1.StopOnFirstResult = false;
+              ImgBarDecoder1.ImageBarcodePageType = Imaging.ImgBarDecoder.ICImageBarcodePageType.SelectedPage;
+              ImgBarDecoder1.SelectedPage = 0;
+              ImgBarDecoder1.ReadBarcodes(m_ImageByteArray);
+            </code></example>
+      <remarks>The read results will be obtained on the ImgBarDecoder.ScanResult event for each valid barcode
+            or on the ImgBarDecoder.ReadedBarcodesResults collection property.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgBarDecoder.ReadBarcodes(System.Uri)">
+      <summary>
+            Loads the image from the uri path and reads the existing valid barcodes.
+            </summary>
+      <example>This sample shows how to scan the existing barcodes from a specified Uri. 
+            <code lang="vbnet">
+              Dim m_Uri as New Uri("http://www.imagecomponents.net/Images/Test.tif")
+              ImgBarDecoder1.ImageBarcodeType = Imaging.ImgBarDecoder.ICImageBarcodeType.AUTO
+              ImgBarDecoder1.ImageBarcodeOrientation = Imaging.ImgBarDecoder.ICImageBarcodeOrientation.LeftToRight
+              ImgBarDecoder1.StopOnFirstResult = False
+              ImgBarDecoder1.ImageBarcodePageType = Imaging.ImgBarDecoder.ICImageBarcodePageType.SelectedPage
+              ImgBarDecoder1.SelectedPage = 0
+              ImgBarDecoder1.ReadBarcodes(m_Uri)
+            </code><code lang="C#">
+              Uri m_uri = new Uri("http://www.imagecomponents.net/Images/Test.tif");
+              ImgBarDecoder1.ImageBarcodeType = Imaging.ImgBarDecoder.ICImageBarcodeType.AUTO;
+              ImgBarDecoder1.ImageBarcodeOrientation = Imaging.ImgBarDecoder.ICImageBarcodeOrientation.LeftToRight;
+              ImgBarDecoder1.StopOnFirstResult = false;
+              ImgBarDecoder1.ImageBarcodePageType = Imaging.ImgBarDecoder.ICImageBarcodePageType.SelectedPage;
+              ImgBarDecoder1.SelectedPage = 0;
+              ImgBarDecoder1.ReadBarcodes(m_uri);
+            </code></example>
+      <remarks>The read results will be obtained on the ImgBarDecoder.ScanResult event for each valid barcode
+            or on the ImgBarDecoder.ReadedBarcodesResults collection property.</remarks>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgBarDecoder.AbortBarcodeRead">
+      <summary>
+            Aborts the current barcode read process.
+            </summary>
+      <example> This sample shows how to abort the barcode read process.
+            <code lang="vbnet">
+              ImgBarDecoder1.AbortBarcodeRead()
+            </code><code lang="C#">
+              ImgBarDecoder1.AbortBarcodeRead();
+            </code></example>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.EnableAsynchronousWork">
+      <summary>
+            Gets or sets the multi thread work value.
+            </summary>
+      <value>Sets the multi thread work value.</value>
+      <returns>Gets the multi thread work value.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.ImageFilePath">
+      <summary>
+            Gets or sets the image file path.
+            </summary>
+      <value>Sets the image file path.</value>
+      <returns>Gets the image file path.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.ImagePageSelection">
+      <summary>
+            Gets or sets the image page selection rectangle.
+            </summary>
+      <value>Sets the image page selection rectangle.</value>
+      <returns>Gets the image page selection rectangle.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.ImageBarcodePageType">
+      <summary>
+            Gets or sets the image Barcode page read type.
+            </summary>
+      <value>Sets the image Barcode page read type.</value>
+      <returns>Gets the image Barcode page read type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.SelectedPage">
+      <summary>
+            Gets or sets the selected image page.
+            </summary>
+      <value>Sets the selected image page.</value>
+      <returns>Gets the selected image page.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.ImageBarcodeTypes">
+      <summary>
+            Gets or sets the image barcode read types.
+            </summary>
+      <value>Sets the image barcode read types.</value>
+      <returns>Gets the image barcode read types.</returns>
+      <remarks>Set the list empty do decode all suported types.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.ImageBarcodeOrientations">
+      <summary>
+            Gets or sets the image barcode read orientation.
+            </summary>
+      <value>Sets the image barcode read orientation.</value>
+      <returns>Gets the image barcode read orientation.</returns>
+      <remarks>Set the list empty do decode in all directions.</remarks>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.ImgEditComponent">
+      <summary>
+            Gets or sets the ImgEdit container component.
+            </summary>
+      <value>Sets the ImgEdit container component.</value>
+      <returns>Gets the ImgEdit container component.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.StopOnFirstResult">
+      <summary>
+            Gets or sets the stop barcode read on first result.
+            </summary>
+      <value>Sets the stop barcode read on first result.</value>
+      <returns>Gets the stop barcode read on first result.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.ReadedBarcodesResults">
+      <summary>
+            Gets the image barcode read results.
+            </summary>
+      <returns>Gets the image barcode read results.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.LastError">
+      <summary>
+            Gets the last error message.
+            </summary>
+      <returns>Gets the last error message.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.ErrorTraceOutputType">
+      <summary>
+            Gets or sets the trace log output type.
+            </summary>
+      <value>Sets the trace log output type.</value>
+      <returns>Gets the trace log output type.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.ErrorFilePath">
+      <summary>
+            Gets or sets the error log file path.
+            </summary>
+      <value>Sets the error log file path.</value>
+      <returns>Gets the error log file path.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.Registration">
+      <summary>
+            Loads the component registration dialog
+            </summary>
+      <returns>Gets the developer machine key code.</returns>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgBarDecoder.ScanResult">
+      <summary>
+            Occurs on every barcode scan result.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgBarDecoder.ScanFinished">
+      <summary>
+            Occurs when the barcode scan is finished.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgBarDecoder.WorkingStarted">
+      <summary>
+            Occurs in every start process long work.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgBarDecoder.WorkingProgress">
+      <summary>
+            Occurs in every processed long work.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgBarDecoder.WorkingFinished">
+      <summary>
+            Occurs in every finished process long work.
+            </summary>
+    </member>
+    <member name="E:ImageComponents.WPF.Imaging.ImgBarDecoder.ErrorOccurred">
+      <summary>
+            Occurs every time one error is raised.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType">
+      <summary>
+            Image Barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.AUTO">
+      <summary>
+            None or auto barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.CODE11">
+      <summary>
+            Code11 barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.CODE39EXT">
+      <summary>
+            Code39 extended barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.CODABAR">
+      <summary>
+            CODABAR 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.CODE39">
+      <summary>
+            CODE 39 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.CODE93">
+      <summary>
+            CODE 93 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.CODE128">
+      <summary>
+            CODE 128 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.EAN8">
+      <summary>
+            EAN-8 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.EAN13">
+      <summary>
+            EAN-13 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.ILV2OF5">
+      <summary>
+            Interleaved 2 of 5 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.PDF417">
+      <summary>
+            PDF417 barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.QRCODE">
+      <summary>
+            QR CODE 2D barcode barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.UPCA">
+      <summary>
+            UPC-A 1D barcode type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeType.UPCE">
+      <summary>
+            UPC-E 1D barcode type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeOrientation">
+      <summary>
+            Image Barcode orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeOrientation.Auto">
+      <summary>
+            Auto barcode orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeOrientation.LeftToRight">
+      <summary>
+            Left to right barcode orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeOrientation.TopToBottom">
+      <summary>
+            Top to bottom barcode orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeOrientation.RightToLeft">
+      <summary>
+            Right to left barcode orientation.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodeOrientation.BottomToTop">
+      <summary>
+            Bottom to top barcode orientation.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodePageType">
+      <summary>
+            Image Barcode page type enumerations.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodePageType.AllPages">
+      <summary>
+            All pages Barcode.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodePageType.SelectedPage">
+      <summary>
+            Selected page Barcode.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodePageType.PageSelection">
+      <summary>
+            Page selection Barcode.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.ICImageBarcodePageType.ImageBarcodeZones">
+      <summary>
+            Image Barcode Zones.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.TraceOutputType">
+      <summary>
+            Trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.TraceOutputType.None">
+      <summary>
+            None trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.TraceOutputType.DebugWindow">
+      <summary>
+            Debug window trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.TraceOutputType.File">
+      <summary>
+            File trace output type.
+            </summary>
+    </member>
+    <member name="F:ImageComponents.WPF.Imaging.ImgBarDecoder.TraceOutputType.EventViewerLog">
+      <summary>
+            Event viewer output type.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.ScanResultHandler">
+      <summary>
+            Occurs on every barcode scan result.
+            </summary>
+      <param name="sender">Sender object.</param>
+      <param name="Result">The barcode scan result.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.ScanFinishedHandler">
+      <summary>
+            Occurs when the barcode scan is finished.
+            </summary>
+      <param name="sender">Sender object.</param>
+      <param name="Sucess">Sucessfull or unsucessfull results.</param>
+      <param name="Message">Error message.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.WorkingStartedEventHandler">
+      <summary>
+            Occurs in every start process long work.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.WorkingProgressEventHandler">
+      <summary>
+            Occurs in every processed item long work.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+      <param name="Total">The total number of items to work.</param>
+      <param name="Value">The work item index.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.WorkingFinishedEventHandler">
+      <summary>
+            Occurs in every finished process long work.
+            </summary>
+      <param name="sender">ImgEdit component object.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.ErrorOccurredEventHandler">
+      <summary>
+            Occurs every time one error is raised.
+            </summary>
+      <param name="sender">ImgScan component object.</param>
+      <param name="ControlName">The control name were the error was raised.</param>
+      <param name="MethodName">The method name were the error was raised.</param>
+      <param name="ErrorMessage">The error message.</param>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.SelectionRectangle">
+      <summary>
+            Image Components selection rectangle class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgBarDecoder.SelectionRectangle.#ctor(System.Windows.Point)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="SelectionLocation">Selection location.</param>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgBarDecoder.SelectionRectangle.#ctor(System.Windows.Point,System.Windows.Size)">
+      <summary>
+            Constructor.
+            </summary>
+      <param name="SelectionLocation">Selection location.</param>
+      <param name="SelectionSize">Selection size.</param>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.SelectionRectangle.SelectionLocation">
+      <summary>
+            Get selection location.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.SelectionRectangle.SelectionSize">
+      <summary>
+            Get selection size.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.BarcodesResult">
+      <summary>
+            Image Components Barcode Result Class.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.BarcodesResult.Text">
+      <summary>
+            Gets the barcode result text.
+            </summary>
+      <returns>Gets the barcode result text.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.BarcodesResult.Count">
+      <summary>
+            Gets the barcode character count.
+            </summary>
+      <returns>Gets the barcode character count.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.BarcodesResult.ZoneID">
+      <summary>
+            Get/Set Zone ID.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.BarcodesResult.PageIndex">
+      <summary>
+            Gets the Page index position.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.BarcodesResult.BarcodeType">
+      <summary>
+            Gets the barcode type result.
+            </summary>
+      <returns>Gets the barcode type result.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.BarcodesResult.BarcodeOrientation">
+      <summary>
+            Get/Set Barcode orientation.
+            </summary>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.BarcodesResult.BarcodePosition">
+      <summary>
+            Get/Set Barcode position.
+            </summary>
+    </member>
+    <member name="T:ImageComponents.WPF.Imaging.ImgBarDecoder.BarcodesResultCollection">
+      <summary>
+            Image Components Barcode Result Collection Class.
+            </summary>
+    </member>
+    <member name="M:ImageComponents.WPF.Imaging.ImgBarDecoder.BarcodesResultCollection.GetEnumerator">
+      <summary>
+            Get collection enumerator.
+            </summary>
+      <returns>IEnumerator.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.BarcodesResultCollection.Count">
+      <summary>
+            Gets the barcode results count.
+            </summary>
+      <returns>the barcode results count.</returns>
+    </member>
+    <member name="P:ImageComponents.WPF.Imaging.ImgBarDecoder.BarcodesResultCollection.Item(System.Int32)">
+      <summary>
+            Gets result item index.
+            </summary>
+      <param name="Index">Index position.</param>
+      <returns>Barcode result class.</returns>
+    </member>
+  </members>
+</doc>
