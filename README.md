@@ -1,5 +1,5 @@
 #Warning
-This program is outdated since riot upgrade to the new HUD. The new version can be found [here](http://thewebs.github.io/LeagueHudRevolution/)
+This program is outdated since riot upgraded to the new HUD. The new version can be found [here](http://thewebs.github.io/LeagueHudRevolution/)
 # LOL10MINUTES-SOURCE
 Source code of LOL10MINUTES that is a program to help you change your League of Legends Hud.
 # Simple design and functions
